@@ -1,0 +1,195 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 10.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      5773,        185]
+NotebookOptionsPosition[      5065,        155]
+NotebookOutlinePosition[      5400,        170]
+CellTagsIndexPosition[      5357,        167]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[BoxData[
+ RowBox[{"rainbow", "=", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"\"\<&\>\"", "<>", 
+     RowBox[{"IntegerString", "[", "#", "]"}]}], "&"}], "/@", 
+   RowBox[{"{", 
+    RowBox[{
+    "4", ",", "7", ",", "8", ",", "9", ",", "3", ",", "10", ",", "11", ",", 
+     "12", ",", "6", ",", "13"}], "}"}]}]}]], "Input",
+ CellChangeTimes->{{3.685673052673401*^9, 3.6856731011033697`*^9}, {
+  3.68567353162038*^9, 3.685673533787341*^9}, {3.685673663940473*^9, 
+  3.68567367276998*^9}, {3.685673738192938*^9, 3.685673750764265*^9}}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"\<\"&4\"\>", ",", "\<\"&7\"\>", ",", "\<\"&8\"\>", 
+   ",", "\<\"&9\"\>", ",", "\<\"&3\"\>", ",", "\<\"&10\"\>", 
+   ",", "\<\"&11\"\>", ",", "\<\"&12\"\>", ",", "\<\"&6\"\>", 
+   ",", "\<\"&13\"\>"}], "}"}]], "Output",
+ CellChangeTimes->{3.68567315874793*^9, 3.6856735345139103`*^9, 
+  3.685673674123578*^9, 3.685673767247912*^9}]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{"\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{"rainbize", "[", "t_", "]"}], ":=", "\[IndentingNewLine]", 
+   RowBox[{"StringJoin", "@", 
+    RowBox[{"Table", "[", 
+     RowBox[{
+      RowBox[{"StringJoin", "[", 
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{"rainbow", "[", 
+          RowBox[{"[", 
+           RowBox[{"1", "+", 
+            RowBox[{"Mod", "[", 
+             RowBox[{
+              RowBox[{"i", "-", "1"}], ",", 
+              RowBox[{"Length", "[", "rainbow", "]"}]}], "]"}]}], "]"}], 
+          "]"}], ",", 
+         RowBox[{
+          RowBox[{"Characters", "[", "t", "]"}], "[", 
+          RowBox[{"[", "i", "]"}], "]"}]}], "}"}], "]"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"i", ",", "1", ",", 
+        RowBox[{"StringLength", "[", "t", "]"}]}], "}"}]}], 
+     "]"}]}]}]}]], "Input",
+ CellChangeTimes->{{3.6856731119840813`*^9, 3.6856731490090637`*^9}, {
+  3.685673185603238*^9, 3.685673196743668*^9}, {3.685673273422215*^9, 
+  3.6856733425286922`*^9}, {3.6856734010393867`*^9, 3.68567344372613*^9}, {
+  3.685673482484125*^9, 3.685673702551318*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Print", "[", 
+  RowBox[{"rainbize", "[", "\"\<Hello World\>\"", "]"}], "]"}]], "Input",
+ CellChangeTimes->{{3.68567369318678*^9, 3.685673697503788*^9}, {
+  3.685673771364395*^9, 3.6856737723532343`*^9}}],
+
+Cell[BoxData["\<\"&4H&7e&8l&9l&3o&10 &11W&12o&6r&13l&4d\"\>"], "Print",
+ CellChangeTimes->{3.685673772782198*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"hallbow", "=", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"\"\<&\>\"", "<>", 
+     RowBox[{"IntegerString", "[", 
+      RowBox[{"#", "[", 
+       RowBox[{"[", "1", "]"}], "]"}], "]"}], "<>", "\"\<,\>\"", "<>", 
+     RowBox[{"IntegerString", "[", 
+      RowBox[{"#", "[", 
+       RowBox[{"[", "2", "]"}], "]"}], "]"}]}], "&"}], "/@", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"1", ",", "7"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"7", ",", "1"}], "}"}]}], "}"}]}]}]], "Input",
+ CellChangeTimes->{{3.685673834024946*^9, 3.68567384506881*^9}, {
+  3.685673905605618*^9, 3.685673934394569*^9}}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"\<\"&1,7\"\>", ",", "\<\"&7,1\"\>"}], "}"}]], "Output",
+ CellChangeTimes->{3.685673935671924*^9}]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"prettify", "[", 
+   RowBox[{"t_", ",", "alph_"}], "]"}], ":=", "\[IndentingNewLine]", 
+  RowBox[{"StringJoin", "@", 
+   RowBox[{"Table", "[", 
+    RowBox[{
+     RowBox[{"StringJoin", "[", 
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"alph", "[", 
+         RowBox[{"[", 
+          RowBox[{"1", "+", 
+           RowBox[{"Mod", "[", 
+            RowBox[{
+             RowBox[{"i", "-", "1"}], ",", 
+             RowBox[{"Length", "[", "alph", "]"}]}], "]"}]}], "]"}], "]"}], 
+        ",", 
+        RowBox[{
+         RowBox[{"Characters", "[", "t", "]"}], "[", 
+         RowBox[{"[", "i", "]"}], "]"}]}], "}"}], "]"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"i", ",", "1", ",", 
+       RowBox[{"StringLength", "[", "t", "]"}]}], "}"}]}], "]"}]}]}]], "Input",\
+
+ CellChangeTimes->{{3.6856738494408083`*^9, 3.685673864732669*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"prettify", "[", 
+  RowBox[{"\"\<HAPPY HALLOWEEN\>\"", ",", "hallbow"}], "]"}]], "Input",
+ CellChangeTimes->{{3.685673866281406*^9, 3.685673874185452*^9}}],
+
+Cell[BoxData["\<\"&1,7H&7,1A&1,7P&7,1P&1,7Y&7,1 \
+&1,7H&7,1A&1,7L&7,1L&1,7O&7,1W&1,7E&7,1E&1,7N\"\>"], "Output",
+ CellChangeTimes->{3.685673874821176*^9, 3.685673941344249*^9}]
+}, Open  ]]
+},
+WindowSize->{868, 713},
+WindowMargins->{{Automatic, -55}, {-6, Automatic}},
+FrontEndVersion->"10.0 for Linux x86 (64-bit) (June 27, 2014)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 529, 12, 32, "Input"],
+Cell[1112, 36, 371, 7, 32, "Output"]
+}, Open  ]],
+Cell[1498, 46, 1105, 28, 121, "Input"],
+Cell[CellGroupData[{
+Cell[2628, 78, 227, 4, 32, "Input"],
+Cell[2858, 84, 113, 1, 23, "Print"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[3008, 90, 637, 18, 55, "Input"],
+Cell[3648, 110, 137, 3, 32, "Output"]
+}, Open  ]],
+Cell[3800, 116, 867, 25, 99, "Input"],
+Cell[CellGroupData[{
+Cell[4692, 145, 178, 3, 32, "Input"],
+Cell[4873, 150, 176, 2, 32, "Output"]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)
+

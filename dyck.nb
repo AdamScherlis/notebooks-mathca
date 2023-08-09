@@ -1,0 +1,568 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 10.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     17242,        559]
+NotebookOptionsPosition[     16516,        529]
+NotebookOutlinePosition[     16851,        544]
+CellTagsIndexPosition[     16808,        541]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{
+   RowBox[{"dyck", "[", "n_", "]"}], ":=", 
+   RowBox[{"dyck", "[", 
+    RowBox[{
+     RowBox[{"IntegerDigits", "[", 
+      RowBox[{"n", ",", "2"}], "]"}], ",", 
+     RowBox[{"{", "}"}], ",", "0"}], "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"dyck", "[", 
+    RowBox[{
+     RowBox[{"{", "}"}], ",", "out_", ",", "n1_"}], "]"}], ":=", 
+   RowBox[{"FromDigits", "[", 
+    RowBox[{
+     RowBox[{"Join", "[", 
+      RowBox[{"out", ",", 
+       RowBox[{"ConstantArray", "[", 
+        RowBox[{"0", ",", "n1"}], "]"}]}], "]"}], ",", "2"}], "]"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"dyck", "[", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"f_", ",", "i___"}], "}"}], ",", "o_", ",", "n1_"}], "]"}], ":=",
+    "\[IndentingNewLine]", 
+   RowBox[{"If", "[", 
+    RowBox[{
+     RowBox[{"f", "\[Equal]", "0"}], ",", "\[IndentingNewLine]", 
+     RowBox[{"If", "[", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"n1", "\[Equal]", "1"}], "||", 
+        RowBox[{"FreeQ", "[", 
+         RowBox[{
+          RowBox[{"List", "[", "i", "]"}], ",", "0"}], "]"}]}], ",", 
+       "\[IndentingNewLine]", 
+       RowBox[{"dyck", "[", 
+        RowBox[{
+         RowBox[{"List", "[", "i", "]"}], ",", 
+         RowBox[{"Join", "[", 
+          RowBox[{"o", ",", 
+           RowBox[{"{", 
+            RowBox[{"0", ",", "1"}], "}"}]}], "]"}], ",", "n1"}], "]"}], ",", 
+       "\[IndentingNewLine]", 
+       RowBox[{"dyck", "[", 
+        RowBox[{
+         RowBox[{"List", "[", "i", "]"}], ",", 
+         RowBox[{"Join", "[", 
+          RowBox[{"o", ",", 
+           RowBox[{"{", "0", "}"}]}], "]"}], ",", 
+         RowBox[{"n1", "-", "1"}]}], "]"}]}], "]"}], ",", 
+     "\[IndentingNewLine]", 
+     RowBox[{"dyck", "[", 
+      RowBox[{
+       RowBox[{"List", "[", "i", "]"}], ",", 
+       RowBox[{"Join", "[", 
+        RowBox[{"o", ",", 
+         RowBox[{"{", "1", "}"}]}], "]"}], ",", 
+       RowBox[{"n1", "+", "1"}]}], "]"}]}], "]"}]}], ";"}]}], "Input",
+ CellChangeTimes->{{3.616174503419094*^9, 3.616174663902342*^9}, {
+  3.616174697073983*^9, 3.616174791830092*^9}, {3.616174826664596*^9, 
+  3.616174870837097*^9}, {3.61617490087501*^9, 3.616175054118662*^9}, {
+  3.616175128846551*^9, 3.616175198109242*^9}, {3.6161752305801373`*^9, 
+  3.616175264968686*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"dycks2", "=", 
+  RowBox[{"Prepend", "[", 
+   RowBox[{
+    RowBox[{"dyck", "/@", 
+     RowBox[{"Range", "[", "100", "]"}]}], ",", "0"}], "]"}]}]], "Input",
+ CellChangeTimes->{{3.616174773194294*^9, 3.6161748029533453`*^9}, {
+  3.616175253359483*^9, 3.616175256438347*^9}, {3.616175306224959*^9, 
+  3.6161753333790827`*^9}, {3.616176289476838*^9, 3.616176327864794*^9}}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+  "0", ",", "2", ",", "10", ",", "12", ",", "42", ",", "44", ",", "52", ",", 
+   "56", ",", "170", ",", "172", ",", "180", ",", "184", ",", "50", ",", 
+   "216", ",", "232", ",", "240", ",", "682", ",", "684", ",", "692", ",", 
+   "696", ",", "178", ",", "728", ",", "744", ",", "752", ",", "202", ",", 
+   "204", ",", "212", ",", "880", ",", "228", ",", "944", ",", "976", ",", 
+   "992", ",", "2730", ",", "2732", ",", "2740", ",", "2744", ",", "690", ",",
+    "2776", ",", "2792", ",", "2800", ",", "714", ",", "716", ",", "724", ",",
+    "2928", ",", "740", ",", "2992", ",", "3024", ",", "3040", ",", "810", 
+   ",", "812", ",", "820", ",", "824", ",", "210", ",", "856", ",", "872", 
+   ",", "3552", ",", "226", ",", "920", ",", "936", ",", "3808", ",", "968", 
+   ",", "3936", ",", "4000", ",", "4032", ",", "10922", ",", "10924", ",", 
+   "10932", ",", "10936", ",", "2738", ",", "10968", ",", "10984", ",", 
+   "10992", ",", "2762", ",", "2764", ",", "2772", ",", "11120", ",", "2788", 
+   ",", "11184", ",", "11216", ",", "11232", ",", "2858", ",", "2860", ",", 
+   "2868", ",", "2872", ",", "722", ",", "2904", ",", "2920", ",", "11744", 
+   ",", "738", ",", "2968", ",", "2984", ",", "12000", ",", "3016", ",", 
+   "12128", ",", "12192", ",", "12224", ",", "3242", ",", "3244", ",", "3252",
+    ",", "3256", ",", "818"}], "}"}]], "Output",
+ CellChangeTimes->{{3.616174777973724*^9, 3.616174809622603*^9}, {
+  3.616175247141796*^9, 3.616175271709262*^9}, {3.616175308473262*^9, 
+  3.616175333629257*^9}, {3.616176290680767*^9, 3.616176328319935*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{"FromDigits", "[", 
+    RowBox[{"IntegerDigits", "[", 
+     RowBox[{
+      RowBox[{"dyck", "[", "#", "]"}], ",", "2"}], "]"}], "]"}], "&"}], "/@", 
+  
+  RowBox[{"Range", "[", "10", "]"}]}]], "Input",
+ CellChangeTimes->{{3.616178188983787*^9, 3.616178238802021*^9}}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+  "10", ",", "1010", ",", "1100", ",", "101010", ",", "101100", ",", "110100",
+    ",", "111000", ",", "10101010", ",", "10101100", ",", "10110100"}], 
+  "}"}]], "Output",
+ CellChangeTimes->{{3.616178207785277*^9, 3.616178239454558*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{
+    RowBox[{
+     RowBox[{"Position", "[", 
+      RowBox[{"dycks1", ",", "#", ",", "1", ",", "1"}], "]"}], "[", 
+     RowBox[{"[", 
+      RowBox[{"1", ",", "1"}], "]"}], "]"}], "-", "1"}], "&"}], "/@", 
+  "dycks2"}]], "Input",
+ CellChangeTimes->{{3.61617636056179*^9, 3.6161764096968393`*^9}}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+  "0", ",", "1", ",", "2", ",", "3", ",", "4", ",", "5", ",", "7", ",", "8", 
+   ",", "9", ",", "10", ",", "12", ",", "13", ",", "6", ",", "18", ",", "21", 
+   ",", "22", ",", "23", ",", "24", ",", "26", ",", "27", ",", "11", ",", 
+   "32", ",", "35", ",", "36", ",", "14", ",", "15", ",", "17", ",", "50", 
+   ",", "20", ",", "59", ",", "63", ",", "64", ",", "65", ",", "66", ",", 
+   "68", ",", "69", ",", "25", ",", "74", ",", "77", ",", "78", ",", "28", 
+   ",", "29", ",", "31", ",", "92", ",", "34", ",", "101", ",", "105", ",", 
+   "106", ",", "37", ",", "38", ",", "40", ",", "41", ",", "16", ",", "46", 
+   ",", "49", ",", "148", ",", "19", ",", "55", ",", "58", ",", "176", ",", 
+   "62", ",", "190", ",", "195", ",", "196", ",", "197", ",", "198", ",", 
+   "200", ",", "201", ",", "67", ",", "206", ",", "209", ",", "210", ",", 
+   "70", ",", "71", ",", "73", ",", "224", ",", "76", ",", "233", ",", "237", 
+   ",", "238", ",", "79", ",", "80", ",", "82", ",", "83", ",", "30", ",", 
+   "88", ",", "91", ",", "280", ",", "33", ",", "97", ",", "100", ",", "308", 
+   ",", "104", ",", "322", ",", "327", ",", "328", ",", "107", ",", "108", 
+   ",", "110", ",", "111", ",", "39"}], "}"}]], "Output",
+ CellChangeTimes->{
+  3.616176365944797*^9, {3.616176406845467*^9, 3.616176410180876*^9}, 
+   3.616176482631948*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"Table", "[", 
+   RowBox[{
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"BaseForm", "[", 
+       RowBox[{"i", ",", "2"}], "]"}], ",", 
+      RowBox[{"BaseForm", "[", 
+       RowBox[{
+        RowBox[{"dyck", "[", "i", "]"}], ",", "2"}], "]"}]}], "}"}], ",", 
+    RowBox[{"{", 
+     RowBox[{"i", ",", "1", ",", "20"}], "}"}]}], "]"}], "//", 
+  "MatrixForm"}]], "Input",
+ CellChangeTimes->{{3.616175579779058*^9, 3.616175581912895*^9}, {
+  3.616176508832293*^9, 3.616176552245268*^9}, {3.6161765871417427`*^9, 
+  3.6161765872165403`*^9}, {3.616176639322711*^9, 3.616176639449559*^9}}],
+
+Cell[BoxData[
+ TagBox[
+  RowBox[{"(", "\[NoBreak]", GridBox[{
+     {
+      TagBox[
+       InterpretationBox[
+        SubscriptBox["\<\"1\"\>", "\<\"2\"\>"],
+        1,
+        Editable->False],
+       BaseForm[#, 2]& ], 
+      TagBox[
+       InterpretationBox[
+        SubscriptBox["\<\"10\"\>", "\<\"2\"\>"],
+        2,
+        Editable->False],
+       BaseForm[#, 2]& ]},
+     {
+      TagBox[
+       InterpretationBox[
+        SubscriptBox["\<\"10\"\>", "\<\"2\"\>"],
+        2,
+        Editable->False],
+       BaseForm[#, 2]& ], 
+      TagBox[
+       InterpretationBox[
+        SubscriptBox["\<\"1010\"\>", "\<\"2\"\>"],
+        10,
+        Editable->False],
+       BaseForm[#, 2]& ]},
+     {
+      TagBox[
+       InterpretationBox[
+        SubscriptBox["\<\"11\"\>", "\<\"2\"\>"],
+        3,
+        Editable->False],
+       BaseForm[#, 2]& ], 
+      TagBox[
+       InterpretationBox[
+        SubscriptBox["\<\"1100\"\>", "\<\"2\"\>"],
+        12,
+        Editable->False],
+       BaseForm[#, 2]& ]},
+     {
+      TagBox[
+       InterpretationBox[
+        SubscriptBox["\<\"100\"\>", "\<\"2\"\>"],
+        4,
+        Editable->False],
+       BaseForm[#, 2]& ], 
+      TagBox[
+       InterpretationBox[
+        SubscriptBox["\<\"101010\"\>", "\<\"2\"\>"],
+        42,
+        Editable->False],
+       BaseForm[#, 2]& ]},
+     {
+      TagBox[
+       InterpretationBox[
+        SubscriptBox["\<\"101\"\>", "\<\"2\"\>"],
+        5,
+        Editable->False],
+       BaseForm[#, 2]& ], 
+      TagBox[
+       InterpretationBox[
+        SubscriptBox["\<\"101100\"\>", "\<\"2\"\>"],
+        44,
+        Editable->False],
+       BaseForm[#, 2]& ]},
+     {
+      TagBox[
+       InterpretationBox[
+        SubscriptBox["\<\"110\"\>", "\<\"2\"\>"],
+        6,
+        Editable->False],
+       BaseForm[#, 2]& ], 
+      TagBox[
+       InterpretationBox[
+        SubscriptBox["\<\"110100\"\>", "\<\"2\"\>"],
+        52,
+        Editable->False],
+       BaseForm[#, 2]& ]},
+     {
+      TagBox[
+       InterpretationBox[
+        SubscriptBox["\<\"111\"\>", "\<\"2\"\>"],
+        7,
+        Editable->False],
+       BaseForm[#, 2]& ], 
+      TagBox[
+       InterpretationBox[
+        SubscriptBox["\<\"111000\"\>", "\<\"2\"\>"],
+        56,
+        Editable->False],
+       BaseForm[#, 2]& ]},
+     {
+      TagBox[
+       InterpretationBox[
+        SubscriptBox["\<\"1000\"\>", "\<\"2\"\>"],
+        8,
+        Editable->False],
+       BaseForm[#, 2]& ], 
+      TagBox[
+       InterpretationBox[
+        SubscriptBox["\<\"10101010\"\>", "\<\"2\"\>"],
+        170,
+        Editable->False],
+       BaseForm[#, 2]& ]},
+     {
+      TagBox[
+       InterpretationBox[
+        SubscriptBox["\<\"1001\"\>", "\<\"2\"\>"],
+        9,
+        Editable->False],
+       BaseForm[#, 2]& ], 
+      TagBox[
+       InterpretationBox[
+        SubscriptBox["\<\"10101100\"\>", "\<\"2\"\>"],
+        172,
+        Editable->False],
+       BaseForm[#, 2]& ]},
+     {
+      TagBox[
+       InterpretationBox[
+        SubscriptBox["\<\"1010\"\>", "\<\"2\"\>"],
+        10,
+        Editable->False],
+       BaseForm[#, 2]& ], 
+      TagBox[
+       InterpretationBox[
+        SubscriptBox["\<\"10110100\"\>", "\<\"2\"\>"],
+        180,
+        Editable->False],
+       BaseForm[#, 2]& ]},
+     {
+      TagBox[
+       InterpretationBox[
+        SubscriptBox["\<\"1011\"\>", "\<\"2\"\>"],
+        11,
+        Editable->False],
+       BaseForm[#, 2]& ], 
+      TagBox[
+       InterpretationBox[
+        SubscriptBox["\<\"10111000\"\>", "\<\"2\"\>"],
+        184,
+        Editable->False],
+       BaseForm[#, 2]& ]},
+     {
+      TagBox[
+       InterpretationBox[
+        SubscriptBox["\<\"1100\"\>", "\<\"2\"\>"],
+        12,
+        Editable->False],
+       BaseForm[#, 2]& ], 
+      TagBox[
+       InterpretationBox[
+        SubscriptBox["\<\"110010\"\>", "\<\"2\"\>"],
+        50,
+        Editable->False],
+       BaseForm[#, 2]& ]},
+     {
+      TagBox[
+       InterpretationBox[
+        SubscriptBox["\<\"1101\"\>", "\<\"2\"\>"],
+        13,
+        Editable->False],
+       BaseForm[#, 2]& ], 
+      TagBox[
+       InterpretationBox[
+        SubscriptBox["\<\"11011000\"\>", "\<\"2\"\>"],
+        216,
+        Editable->False],
+       BaseForm[#, 2]& ]},
+     {
+      TagBox[
+       InterpretationBox[
+        SubscriptBox["\<\"1110\"\>", "\<\"2\"\>"],
+        14,
+        Editable->False],
+       BaseForm[#, 2]& ], 
+      TagBox[
+       InterpretationBox[
+        SubscriptBox["\<\"11101000\"\>", "\<\"2\"\>"],
+        232,
+        Editable->False],
+       BaseForm[#, 2]& ]},
+     {
+      TagBox[
+       InterpretationBox[
+        SubscriptBox["\<\"1111\"\>", "\<\"2\"\>"],
+        15,
+        Editable->False],
+       BaseForm[#, 2]& ], 
+      TagBox[
+       InterpretationBox[
+        SubscriptBox["\<\"11110000\"\>", "\<\"2\"\>"],
+        240,
+        Editable->False],
+       BaseForm[#, 2]& ]},
+     {
+      TagBox[
+       InterpretationBox[
+        SubscriptBox["\<\"10000\"\>", "\<\"2\"\>"],
+        16,
+        Editable->False],
+       BaseForm[#, 2]& ], 
+      TagBox[
+       InterpretationBox[
+        SubscriptBox["\<\"1010101010\"\>", "\<\"2\"\>"],
+        682,
+        Editable->False],
+       BaseForm[#, 2]& ]},
+     {
+      TagBox[
+       InterpretationBox[
+        SubscriptBox["\<\"10001\"\>", "\<\"2\"\>"],
+        17,
+        Editable->False],
+       BaseForm[#, 2]& ], 
+      TagBox[
+       InterpretationBox[
+        SubscriptBox["\<\"1010101100\"\>", "\<\"2\"\>"],
+        684,
+        Editable->False],
+       BaseForm[#, 2]& ]},
+     {
+      TagBox[
+       InterpretationBox[
+        SubscriptBox["\<\"10010\"\>", "\<\"2\"\>"],
+        18,
+        Editable->False],
+       BaseForm[#, 2]& ], 
+      TagBox[
+       InterpretationBox[
+        SubscriptBox["\<\"1010110100\"\>", "\<\"2\"\>"],
+        692,
+        Editable->False],
+       BaseForm[#, 2]& ]},
+     {
+      TagBox[
+       InterpretationBox[
+        SubscriptBox["\<\"10011\"\>", "\<\"2\"\>"],
+        19,
+        Editable->False],
+       BaseForm[#, 2]& ], 
+      TagBox[
+       InterpretationBox[
+        SubscriptBox["\<\"1010111000\"\>", "\<\"2\"\>"],
+        696,
+        Editable->False],
+       BaseForm[#, 2]& ]},
+     {
+      TagBox[
+       InterpretationBox[
+        SubscriptBox["\<\"10100\"\>", "\<\"2\"\>"],
+        20,
+        Editable->False],
+       BaseForm[#, 2]& ], 
+      TagBox[
+       InterpretationBox[
+        SubscriptBox["\<\"10110010\"\>", "\<\"2\"\>"],
+        178,
+        Editable->False],
+       BaseForm[#, 2]& ]}
+    },
+    GridBoxAlignment->{
+     "Columns" -> {{Center}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}}, 
+      "RowsIndexed" -> {}},
+    GridBoxSpacings->{"Columns" -> {
+        Offset[0.27999999999999997`], {
+         Offset[0.7]}, 
+        Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+        Offset[0.2], {
+         Offset[0.4]}, 
+        Offset[0.2]}, "RowsIndexed" -> {}}], "\[NoBreak]", ")"}],
+  Function[BoxForm`e$, 
+   MatrixForm[BoxForm`e$]]]], "Output",
+ CellChangeTimes->{
+  3.616175582162826*^9, {3.6161765438265676`*^9, 3.616176552533608*^9}, 
+   3.616176588007449*^9, 3.616176639698155*^9}]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"(*", " ", 
+   RowBox[{
+    RowBox[{"from", " ", "A063171"}], ",", " ", 
+    RowBox[{"due", " ", "to", " ", 
+     RowBox[{"Alcover", ":"}]}]}], " ", "*)"}], "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"balancedQ", "[", "0", "]"}], "=", "True"}], ";", 
+   RowBox[{
+    RowBox[{"balancedQ", "[", "n_", "]"}], ":=", 
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"s", "=", "0"}], ";", 
+      RowBox[{"Do", "[", 
+       RowBox[{
+        RowBox[{
+         RowBox[{"s", "+=", 
+          RowBox[{"If", "[", 
+           RowBox[{
+            RowBox[{"b", "\[Equal]", "1"}], ",", "1", ",", 
+            RowBox[{"-", "1"}]}], "]"}]}], ";", 
+         RowBox[{"If", "[", 
+          RowBox[{
+           RowBox[{"s", "<", "0"}], ",", 
+           RowBox[{"Return", "[", "False", "]"}]}], "]"}]}], ",", 
+        RowBox[{"{", 
+         RowBox[{"b", ",", 
+          RowBox[{"IntegerDigits", "[", 
+           RowBox[{"n", ",", "2"}], "]"}]}], "}"}]}], "]"}], ";", 
+      RowBox[{"Return", "[", 
+       RowBox[{"s", "\[Equal]", "0"}], "]"}]}], ")"}]}], ";", 
+   RowBox[{"dycks1", "=", 
+    RowBox[{"Select", "[", 
+     RowBox[{
+      RowBox[{"Range", "[", 
+       RowBox[{"0", ",", "12225"}], "]"}], ",", "balancedQ"}], "]"}]}], 
+   ";"}]}]], "Input",
+ CellChangeTimes->{{3.616176333615823*^9, 3.6161763530490313`*^9}, {
+   3.6161764514002647`*^9, 3.616176454010202*^9}, 3.616176502730283*^9}]
+},
+WindowSize->{808, 621},
+WindowMargins->{{276, Automatic}, {46, Automatic}},
+FrontEndVersion->"10.0 for Linux x86 (64-bit) (June 27, 2014)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 2337, 66, 187, "Input"],
+Cell[CellGroupData[{
+Cell[2920, 90, 392, 8, 32, "Input"],
+Cell[3315, 100, 1601, 23, 187, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[4953, 128, 311, 9, 32, "Input"],
+Cell[5267, 139, 277, 6, 55, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[5581, 150, 340, 10, 32, "Input"],
+Cell[5924, 162, 1364, 21, 143, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[7325, 188, 616, 16, 32, "Input"],
+Cell[7944, 206, 7132, 278, 386, "Output"]
+}, Open  ]],
+Cell[15091, 487, 1421, 40, 165, "Input"]
+}
+]
+*)
+
+(* End of internal cache information *)

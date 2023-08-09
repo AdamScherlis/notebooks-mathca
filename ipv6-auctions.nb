@@ -1,0 +1,381 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 10.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     19548,        371]
+NotebookOptionsPosition[     18967,        346]
+NotebookOutlinePosition[     19302,        361]
+CellTagsIndexPosition[     19259,        358]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+  "str", "=", 
+   "\"\</24 Block Registered in ARIN\\t1/28/16\\t$2,816.00\\t$11.00\n/24 \
+Block Registered in ARIN\\t1/27/16\\t$2,816.00\\t$11.00\n/23 Block Registered \
+in ARIN\\t1/26/16\\t$5,632.00\\t$11.00\n/21 Block Registered in \
+ARIN\\t1/26/16\\t$16,384.00\\t$8.00\n/24 Block Registered in \
+ARIN\\t1/26/16\\t$2,816.00\\t$11.00\n/24 Block Registered in \
+ARIN\\t1/21/16\\t$2,816.00\\t$11.00\n/24 Block Registered in \
+ARIN\\t1/20/16\\t$3,501.00\\t$13.68\n/22 Block Registered in \
+ARIN\\t1/19/16\\t$9,728.00\\t$9.50\n/20 Block Registered in \
+ARIN\\t1/15/16\\t$32,768.00\\t$8.00\n/21 Block Registered in \
+ARIN\\t1/15/16\\t$16,384.00\\t$8.00\n/23 Block Registered in \
+ARIN\\t1/15/16\\t$5,632.00\\t$11.00\n/24 Block Registered in \
+ARIN\\t1/13/16\\t$2,816.00\\t$11.00\n/21 Block Registered in \
+ARIN\\t1/12/16\\t$16,384.00\\t$8.00\n/22 Block Registered in \
+ARIN\\t1/12/16\\t$9,728.00\\t$9.50\n/24 Block Registered in \
+ARIN\\t1/12/16\\t$2,816.00\\t$11.00\n/24 Block Registered in \
+ARIN\\t1/08/16\\t$2,816.00\\t$11.00\n/23 Block Registered in \
+ARIN\\t1/07/16\\t$6,176.00\\t$12.06\n/21 Block Registered in \
+ARIN\\t1/07/16\\t$16,384.00\\t$8.00\n/24 Block Registered in \
+ARIN\\t1/07/16\\t$2,816.00\\t$11.00\n/24 Block Registered in \
+ARIN\\t1/06/16\\t$2,916.00\\t$11.39\n/24 Block Registered in \
+ARIN\\t1/04/16\\t$2,816.00\\t$11.00\n/21 Block Registered in \
+ARIN\\t12/31/15\\t$16,434.00\\t$8.02\n/23 Block Registered in ARIN\\t12/31/15\
+\\t$5,760.00\\t$11.25\n/24 Block Registered in \
+ARIN\\t12/30/15\\t$2,816.00\\t$11.00\n/24 Block Registered in ARIN\\t12/29/15\
+\\t$2,560.00\\t$10.00\n/23 Block Registered in \
+ARIN\\t12/29/15\\t$5,120.00\\t$10.00\n/22 Block Registered in ARIN\\t12/29/15\
+\\t$9,216.00\\t$9.00\n/20 Block Registered in \
+ARIN\\t12/29/15\\t$30,720.00\\t$7.50\n/19 Block Registered in ARIN\\t12/29/15\
+\\t$61,440.00\\t$7.50\n/19 Block Registered in \
+ARIN\\t12/22/15\\t$61,440.00\\t$7.50\n/22 Block Registered in ARIN\\t12/22/15\
+\\t$10,850.00\\t$10.60\n/20 Block Registered in \
+ARIN\\t12/22/15\\t$32,768.00\\t$8.00\n/24 Block Registered in ARIN\\t12/22/15\
+\\t$3,328.00\\t$13.00\n/23 Block Registered in \
+ARIN\\t12/22/15\\t$5,760.00\\t$11.25\n/24 Block Registered in ARIN\\t12/21/15\
+\\t$3,285.00\\t$12.83\n/24 Block Registered in \
+ARIN\\t12/18/15\\t$3,675.00\\t$14.36\n/19 Block Registered in ARIN\\t12/17/15\
+\\t$65,501.00\\t$8.00\n/24 Block Registered in \
+ARIN\\t12/16/15\\t$2,816.00\\t$11.00\n/24 Block Registered in ARIN\\t12/09/15\
+\\t$2,816.00\\t$11.00\n/22 Block Registered in \
+ARIN\\t12/08/15\\t$9,728.00\\t$9.50\n/24 Block Registered in \
+ARIN\\t12/08/15\\t$2,816.00\\t$11.00\n/24 Block Registered in ARIN\\t12/07/15\
+\\t$3,625.00\\t$14.16\n/24 Block Registered in \
+ARIN\\t12/04/15\\t$3,890.00\\t$15.20\n/24 Block Registered in ARIN\\t12/03/15\
+\\t$3,580.00\\t$13.98\n/24 Block Registered in \
+ARIN\\t12/02/15\\t$3,875.00\\t$15.14\n/24 Block Registered in ARIN\\t12/01/15\
+\\t$5,325.00\\t$20.80\n/23 Block Registered in \
+RIPE\\t12/01/15\\t$5,888.00\\t$11.50\n/22 Block Registered in ARIN\\t12/01/15\
+\\t$9,728.00\\t$9.50\n/18 Block Registered in \
+ARIN\\t11/18/15\\t$131,072.00\\t$8.00\n/24 Block Registered in \
+ARIN\\t11/17/15\\t$2,816.00\\t$11.00\n/24 Block Registered in ARIN\\t11/12/15\
+\\t$2,816.00\\t$11.00\n/22 Block Registered in \
+ARIN\\t11/12/15\\t$9,728.00\\t$9.50\n/22 Block Registered in \
+ARIN\\t11/10/15\\t$9,728.00\\t$9.50\n/20 Block Registered in \
+ARIN\\t11/10/15\\t$34,816.00\\t$8.50\n/23 Block Registered in ARIN\\t11/05/15\
+\\t$5,632.00\\t$11.00\n/24 Block Registered in \
+ARIN\\t11/03/15\\t$2,691.00\\t$10.51\n/23 Block Registered in ARIN\\t11/03/15\
+\\t$5,767.00\\t$11.26\n/24 Block Registered in \
+ARIN\\t10/29/15\\t$3,700.00\\t$14.45\n/23 Block Registered in ARIN\\t10/29/15\
+\\t$5,707.00\\t$11.15\n/22 Block Registered in \
+ARIN\\t10/29/15\\t$10,240.00\\t$10.00\n/20 Block Registered in \
+ARIN\\t10/26/15\\t$34,816.00\\t$8.50\n/23 Block Registered in ARIN\\t10/22/15\
+\\t$5,120.00\\t$10.00\n/22 Block Registered in \
+ARIN\\t10/22/15\\t$10,240.00\\t$10.00\n/20 Block Registered in \
+ARIN\\t10/22/15\\t$37,466.00\\t$9.15\n/24 Block Registered in ARIN\\t10/19/15\
+\\t$2,560.00\\t$10.00\n/23 Block Registered in \
+ARIN\\t10/19/15\\t$6,125.00\\t$11.96\n/24 Block Registered in ARIN\\t10/15/15\
+\\t$2,825.00\\t$11.04\n/23 Block Registered in \
+ARIN\\t10/15/15\\t$7,025.00\\t$13.72\n/21 Block Registered in ARIN\\t10/15/15\
+\\t$16,384.00\\t$8.00\n/24 Block Registered in \
+ARIN\\t10/12/15\\t$5,050.00\\t$19.73\n/24 Block Registered in ARIN\\t10/05/15\
+\\t$3,525.00\\t$13.77\n/23 Block Registered in \
+ARIN\\t9/28/15\\t$4,608.00\\t$9.00\n/21 Block Registered in \
+ARIN\\t9/28/15\\t$16,384.00\\t$8.00\n/22 Block Registered in \
+ARIN\\t9/24/15\\t$8,192.00\\t$8.00\n/24 Block Registered in \
+ARIN\\t9/21/15\\t$2,475.00\\t$9.67\n/21 Block Registered in \
+ARIN\\t9/14/15\\t$16,434.00\\t$8.02\n/24 Block Registered in \
+ARIN\\t9/03/15\\t$2,775.00\\t$10.84\n/22 Block Registered in \
+ARIN\\t9/03/15\\t$7,936.00\\t$7.75\n/24 Block Registered in \
+ARIN\\t8/27/15\\t$2,432.00\\t$9.50\n/20 Block Registered in \
+ARIN\\t8/19/15\\t$32,768.00\\t$8.00\n/21 Block Registered in \
+ARIN\\t8/06/15\\t$16,384.00\\t$8.00\n/23 Block Registered in \
+ARIN\\t8/06/15\\t$4,608.00\\t$9.00\n/18 Block Registered in \
+ARIN\\t8/03/15\\t$131,072.00\\t$8.00\n/24 Block Registered in \
+ARIN\\t7/27/15\\t$2,432.00\\t$9.50\n/24 Block Registered in \
+ARIN\\t7/23/15\\t$2,625.00\\t$10.25\n/22 Block Registered in \
+ARIN\\t7/20/15\\t$8,704.00\\t$8.50\n/24 Block Registered in \
+ARIN\\t7/20/15\\t$2,432.00\\t$9.50\n/20 Block Registered in \
+ARIN\\t7/16/15\\t$32,768.00\\t$8.00\n/22 Block Registered in \
+ARIN\\t7/16/15\\t$8,704.00\\t$8.50\n/22 Block Registered in \
+ARIN\\t7/16/15\\t$16,601.00\\t$8.11\n/24 Block Registered in \
+ARIN\\t7/13/15\\t$2,432.00\\t$9.50\n/23 Block Registered in \
+ARIN\\t7/13/15\\t$4,608.00\\t$9.00\n/22 Block Registered in \
+ARIN\\t7/13/15\\t$8,192.00\\t$8.00\n/21 Block Registered in \
+ARIN\\t7/13/15\\t$16,434.00\\t$8.02\n/20 Block Registered in \
+ARIN\\t7/13/15\\t$32,818.00\\t$8.01\n/24 Block Registered in \
+ARIN\\t7/2/15\\t$2,525.00\\t$9.86\n/23 Block Registered in \
+ARIN\\t7/2/15\\t$4,608.00\\t$9.00\n/22 Block Registered in \
+ARIN\\t6/25/15\\t$8,192.00\\t$8.00\n/20 Block Registered in \
+ARIN\\t6/10/15\\t$30,518.00\\t$7.45\n/24 Block Registered in \
+ARIN\\t6/10/15\\t$2,600.00\\t$10.16\n/24 Block Registered in \
+ARIN\\t5/27/15\\t$2,432.00\\t$9.50\n/20 Block Registered in \
+ARIN\\t5/7/15\\t$30,720.00\\t$7.50\n/24 Block Registered in \
+ARIN\\t4/23/15\\t$2,432.00\\t$9.50\n/17 Block Registered in \
+ARIN\\t4/15/15\\t$196,608.00\\t$6.00\n/20 Block Registered in \
+ARIN\\t4/9/15\\t$32,768.00\\t$8.00\n/23 Block Registered in \
+ARIN\\t4/9/15\\t$4,608.00\\t$9.00\n/24 Block Registered in \
+ARIN\\t4/9/15\\t$2,707.00\\t$10.57\n/23 Block Registered in \
+ARIN\\t3/19/15\\t$4,608.00\\t$9.00\n/24 Block Registered in \
+ARIN\\t3/19/15\\t$2,432.00\\t$9.50\n/21 Block Registered in \
+ARIN\\t3/4/15\\t$16,435.00\\t$8.02\n/21 Block Registered in \
+ARIN\\t2/18/15\\t$16,384.00\\t$8.00\n/23 Block Registered in \
+ARIN\\t2/18/15\\t$4,608.00\\t$9.00\n/24 Block Registered in \
+ARIN\\t2/18/15\\t$2,432.00\\t$9.50\n/24 Block Registered in \
+ARIN\\t2/5/15\\t$2,432.00\\t$9.50\n/24 Block Registered in \
+ARIN\\t1/29/15\\t$3,001\\t$11.72\n/23 Block Registered in \
+ARIN\\t1/29/15\\t$4,224\\t$8.25\n/22 Block Registered in \
+ARIN\\t1/29/15\\t$8,217\\t$8.02\n/21 Block Registered in \
+ARIN\\t1/29/15\\t$16,384\\t$8.00\n/23 Block Registered in \
+ARIN\\t1/20/15\\t$4,633\\t$9.05\n/24 Block Registered in \
+ARIN\\t1/20/15\\t$2,432\\t$9.50\n/21 Block Registered in \
+ARIN\\t1/20/15\\t$12,288\\t$6.00\n/22 Block Registered in \
+ARIN\\t1/20/15\\t$8,217\\t$8.02\n/24 Block Registered in \
+ARIN\\t12/30/14\\t$2,304\\t$9.00\n/24 Block Registered in \
+ARIN\\t12/10/14\\t$2,304\\t$9.00\n/23 Block Registered in \
+ARIN\\t12/10/14\\t$4,608\\t$9.00\n/20 Block Registered in \
+ARIN\\t11/05/14\\t$32,768\\t$8.00\n/23 Block Registered in \
+ARIN\\t11/05/14\\t$4,608\\t$9.00\n/24 Block Registered in \
+ARIN\\t11/05/14\\t$2,432\\t$9.50\n/20 Block Registered in \
+ARIN\\t10/23/14\\t$32,768\\t$8.00\n/24 Block Registered in \
+ARIN\\t10/23/14\\t$3,475\\t$13.57\n/23 Block Registered in \
+ARIN\\t10/23/14\\t$5,126\\t$10.01\n/20 Block Registered in \
+ARIN\\t10/11/14\\t$32,768\\t$8.00\n/24 Block Registered in \
+ARIN\\t09/18/14\\t$4,625\\t$18.07\n/23 Block Registered in \
+ARIN\\t09/18/14\\t$4,608\\t$9.00\n/21 Block Registered in \
+RIPE\\t10/09/14\\t$16,384\\t$8.00\n/21 Block Registered in \
+ARIN\\t09/04/14\\t$16,384\\t$8.00\nTwo consecutive /24 Blocks Registered in \
+ARIN\\t09/04/14\\t$5,635\\t$11.01\n/24 Block Registered in \
+ARIN\\t09/04/14\\t$2,877\\t$11.24\n/24 Block Registered in \
+ARIN\\t08/07/14\\t$2,048\\t$8.00\nTwo consecutive /24 Blocks Registered in \
+ARIN\\t08/07/14\\t$4,096\\t$8.00\nTwo consecutive /24 Blocks Registered in \
+ARIN\\t07/23/14\\t$3,584\\t$7.00\n/24 Block Registered in \
+ARIN\\t07/23/14\\t$1,980\\t$7.73\n/23 Block Registered in \
+ARIN\\t06/19/14\\t$4,234\\t$8.27\n/24 Block Registered in \
+ARIN\\t06/19/14\\t$1,725\\t$6.74\n/18 Block Registered in \
+ARIN\\t06/18/14\\t$131,072\\t$8.00\n/20 Block Registered in \
+ARIN\\t03/25/14\\t$29,696\\t$7.25\n/24 Block Registered in \
+ARIN\\t02/26/14\\t$6,225\\t$24.32\n/23 Block Registered in \
+ARIN\\t02/26/14\\t$8,025\\t$15.67\n/20 Block Registered in \
+ARIN\\t02/26/14\\t$29,983\\t$7.32\>\""}], ";"}]], "Input",
+ CellChangeTimes->{{3.6630942960135727`*^9, 3.663094301770246*^9}, {
+  3.663094353971834*^9, 3.6630943732965183`*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"prices", "=", 
+  RowBox[{"StringCases", "[", 
+   RowBox[{"str", ",", 
+    RowBox[{
+    "\"\<$\>\"", "~~", "NumberString", "~~", "\"\<.\>\"", "~~", 
+     "NumberString"}]}], "]"}]}]], "Input",
+ CellChangeTimes->{{3.6630943749713583`*^9, 3.663094390786992*^9}, {
+  3.663094435020698*^9, 3.663094459284284*^9}, {3.663094512771274*^9, 
+  3.663094644067348*^9}}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"\<\"$11.00\"\>", ",", "\<\"$11.00\"\>", ",", "\<\"$11.00\"\>", 
+   ",", "\<\"$8.00\"\>", ",", "\<\"$11.00\"\>", ",", "\<\"$11.00\"\>", 
+   ",", "\<\"$13.68\"\>", ",", "\<\"$9.50\"\>", ",", "\<\"$8.00\"\>", 
+   ",", "\<\"$8.00\"\>", ",", "\<\"$11.00\"\>", ",", "\<\"$11.00\"\>", 
+   ",", "\<\"$8.00\"\>", ",", "\<\"$9.50\"\>", ",", "\<\"$11.00\"\>", 
+   ",", "\<\"$11.00\"\>", ",", "\<\"$12.06\"\>", ",", "\<\"$8.00\"\>", 
+   ",", "\<\"$11.00\"\>", ",", "\<\"$11.39\"\>", ",", "\<\"$11.00\"\>", 
+   ",", "\<\"$8.02\"\>", ",", "\<\"$11.25\"\>", ",", "\<\"$11.00\"\>", 
+   ",", "\<\"$10.00\"\>", ",", "\<\"$10.00\"\>", ",", "\<\"$9.00\"\>", 
+   ",", "\<\"$7.50\"\>", ",", "\<\"$7.50\"\>", ",", "\<\"$7.50\"\>", 
+   ",", "\<\"$10.60\"\>", ",", "\<\"$8.00\"\>", ",", "\<\"$13.00\"\>", 
+   ",", "\<\"$11.25\"\>", ",", "\<\"$12.83\"\>", ",", "\<\"$14.36\"\>", 
+   ",", "\<\"$8.00\"\>", ",", "\<\"$11.00\"\>", ",", "\<\"$11.00\"\>", 
+   ",", "\<\"$9.50\"\>", ",", "\<\"$11.00\"\>", ",", "\<\"$14.16\"\>", 
+   ",", "\<\"$15.20\"\>", ",", "\<\"$13.98\"\>", ",", "\<\"$15.14\"\>", 
+   ",", "\<\"$20.80\"\>", ",", "\<\"$11.50\"\>", ",", "\<\"$9.50\"\>", 
+   ",", "\<\"$8.00\"\>", ",", "\<\"$11.00\"\>", ",", "\<\"$11.00\"\>", 
+   ",", "\<\"$9.50\"\>", ",", "\<\"$9.50\"\>", ",", "\<\"$8.50\"\>", 
+   ",", "\<\"$11.00\"\>", ",", "\<\"$10.51\"\>", ",", "\<\"$11.26\"\>", 
+   ",", "\<\"$14.45\"\>", ",", "\<\"$11.15\"\>", ",", "\<\"$10.00\"\>", 
+   ",", "\<\"$8.50\"\>", ",", "\<\"$10.00\"\>", ",", "\<\"$10.00\"\>", 
+   ",", "\<\"$9.15\"\>", ",", "\<\"$10.00\"\>", ",", "\<\"$11.96\"\>", 
+   ",", "\<\"$11.04\"\>", ",", "\<\"$13.72\"\>", ",", "\<\"$8.00\"\>", 
+   ",", "\<\"$19.73\"\>", ",", "\<\"$13.77\"\>", ",", "\<\"$9.00\"\>", 
+   ",", "\<\"$8.00\"\>", ",", "\<\"$8.00\"\>", ",", "\<\"$9.67\"\>", 
+   ",", "\<\"$8.02\"\>", ",", "\<\"$10.84\"\>", ",", "\<\"$7.75\"\>", 
+   ",", "\<\"$9.50\"\>", ",", "\<\"$8.00\"\>", ",", "\<\"$8.00\"\>", 
+   ",", "\<\"$9.00\"\>", ",", "\<\"$8.00\"\>", ",", "\<\"$9.50\"\>", 
+   ",", "\<\"$10.25\"\>", ",", "\<\"$8.50\"\>", ",", "\<\"$9.50\"\>", 
+   ",", "\<\"$8.00\"\>", ",", "\<\"$8.50\"\>", ",", "\<\"$8.11\"\>", 
+   ",", "\<\"$9.50\"\>", ",", "\<\"$9.00\"\>", ",", "\<\"$8.00\"\>", 
+   ",", "\<\"$8.02\"\>", ",", "\<\"$8.01\"\>", ",", "\<\"$9.86\"\>", 
+   ",", "\<\"$9.00\"\>", ",", "\<\"$8.00\"\>", ",", "\<\"$7.45\"\>", 
+   ",", "\<\"$10.16\"\>", ",", "\<\"$9.50\"\>", ",", "\<\"$7.50\"\>", 
+   ",", "\<\"$9.50\"\>", ",", "\<\"$6.00\"\>", ",", "\<\"$8.00\"\>", 
+   ",", "\<\"$9.00\"\>", ",", "\<\"$10.57\"\>", ",", "\<\"$9.00\"\>", 
+   ",", "\<\"$9.50\"\>", ",", "\<\"$8.02\"\>", ",", "\<\"$8.00\"\>", 
+   ",", "\<\"$9.00\"\>", ",", "\<\"$9.50\"\>", ",", "\<\"$9.50\"\>", 
+   ",", "\<\"$11.72\"\>", ",", "\<\"$8.25\"\>", ",", "\<\"$8.02\"\>", 
+   ",", "\<\"$8.00\"\>", ",", "\<\"$9.05\"\>", ",", "\<\"$9.50\"\>", 
+   ",", "\<\"$6.00\"\>", ",", "\<\"$8.02\"\>", ",", "\<\"$9.00\"\>", 
+   ",", "\<\"$9.00\"\>", ",", "\<\"$9.00\"\>", ",", "\<\"$8.00\"\>", 
+   ",", "\<\"$9.00\"\>", ",", "\<\"$9.50\"\>", ",", "\<\"$8.00\"\>", 
+   ",", "\<\"$13.57\"\>", ",", "\<\"$10.01\"\>", ",", "\<\"$8.00\"\>", 
+   ",", "\<\"$18.07\"\>", ",", "\<\"$9.00\"\>", ",", "\<\"$8.00\"\>", 
+   ",", "\<\"$8.00\"\>", ",", "\<\"$11.01\"\>", ",", "\<\"$11.24\"\>", 
+   ",", "\<\"$8.00\"\>", ",", "\<\"$8.00\"\>", ",", "\<\"$7.00\"\>", 
+   ",", "\<\"$7.73\"\>", ",", "\<\"$8.27\"\>", ",", "\<\"$6.74\"\>", 
+   ",", "\<\"$8.00\"\>", ",", "\<\"$7.25\"\>", ",", "\<\"$24.32\"\>", 
+   ",", "\<\"$15.67\"\>", ",", "\<\"$7.32\"\>"}], "}"}]], "Output",
+ CellChangeTimes->{{3.66309444769635*^9, 3.663094461206099*^9}, {
+  3.663094534902611*^9, 3.6630946446309137`*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"nprices", "=", 
+  RowBox[{"Reverse", "[", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"ToExpression", "[", 
+      RowBox[{"StringDrop", "[", 
+       RowBox[{"#", ",", "1"}], "]"}], "]"}], "&"}], "/@", "prices"}], 
+   "]"}]}]], "Input",
+ CellChangeTimes->{{3.663094465108526*^9, 3.663094496229837*^9}, {
+  3.663094669119932*^9, 3.663094710705028*^9}, {3.663094747816394*^9, 
+  3.663094778166645*^9}}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+  "7.32`", ",", "15.67`", ",", "24.32`", ",", "7.25`", ",", "8.`", ",", 
+   "6.74`", ",", "8.27`", ",", "7.73`", ",", "7.`", ",", "8.`", ",", "8.`", 
+   ",", "11.24`", ",", "11.01`", ",", "8.`", ",", "8.`", ",", "9.`", ",", 
+   "18.07`", ",", "8.`", ",", "10.01`", ",", "13.57`", ",", "8.`", ",", 
+   "9.5`", ",", "9.`", ",", "8.`", ",", "9.`", ",", "9.`", ",", "9.`", ",", 
+   "8.02`", ",", "6.`", ",", "9.5`", ",", "9.05`", ",", "8.`", ",", "8.02`", 
+   ",", "8.25`", ",", "11.72`", ",", "9.5`", ",", "9.5`", ",", "9.`", ",", 
+   "8.`", ",", "8.02`", ",", "9.5`", ",", "9.`", ",", "10.57`", ",", "9.`", 
+   ",", "8.`", ",", "6.`", ",", "9.5`", ",", "7.5`", ",", "9.5`", ",", 
+   "10.16`", ",", "7.45`", ",", "8.`", ",", "9.`", ",", "9.86`", ",", "8.01`",
+    ",", "8.02`", ",", "8.`", ",", "9.`", ",", "9.5`", ",", "8.11`", ",", 
+   "8.5`", ",", "8.`", ",", "9.5`", ",", "8.5`", ",", "10.25`", ",", "9.5`", 
+   ",", "8.`", ",", "9.`", ",", "8.`", ",", "8.`", ",", "9.5`", ",", "7.75`", 
+   ",", "10.84`", ",", "8.02`", ",", "9.67`", ",", "8.`", ",", "8.`", ",", 
+   "9.`", ",", "13.77`", ",", "19.73`", ",", "8.`", ",", "13.72`", ",", 
+   "11.04`", ",", "11.96`", ",", "10.`", ",", "9.15`", ",", "10.`", ",", 
+   "10.`", ",", "8.5`", ",", "10.`", ",", "11.15`", ",", "14.45`", ",", 
+   "11.26`", ",", "10.51`", ",", "11.`", ",", "8.5`", ",", "9.5`", ",", 
+   "9.5`", ",", "11.`", ",", "11.`", ",", "8.`", ",", "9.5`", ",", "11.5`", 
+   ",", "20.8`", ",", "15.14`", ",", "13.98`", ",", "15.2`", ",", "14.16`", 
+   ",", "11.`", ",", "9.5`", ",", "11.`", ",", "11.`", ",", "8.`", ",", 
+   "14.36`", ",", "12.83`", ",", "11.25`", ",", "13.`", ",", "8.`", ",", 
+   "10.6`", ",", "7.5`", ",", "7.5`", ",", "7.5`", ",", "9.`", ",", "10.`", 
+   ",", "10.`", ",", "11.`", ",", "11.25`", ",", "8.02`", ",", "11.`", ",", 
+   "11.39`", ",", "11.`", ",", "8.`", ",", "12.06`", ",", "11.`", ",", "11.`",
+    ",", "9.5`", ",", "8.`", ",", "11.`", ",", "11.`", ",", "8.`", ",", "8.`",
+    ",", "9.5`", ",", "13.68`", ",", "11.`", ",", "11.`", ",", "8.`", ",", 
+   "11.`", ",", "11.`", ",", "11.`"}], "}"}]], "Output",
+ CellChangeTimes->{{3.663094474888329*^9, 3.663094492165771*^9}, {
+  3.663094672613551*^9, 3.6630947085217123`*^9}, {3.663094751820229*^9, 
+  3.663094779195859*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"ListPlot", "[", "nprices", "]"}]], "Input",
+ CellChangeTimes->{{3.66309478087759*^9, 3.663094785621396*^9}}],
+
+Cell[BoxData[
+ GraphicsBox[{{}, 
+   {RGBColor[0.368417, 0.506779, 0.709798], PointSize[0.01388888888888889], 
+    AbsoluteThickness[1.6], PointBox[CompressedData["
+1:eJxdlT1MU1EUx19MSEwnTTqg0fIAP4oaPyhi/agcFKRIRfpoqZYHvJLIqq64
+3IXFxclBpyY6ODE3TjcuLjqzwuKig4vOvtf7/2PueUlz8rvn89577unw5vPo
+2ZEgCN6mv0y67/dU9WA7vzt3WrAgex9eVHKtK+CjEvUKOz/rZfAxSNrnIUPI
+QflbjN98+XMSfEpyWcDX4aHdr3oWsAAeObRz8oyKd05xUV6l1R5sc/2CpMX1
+CgPkS8r+suKrKu81t7/j4+BxZV9CfNY1IR/T49kbvQi+ruwnIUchb6h8ZWV/
+U+lvKb6t+I47zxz9K5CDkHdV/il5/y79TtBf/PxGVLxprFM/LS8rmcV56O/5
+8Y3i4L5fryEz/oyfz8wo/1nlP4vzPov1B0pPZvw5SJyHITN+FRL9Z6pKP49+
+x32befn+LfvY7w/9fIaMeoIF6bv3eD4L6B/WV1P7r6n6H6n9kVnfootfpv8i
+1ochH6v6yPRf8u0FbLjfJd/ekllf3a9P6r7eKLZk5o8gh+AfSfaa87u4XxP5
+52MjzCP6L/vxRbEhoz67jPnD99pw8+NzCf4N5d9Av8PeNqQ/bvKcL03ML7wH
+aWKd59d0/VJjfqUPVnwWMu7DKL1dQTzmb8lW9v3AnJOW668d6A14AOdpW/Cj
+/xM/n5DZr4otmf5PfRYyz49MfzLnRxvvaQL+bXH/P5jTpo3/D55/2+13i3N8
+Fe+T+1/16zFk5lf6IFb1k1l/jPeL+DaWsaycT2OwW4Md/cHp/5BbJ7N/16TU
+/zi/1iExf0SxUWzJI5AbkOwfxYaM+uyGX2+Q+O8rTHx7Sdx9fAUnSm/I8O8m
+MtRvuCLyKft9xUEHEvcTkvmeO759otgo+65iq+LvdyS7vmLM97/pxwsVCxnx
+EqU3irv/+R9AzEVG
+     "]]}, {}},
+  AspectRatio->NCache[GoldenRatio^(-1), 0.6180339887498948],
+  Axes->{True, True},
+  AxesLabel->{None, None},
+  AxesOrigin->{0, 0},
+  DisplayFunction->Identity,
+  Frame->{{False, False}, {False, False}},
+  FrameLabel->{{None, None}, {None, None}},
+  FrameTicks->{{Automatic, Automatic}, {Automatic, Automatic}},
+  GridLines->{None, None},
+  GridLinesStyle->Directive[
+    GrayLevel[0.5, 0.4]],
+  Method->{},
+  PlotRange->{{0., 149.}, {0, 15.875}},
+  PlotRangeClipping->True,
+  PlotRangePadding->{{
+     Scaled[0.02], 
+     Scaled[0.02]}, {
+     Scaled[0.02], 
+     Scaled[0.05]}},
+  Ticks->{Automatic, Automatic}]], "Output",
+ CellChangeTimes->{3.6630947869673758`*^9}]
+}, Open  ]]
+},
+WindowSize->{808, 621},
+WindowMargins->{{278, Automatic}, {Automatic, 17}},
+FrontEndVersion->"10.0 for Linux x86 (64-bit) (June 27, 2014)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 9559, 154, 3289, "Input"],
+Cell[CellGroupData[{
+Cell[10142, 178, 381, 9, 32, "Input"],
+Cell[10526, 189, 3703, 53, 363, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[14266, 247, 418, 11, 32, "Input"],
+Cell[14687, 260, 2309, 33, 253, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[17033, 298, 132, 2, 32, "Input"],
+Cell[17168, 302, 1783, 41, 242, "Output"]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)
+

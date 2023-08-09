@@ -1,0 +1,339 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 10.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     16850,        330]
+NotebookOptionsPosition[     16344,        309]
+NotebookOutlinePosition[     16677,        324]
+CellTagsIndexPosition[     16634,        321]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[
+ RowBox[{"(*", " ", 
+  RowBox[{
+   RowBox[{"VIEW", " ", "SOURCE", " ", "from", " ", "shop"}], " ", "\[Rule]", 
+   " ", "page"}], " ", "*)"}]], "Input",
+ CellChangeTimes->{{3.644715036658358*^9, 3.6447150749514713`*^9}, {
+  3.6447154295758953`*^9, 3.644715432740879*^9}}],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"shop", "=", "22"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"page2s", "=", 
+   RowBox[{"StringJoin", "@@", 
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"URLFetch", "[", 
+        RowBox[{
+        "\"\<http://www.neocodex.us/forum/index.php?app=itemdb&module=search&\
+section=search&item=&use_rarity=&rarity_low=&rarity_high=&use_price=&price_\
+low=5000&price_high=10000000000000000&use_shop=&shop=\>\"", "~~", 
+         RowBox[{"IntegerString", "[", "shop", "]"}], "~~", 
+         "\"\<&search_order=name&sort=asc&lim=100&st=\>\"", "~~", 
+         RowBox[{"IntegerString", "[", "#", "]"}]}], "]"}], "&"}], "/@", 
+      RowBox[{"Range", "[", 
+       RowBox[{"0", ",", "300", ",", "100"}], "]"}]}], ")"}]}]}], 
+  ";"}]}], "Input",
+ CellChangeTimes->{{3.6447154477162123`*^9, 3.6447154895383244`*^9}, {
+  3.64471569224748*^9, 3.6447156970961103`*^9}, {3.6447158024802523`*^9, 
+  3.644715802766222*^9}, {3.644716313824732*^9, 3.6447163823060913`*^9}, {
+  3.64471665642199*^9, 3.644716656676635*^9}, {3.6447175181539583`*^9, 
+  3.644717518229989*^9}, {3.644717551275344*^9, 3.64471755141469*^9}, {
+  3.644717832326539*^9, 3.644717836070841*^9}, {3.6447179314866047`*^9, 
+  3.644717934255826*^9}, {3.644717977551794*^9, 3.644717977778716*^9}, {
+  3.644718020594345*^9, 3.644718020917564*^9}, {3.644718171936614*^9, 
+  3.644718172131566*^9}, {3.644718338716742*^9, 3.6447183388964157`*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{"items", "=", 
+  RowBox[{"StringCases", "[", 
+   RowBox[{"page", ",", 
+    RowBox[{
+     RowBox[{"Shortest", "[", 
+      RowBox[{
+      "\"\<<B>\>\"", "~~", "t__", "~~", "\"\<</B><BR>\>\"", "~~", "n__", 
+       "~~", "\"\< in stock<BR>Cost:\>\""}], "]"}], "\[RuleDelayed]", "t"}]}],
+    "]"}]}], "\[IndentingNewLine]", 
+ RowBox[{"valitems", "=", 
+  RowBox[{"StringCases", "[", 
+   RowBox[{"page2s", ",", 
+    RowBox[{
+     RowBox[{"\"\<<a href=\\\"http://www.neocodex.us/forum/itemdb/\>\"", "~~", 
+      RowBox[{
+       RowBox[{"Except", "[", "\"\<\\\"\>\"", "]"}], ".."}], "~~", 
+      "\"\<\\\">\\n\\t\>\"", "~~", 
+      RowBox[{"tt", ":", 
+       RowBox[{
+        RowBox[{"{", 
+         RowBox[{"WordCharacter", ",", "WhitespaceCharacter"}], "}"}], 
+        ".."}]}], "~~", "\"\<\\n    </a>\>\""}], "\[RuleDelayed]", "tt"}]}], 
+   "]"}]}], "\[IndentingNewLine]", 
+ RowBox[{"Intersection", "[", 
+  RowBox[{"items", ",", "valitems"}], "]"}]}], "Input",
+ CellChangeTimes->{{3.644712228511326*^9, 3.644712253749634*^9}, {
+   3.644712288988791*^9, 3.644712311928803*^9}, {3.644712385981327*^9, 
+   3.644712391935789*^9}, {3.644715082801908*^9, 3.64471509776001*^9}, 
+   3.6447154148890123`*^9}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"\<\"Vegetable Deluxe\"\>", ",", "\<\"Beef Rouladen\"\>", 
+   ",", "\<\"Cheese Manicotti\"\>", ",", "\<\"Cherries Jubalee\"\>", 
+   ",", "\<\"Chicken Cordon Bleu\"\>", ",", "\<\"Green Tea\"\>", 
+   ",", "\<\"Blueberry Gateaux\"\>", 
+   ",", "\<\"Intergalactic Spiced Beans\"\>", 
+   ",", "\<\"Chocolate Eclair Paste\"\>", 
+   ",", "\<\"Caramalised Blunkabean\"\>", 
+   ",", "\<\"Squashed Salisbury Steak\"\>", 
+   ",", "\<\"Sugarbunny Surprise\"\>", ",", "\<\"Spiced Apple Pie\"\>", 
+   ",", "\<\"Planet Pops\"\>", ",", "\<\"Mouldy Gruncheese\"\>", 
+   ",", "\<\"Rock Fruit\"\>", ",", "\<\"Scrambled Aubergine\"\>", 
+   ",", "\<\"Cosmic Cheese Stars\"\>", ",", "\<\"Garthroxian Goo\"\>", 
+   ",", "\<\"Sloth Surprise\"\>", ",", "\<\"Nova Fruit\"\>", 
+   ",", "\<\"Gloof Stick\"\>", ",", "\<\"Glowing Pretzel\"\>", 
+   ",", "\<\"Toroidoughnut\"\>", ",", "\<\"Impermeable Cheese Log\"\>", 
+   ",", "\<\"Cheese Star Sandwich\"\>", ",", "\<\"Dehydrated Ice Cream\"\>", 
+   ",", "\<\"Sauteed Space Rock\"\>", ",", "\<\"Dehydrated Fungus\"\>", 
+   ",", "\<\"Cratered Pastry\"\>", ",", "\<\"Grobleen Fruit Punch\"\>", 
+   ",", "\<\"Mystery Dessert Goo\"\>", ",", "\<\"Space Coffee\"\>", 
+   ",", "\<\"Constellation Soup\"\>"}], "}"}]], "Output",
+ CellChangeTimes->{{3.644712250132914*^9, 3.644712254021896*^9}, {
+   3.644712302828805*^9, 3.6447123132107153`*^9}, 3.644712392954368*^9, 
+   3.6447124350193167`*^9, 3.644712804449004*^9, 3.644712872422647*^9, 
+   3.6447132543012257`*^9, 3.644713579971561*^9, 3.6447136545612793`*^9, 
+   3.644714001962225*^9, {3.644714896083283*^9, 3.64471492536205*^9}, {
+   3.644715088758225*^9, 3.644715107681973*^9}, 3.6447151753766403`*^9, 
+   3.644715285296135*^9, {3.644715316731036*^9, 3.644715346046253*^9}, {
+   3.64471540850635*^9, 3.644715415483986*^9}, {3.644715452052878*^9, 
+   3.64471551907374*^9}, 3.644715700706081*^9, 3.6447158069370728`*^9, 
+   3.644716098430916*^9, 3.644716337727974*^9, 3.6447163862360067`*^9, 
+   3.644716658863426*^9, 3.644717523682276*^9, 3.64471755572359*^9, 
+   3.644717838801034*^9, 3.644717937959632*^9, {3.644717972056766*^9, 
+   3.644717979935088*^9}, 3.6447180261724243`*^9, 3.644718174364387*^9, 
+   3.644718206577726*^9, 3.644718341087387*^9}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"\<\"Blue Rambus\"\>", ",", "\<\"Chocolate Sloth Head\"\>", 
+   ",", "\<\"Cloned Corn\"\>", ",", "\<\"Constellation Soup\"\>", 
+   ",", "\<\"Cosmic Ring Cereal\"\>", ",", "\<\"Cosmic Stars Sandwich\"\>", 
+   ",", "\<\"Cryogenically Frozen Negg\"\>", 
+   ",", "\<\"Dehydrated Chicken Dumplings\"\>", 
+   ",", "\<\"Dehydrated Spaghetti\"\>", 
+   ",", "\<\"Double Chocolate Surprise\"\>", ",", "\<\"Electric Nachos\"\>", 
+   ",", "\<\"Electric Taco\"\>", ",", "\<\"Freeze Dried Fruit Platter\"\>", 
+   ",", "\<\"Freeze Dried Ice Cream Sandwich\"\>", 
+   ",", "\<\"Full Moon Cheese\"\>", ",", "\<\"Galactic Protein Shake\"\>", 
+   ",", "\<\"Galactic Water\"\>", ",", "\<\"Galaxy Cupcake\"\>", 
+   ",", "\<\"Glowing Asparagus\"\>", ",", "\<\"Gorgroggle Soup\"\>", 
+   ",", "\<\"Grobleen Salad\"\>", ",", "\<\"Grobleen Sandwich\"\>", 
+   ",", "\<\"Grundo Goo Sundae\"\>", ",", "\<\"Grundo Space Grub Platter\"\>",
+    ",", "\<\"Grundos House Special\"\>", ",", "\<\"Grundos Luxury Kebab\"\>",
+    ",", "\<\"Intergalactic Orange Sorbet\"\>", ",", "\<\"Lunar Grunpop\"\>", 
+   ",", "\<\"Milkyway Shake\"\>", ",", "\<\"Mouldy Gruncheese\"\>", 
+   ",", "\<\"Obliteratoes\"\>", ",", "\<\"Pizza Protein Block\"\>", 
+   ",", "\<\"Plate of Unidentifiable Meat\"\>", 
+   ",", "\<\"Prime Beef and Chicken Meatballs\"\>", 
+   ",", "\<\"Protein on the Go\"\>", ",", "\<\"Sloth Cone\"\>", 
+   ",", "\<\"Sloth Pudding Cup\"\>", ",", "\<\"Sloth Spaghetti\"\>", 
+   ",", "\<\"Sloth Wrap\"\>", ",", "\<\"Space Coffee\"\>", 
+   ",", "\<\"Space Quesadilla\"\>", 
+   ",", "\<\"Spotted Pudding with Custard\"\>", 
+   ",", "\<\"Steamed Gorgroggles\"\>", ",", "\<\"Strawberry Milk Packet\"\>", 
+   ",", "\<\"Tentacle Burger\"\>", ",", "\<\"Tigersquash Spectacular\"\>", 
+   ",", "\<\"Tofu Space Slug Soup\"\>", ",", "\<\"Toxic Sloth Slushie\"\>", 
+   ",", "\<\"Vegetarian Sloth Wrap\"\>", ",", "\<\"Blue Rambus\"\>", 
+   ",", "\<\"Chocolate Sloth Head\"\>", ",", "\<\"Cloned Corn\"\>", 
+   ",", "\<\"Constellation Soup\"\>", ",", "\<\"Cosmic Ring Cereal\"\>", 
+   ",", "\<\"Cosmic Stars Sandwich\"\>", 
+   ",", "\<\"Cryogenically Frozen Negg\"\>", 
+   ",", "\<\"Dehydrated Chicken Dumplings\"\>", 
+   ",", "\<\"Dehydrated Spaghetti\"\>", 
+   ",", "\<\"Double Chocolate Surprise\"\>", ",", "\<\"Electric Nachos\"\>", 
+   ",", "\<\"Electric Taco\"\>", ",", "\<\"Freeze Dried Fruit Platter\"\>", 
+   ",", "\<\"Freeze Dried Ice Cream Sandwich\"\>", 
+   ",", "\<\"Full Moon Cheese\"\>", ",", "\<\"Galactic Protein Shake\"\>", 
+   ",", "\<\"Galactic Water\"\>", ",", "\<\"Galaxy Cupcake\"\>", 
+   ",", "\<\"Glowing Asparagus\"\>", ",", "\<\"Gorgroggle Soup\"\>", 
+   ",", "\<\"Grobleen Salad\"\>", ",", "\<\"Grobleen Sandwich\"\>", 
+   ",", "\<\"Grundo Goo Sundae\"\>", ",", "\<\"Grundo Space Grub Platter\"\>",
+    ",", "\<\"Grundos House Special\"\>", ",", "\<\"Grundos Luxury Kebab\"\>",
+    ",", "\<\"Intergalactic Orange Sorbet\"\>", ",", "\<\"Lunar Grunpop\"\>", 
+   ",", "\<\"Milkyway Shake\"\>", ",", "\<\"Mouldy Gruncheese\"\>", 
+   ",", "\<\"Obliteratoes\"\>", ",", "\<\"Pizza Protein Block\"\>", 
+   ",", "\<\"Plate of Unidentifiable Meat\"\>", 
+   ",", "\<\"Prime Beef and Chicken Meatballs\"\>", 
+   ",", "\<\"Protein on the Go\"\>", ",", "\<\"Sloth Cone\"\>", 
+   ",", "\<\"Sloth Pudding Cup\"\>", ",", "\<\"Sloth Spaghetti\"\>", 
+   ",", "\<\"Sloth Wrap\"\>", ",", "\<\"Space Coffee\"\>", 
+   ",", "\<\"Space Quesadilla\"\>", 
+   ",", "\<\"Spotted Pudding with Custard\"\>", 
+   ",", "\<\"Steamed Gorgroggles\"\>", ",", "\<\"Strawberry Milk Packet\"\>", 
+   ",", "\<\"Tentacle Burger\"\>", ",", "\<\"Tigersquash Spectacular\"\>", 
+   ",", "\<\"Tofu Space Slug Soup\"\>", ",", "\<\"Toxic Sloth Slushie\"\>", 
+   ",", "\<\"Vegetarian Sloth Wrap\"\>", ",", "\<\"Blue Rambus\"\>", 
+   ",", "\<\"Chocolate Sloth Head\"\>", ",", "\<\"Cloned Corn\"\>", 
+   ",", "\<\"Constellation Soup\"\>", ",", "\<\"Cosmic Ring Cereal\"\>", 
+   ",", "\<\"Cosmic Stars Sandwich\"\>", 
+   ",", "\<\"Cryogenically Frozen Negg\"\>", 
+   ",", "\<\"Dehydrated Chicken Dumplings\"\>", 
+   ",", "\<\"Dehydrated Spaghetti\"\>", 
+   ",", "\<\"Double Chocolate Surprise\"\>", ",", "\<\"Electric Nachos\"\>", 
+   ",", "\<\"Electric Taco\"\>", ",", "\<\"Freeze Dried Fruit Platter\"\>", 
+   ",", "\<\"Freeze Dried Ice Cream Sandwich\"\>", 
+   ",", "\<\"Full Moon Cheese\"\>", ",", "\<\"Galactic Protein Shake\"\>", 
+   ",", "\<\"Galactic Water\"\>", ",", "\<\"Galaxy Cupcake\"\>", 
+   ",", "\<\"Glowing Asparagus\"\>", ",", "\<\"Gorgroggle Soup\"\>", 
+   ",", "\<\"Grobleen Salad\"\>", ",", "\<\"Grobleen Sandwich\"\>", 
+   ",", "\<\"Grundo Goo Sundae\"\>", ",", "\<\"Grundo Space Grub Platter\"\>",
+    ",", "\<\"Grundos House Special\"\>", ",", "\<\"Grundos Luxury Kebab\"\>",
+    ",", "\<\"Intergalactic Orange Sorbet\"\>", ",", "\<\"Lunar Grunpop\"\>", 
+   ",", "\<\"Milkyway Shake\"\>", ",", "\<\"Mouldy Gruncheese\"\>", 
+   ",", "\<\"Obliteratoes\"\>", ",", "\<\"Pizza Protein Block\"\>", 
+   ",", "\<\"Plate of Unidentifiable Meat\"\>", 
+   ",", "\<\"Prime Beef and Chicken Meatballs\"\>", 
+   ",", "\<\"Protein on the Go\"\>", ",", "\<\"Sloth Cone\"\>", 
+   ",", "\<\"Sloth Pudding Cup\"\>", ",", "\<\"Sloth Spaghetti\"\>", 
+   ",", "\<\"Sloth Wrap\"\>", ",", "\<\"Space Coffee\"\>", 
+   ",", "\<\"Space Quesadilla\"\>", 
+   ",", "\<\"Spotted Pudding with Custard\"\>", 
+   ",", "\<\"Steamed Gorgroggles\"\>", ",", "\<\"Strawberry Milk Packet\"\>", 
+   ",", "\<\"Tentacle Burger\"\>", ",", "\<\"Tigersquash Spectacular\"\>", 
+   ",", "\<\"Tofu Space Slug Soup\"\>", ",", "\<\"Toxic Sloth Slushie\"\>", 
+   ",", "\<\"Vegetarian Sloth Wrap\"\>", ",", "\<\"Blue Rambus\"\>", 
+   ",", "\<\"Chocolate Sloth Head\"\>", ",", "\<\"Cloned Corn\"\>", 
+   ",", "\<\"Constellation Soup\"\>", ",", "\<\"Cosmic Ring Cereal\"\>", 
+   ",", "\<\"Cosmic Stars Sandwich\"\>", 
+   ",", "\<\"Cryogenically Frozen Negg\"\>", 
+   ",", "\<\"Dehydrated Chicken Dumplings\"\>", 
+   ",", "\<\"Dehydrated Spaghetti\"\>", 
+   ",", "\<\"Double Chocolate Surprise\"\>", ",", "\<\"Electric Nachos\"\>", 
+   ",", "\<\"Electric Taco\"\>", ",", "\<\"Freeze Dried Fruit Platter\"\>", 
+   ",", "\<\"Freeze Dried Ice Cream Sandwich\"\>", 
+   ",", "\<\"Full Moon Cheese\"\>", ",", "\<\"Galactic Protein Shake\"\>", 
+   ",", "\<\"Galactic Water\"\>", ",", "\<\"Galaxy Cupcake\"\>", 
+   ",", "\<\"Glowing Asparagus\"\>", ",", "\<\"Gorgroggle Soup\"\>", 
+   ",", "\<\"Grobleen Salad\"\>", ",", "\<\"Grobleen Sandwich\"\>", 
+   ",", "\<\"Grundo Goo Sundae\"\>", ",", "\<\"Grundo Space Grub Platter\"\>",
+    ",", "\<\"Grundos House Special\"\>", ",", "\<\"Grundos Luxury Kebab\"\>",
+    ",", "\<\"Intergalactic Orange Sorbet\"\>", ",", "\<\"Lunar Grunpop\"\>", 
+   ",", "\<\"Milkyway Shake\"\>", ",", "\<\"Mouldy Gruncheese\"\>", 
+   ",", "\<\"Obliteratoes\"\>", ",", "\<\"Pizza Protein Block\"\>", 
+   ",", "\<\"Plate of Unidentifiable Meat\"\>", 
+   ",", "\<\"Prime Beef and Chicken Meatballs\"\>", 
+   ",", "\<\"Protein on the Go\"\>", ",", "\<\"Sloth Cone\"\>", 
+   ",", "\<\"Sloth Pudding Cup\"\>", ",", "\<\"Sloth Spaghetti\"\>", 
+   ",", "\<\"Sloth Wrap\"\>", ",", "\<\"Space Coffee\"\>", 
+   ",", "\<\"Space Quesadilla\"\>", 
+   ",", "\<\"Spotted Pudding with Custard\"\>", 
+   ",", "\<\"Steamed Gorgroggles\"\>", ",", "\<\"Strawberry Milk Packet\"\>", 
+   ",", "\<\"Tentacle Burger\"\>", ",", "\<\"Tigersquash Spectacular\"\>", 
+   ",", "\<\"Tofu Space Slug Soup\"\>", ",", "\<\"Toxic Sloth Slushie\"\>", 
+   ",", "\<\"Vegetarian Sloth Wrap\"\>"}], "}"}]], "Output",
+ CellChangeTimes->{{3.644712250132914*^9, 3.644712254021896*^9}, {
+   3.644712302828805*^9, 3.6447123132107153`*^9}, 3.644712392954368*^9, 
+   3.6447124350193167`*^9, 3.644712804449004*^9, 3.644712872422647*^9, 
+   3.6447132543012257`*^9, 3.644713579971561*^9, 3.6447136545612793`*^9, 
+   3.644714001962225*^9, {3.644714896083283*^9, 3.64471492536205*^9}, {
+   3.644715088758225*^9, 3.644715107681973*^9}, 3.6447151753766403`*^9, 
+   3.644715285296135*^9, {3.644715316731036*^9, 3.644715346046253*^9}, {
+   3.64471540850635*^9, 3.644715415483986*^9}, {3.644715452052878*^9, 
+   3.64471551907374*^9}, 3.644715700706081*^9, 3.6447158069370728`*^9, 
+   3.644716098430916*^9, 3.644716337727974*^9, 3.6447163862360067`*^9, 
+   3.644716658863426*^9, 3.644717523682276*^9, 3.64471755572359*^9, 
+   3.644717838801034*^9, 3.644717937959632*^9, {3.644717972056766*^9, 
+   3.644717979935088*^9}, 3.6447180261724243`*^9, 3.644718174364387*^9, 
+   3.644718206577726*^9, 3.644718341106324*^9}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"\<\"Constellation Soup\"\>", ",", "\<\"Mouldy Gruncheese\"\>", 
+   ",", "\<\"Space Coffee\"\>"}], "}"}]], "Output",
+ CellChangeTimes->{{3.644712250132914*^9, 3.644712254021896*^9}, {
+   3.644712302828805*^9, 3.6447123132107153`*^9}, 3.644712392954368*^9, 
+   3.6447124350193167`*^9, 3.644712804449004*^9, 3.644712872422647*^9, 
+   3.6447132543012257`*^9, 3.644713579971561*^9, 3.6447136545612793`*^9, 
+   3.644714001962225*^9, {3.644714896083283*^9, 3.64471492536205*^9}, {
+   3.644715088758225*^9, 3.644715107681973*^9}, 3.6447151753766403`*^9, 
+   3.644715285296135*^9, {3.644715316731036*^9, 3.644715346046253*^9}, {
+   3.64471540850635*^9, 3.644715415483986*^9}, {3.644715452052878*^9, 
+   3.64471551907374*^9}, 3.644715700706081*^9, 3.6447158069370728`*^9, 
+   3.644716098430916*^9, 3.644716337727974*^9, 3.6447163862360067`*^9, 
+   3.644716658863426*^9, 3.644717523682276*^9, 3.64471755572359*^9, 
+   3.644717838801034*^9, 3.644717937959632*^9, {3.644717972056766*^9, 
+   3.644717979935088*^9}, 3.6447180261724243`*^9, 3.644718174364387*^9, 
+   3.644718206577726*^9, 3.644718341114695*^9}]
+}, Open  ]],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{
+   RowBox[{"url", "[", "it_", "]"}], ":=", 
+   RowBox[{"URLFetch", "[", 
+    RowBox[{
+    "\"\<http://items.jellyneo.net/index.php?go=show_items&name_type=exact&\
+name=\>\"", "~~", 
+     RowBox[{"StringReplace", "[", 
+      RowBox[{"it", ",", 
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{"\"\< \>\"", "\[Rule]", "\"\<+\>\""}], ",", 
+         RowBox[{"\"\<&\>\"", "\[Rule]", "\"\<%26\>\""}]}], "}"}]}], "]"}]}], 
+    "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"price", "[", "it_", "]"}], ":=", 
+   RowBox[{"StringCases", "[", 
+    RowBox[{
+     RowBox[{"url", "[", "it", "]"}], ",", 
+     RowBox[{
+      RowBox[{"Shortest", "[", 
+       RowBox[{
+       "\"\<style=\\\"font-weight:bold;\\\">\>\"", "~~", "nn__", "~~", 
+        "\"\< NP</a>\>\""}], "]"}], "\[RuleDelayed]", "nn"}]}], "]"}]}], 
+  ";"}]}], "Input"]
+},
+WindowSize->{1364, 686},
+WindowMargins->{{0, Automatic}, {Automatic, 0}},
+FrontEndVersion->"10.0 for Linux x86 (64-bit) (June 27, 2014)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 284, 6, 32, "Input"],
+Cell[845, 28, 1447, 28, 165, "Input"],
+Cell[CellGroupData[{
+Cell[2317, 60, 1216, 29, 143, "Input"],
+Cell[3536, 91, 2257, 35, 121, "Output"],
+Cell[5796, 128, 8505, 131, 737, "Output"],
+Cell[14304, 261, 1135, 17, 32, "Output"]
+}, Open  ]],
+Cell[15454, 281, 886, 26, 77, "Input"]
+}
+]
+*)
+
+(* End of internal cache information *)

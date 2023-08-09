@@ -1,0 +1,252 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 10.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      7775,        243]
+NotebookOptionsPosition[      6880,        207]
+NotebookOutlinePosition[      7215,        222]
+CellTagsIndexPosition[      7172,        219]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"sum39", "=", 
+   RowBox[{
+    RowBox[{"Total", "[", 
+     RowBox[{
+      RowBox[{"IntegerDigits", "[", "#", "]"}], "^", "39"}], "]"}], "&"}]}], 
+  ";"}]], "Input",
+ CellChangeTimes->{{3.646161992744438*^9, 3.646162029232512*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{"Position", "[", 
+    RowBox[{"#", ",", 
+     RowBox[{"#", "[", 
+      RowBox[{"[", 
+       RowBox[{"-", "1"}], "]"}], "]"}]}], "]"}], "&"}], "@", 
+  RowBox[{"NestList", "[", 
+   RowBox[{"sum39", ",", "2", ",", "1000"}], "]"}]}]], "Input",
+ CellChangeTimes->{{3.6461620305146*^9, 3.6461621042528667`*^9}, {
+   3.646162143109846*^9, 3.646162233566231*^9}, {3.6461623568079967`*^9, 
+   3.646162380171756*^9}, 3.646162526895467*^9}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{"{", "399", "}"}], ",", 
+   RowBox[{"{", "700", "}"}], ",", 
+   RowBox[{"{", "1001", "}"}]}], "}"}]], "Output",
+ CellChangeTimes->{{3.64616205366008*^9, 3.646162098097411*^9}, {
+   3.6461621479221277`*^9, 3.646162179777088*^9}, {3.646162221577161*^9, 
+   3.646162246491941*^9}, {3.646162357621121*^9, 3.6461623805705976`*^9}, 
+   3.646162527541193*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{
+   RowBox[{
+    RowBox[{
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"Position", "[", 
+         RowBox[{"#", ",", 
+          RowBox[{"#", "[", 
+           RowBox[{"[", 
+            RowBox[{"-", "1"}], "]"}], "]"}]}], "]"}], "&"}], "@", 
+       RowBox[{"NestList", "[", 
+        RowBox[{"sum39", ",", "#", ",", "10000"}], "]"}]}], ")"}], "[", 
+     RowBox[{"[", 
+      RowBox[{"-", "2"}], "]"}], "]"}], "&"}], "/@", 
+   RowBox[{"Range", "[", "81", "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"Partition", "[", 
+   RowBox[{
+    RowBox[{"Flatten", "[", 
+     RowBox[{"10001", "-", "%"}], "]"}], ",", "9"}], "]"}], "//", 
+  "MatrixForm"}]}], "Input",
+ CellChangeTimes->{{3.646162517996051*^9, 3.646162599471513*^9}, {
+  3.646162683627261*^9, 3.646162689734592*^9}, {3.646162735700214*^9, 
+  3.646162760693756*^9}, {3.6461628299965076`*^9, 3.646162913709936*^9}, {
+  3.646162946883456*^9, 3.6461629506919613`*^9}, {3.64616298542927*^9, 
+  3.646162988018044*^9}, {3.6461630203934727`*^9, 3.646163021931841*^9}, {
+  3.64616305853828*^9, 3.6461630964879017`*^9}, {3.6461632910677567`*^9, 
+  3.646163323569952*^9}, {3.646165301947896*^9, 3.646165302043951*^9}, {
+  3.6461872307236032`*^9, 3.646187230815557*^9}}],
+
+Cell[BoxData[
+ TagBox[
+  RowBox[{"(", "\[NoBreak]", GridBox[{
+     {"1", "301", "4356", "1249", "1673", "4356", "236", "914", "4356"},
+     {"1", "301", "4356", "1249", "1673", "4356", "236", "914", "4356"},
+     {"1249", "301", "4356", "1249", "1673", "4356", "1249", "1673", "4356"},
+     {"1249", "1673", "4356", "1249", "1673", "4356", "1249", "1673", 
+      "4356"},
+     {"1249", "914", "403", "1249", "1673", "4356", "1249", "1673", "4356"},
+     {"1249", "301", "4356", "1249", "1673", "4356", "1249", "1673", "4356"},
+     {"987", "1673", "4356", "1249", "914", "4356", "236", "1673", "4356"},
+     {"1249", "1673", "4356", "1249", "1673", "4356", "236", "914", "4356"},
+     {"1249", "301", "4356", "1249", "1673", "394", "1249", "914", "4356"}
+    },
+    GridBoxAlignment->{
+     "Columns" -> {{Center}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}}, 
+      "RowsIndexed" -> {}},
+    GridBoxSpacings->{"Columns" -> {
+        Offset[0.27999999999999997`], {
+         Offset[0.7]}, 
+        Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+        Offset[0.2], {
+         Offset[0.4]}, 
+        Offset[0.2]}, "RowsIndexed" -> {}}], "\[NoBreak]", ")"}],
+  Function[BoxForm`e$, 
+   MatrixForm[BoxForm`e$]]]], "Output",
+ CellChangeTimes->{3.646163081790908*^9, 3.6461631131496267`*^9, 
+  3.646163295378873*^9, 3.646163343536536*^9, 3.646165330276992*^9, 
+  3.6461872771006403`*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Length", "[", "%", "]"}]], "Input",
+ CellChangeTimes->{{3.646163158512638*^9, 3.6461631596666117`*^9}}],
+
+Cell[BoxData["30"], "Output",
+ CellChangeTimes->{3.646163159928336*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Length", "[", 
+  RowBox[{"Union", "[", "%120", "]"}], "]"}]], "Input",
+ CellChangeTimes->{{3.646163160248561*^9, 3.6461631650001698`*^9}}],
+
+Cell[BoxData["7"], "Output",
+ CellChangeTimes->{3.646163165511868*^9}]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"chains", "=", 
+   RowBox[{"(", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"NestList", "[", 
+       RowBox[{"sum39", ",", "#", ",", "10000"}], "]"}], "&"}], "/@", 
+     RowBox[{"{", 
+      RowBox[{
+      "1", ",", "99", ",", "7", ",", "2", ",", "78", ",", "39", ",", "8", ",",
+        "55", ",", "4", ",", "5", ",", "3"}], "}"}]}], ")"}]}], 
+  ";"}]], "Input",
+ CellChangeTimes->{{3.646266193556443*^9, 3.6462661941148233`*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"cycs", "=", 
+   RowBox[{"getCyc", "/@", "chains"}]}], ";"}]], "Input",
+ CellChangeTimes->{{3.646265843783896*^9, 3.646265848695985*^9}, {
+  3.646266066962941*^9, 3.646266073078442*^9}, {3.646266180547738*^9, 
+  3.646266196804812*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Length", "/@", "cycs"}]], "Input",
+ CellChangeTimes->{{3.646266075019847*^9, 3.646266076622424*^9}}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+  "1", ",", "142", ",", "236", ",", "301", ",", "394", ",", "403", ",", "914",
+    ",", "987", ",", "1249", ",", "1673", ",", "4356"}], "}"}]], "Output",
+ CellChangeTimes->{3.646266079309451*^9, 3.6462663077366667`*^9}]
+}, Open  ]],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"cycStart", "[", "l_", "]"}], ":=", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"Position", "[", 
+     RowBox[{"l", ",", 
+      RowBox[{"l", "[", 
+       RowBox[{"[", 
+        RowBox[{"-", "1"}], "]"}], "]"}], ",", "1"}], "]"}], "[", 
+    RowBox[{"[", 
+     RowBox[{"All", ",", "1"}], "]"}], "]"}], "[", 
+   RowBox[{"[", 
+    RowBox[{"-", "2"}], "]"}], "]"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"getCyc", "[", "l_", "]"}], ":=", 
+  RowBox[{"l", "[", 
+   RowBox[{"[", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"cycStart", "[", "l", "]"}], "+", "1"}], ";;"}], "]"}], 
+   "]"}]}]}], "Input",
+ CellChangeTimes->{{3.646265863999226*^9, 3.646265890933649*^9}, {
+  3.64626592875294*^9, 3.646266044606731*^9}}]
+},
+WindowSize->{876, 621},
+WindowMargins->{{Automatic, 210}, {Automatic, 17}},
+FrontEndVersion->"10.0 for Linux x86 (64-bit) (June 27, 2014)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 264, 8, 32, "Input"],
+Cell[CellGroupData[{
+Cell[847, 32, 475, 12, 32, "Input"],
+Cell[1325, 46, 403, 9, 32, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[1765, 60, 1277, 31, 55, "Input"],
+Cell[3045, 93, 1407, 28, 179, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[4489, 126, 127, 2, 32, "Input"],
+Cell[4619, 130, 71, 1, 32, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[4727, 136, 162, 3, 32, "Input"],
+Cell[4892, 141, 70, 1, 32, "Output"]
+}, Open  ]],
+Cell[4977, 145, 461, 13, 32, "Input"],
+Cell[5441, 160, 269, 6, 32, "Input"],
+Cell[CellGroupData[{
+Cell[5735, 170, 124, 2, 32, "Input"],
+Cell[5862, 174, 259, 5, 32, "Output"]
+}, Open  ]],
+Cell[6136, 182, 740, 23, 55, "Input"]
+}
+]
+*)
+
+(* End of internal cache information *)

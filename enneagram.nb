@@ -1,0 +1,294 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 10.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     10898,        285]
+NotebookOptionsPosition[      9983,        248]
+NotebookOutlinePosition[     10471,        269]
+CellTagsIndexPosition[     10386,        264]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[BoxData[
+ RowBox[{"?", "Graph"}]], "Input",
+ CellChangeTimes->{{3.7001720457201567`*^9, 3.700172046936173*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox["\<\"\\!\\(\\*RowBox[{\\\"Graph\\\", \\\"[\\\", RowBox[{\\\"{\\\", \
+RowBox[{SubscriptBox[StyleBox[\\\"e\\\", \\\"TI\\\"], StyleBox[\\\"1\\\", \
+\\\"TR\\\"]], \\\",\\\", SubscriptBox[StyleBox[\\\"e\\\", \\\"TI\\\"], \
+StyleBox[\\\"2\\\", \\\"TR\\\"]], \\\",\\\", StyleBox[\\\"\[Ellipsis]\\\", \\\
+\"TR\\\"]}], \\\"}\\\"}], \\\"]\\\"}]\\) yields a graph with edges \
+\\!\\(\\*SubscriptBox[StyleBox[\\\"e\\\", \\\"TI\\\"], StyleBox[\\\"j\\\", \\\
+\"TI\\\"]]\\).\\n\\!\\(\\*RowBox[{\\\"Graph\\\", \\\"[\\\", \
+RowBox[{RowBox[{\\\"{\\\", RowBox[{StyleBox[SubscriptBox[StyleBox[\\\"v\\\", \
+\\\"TI\\\"], StyleBox[\\\"1\\\", \\\"TR\\\"]], \\\"TI\\\"], \\\",\\\", \
+StyleBox[SubscriptBox[StyleBox[\\\"v\\\", \\\"TI\\\"], StyleBox[\\\"2\\\", \\\
+\"TR\\\"]], \\\"TI\\\"], \\\",\\\", StyleBox[\\\"\[Ellipsis]\\\", \
+\\\"TR\\\"]}], \\\"}\\\"}], \\\",\\\", RowBox[{\\\"{\\\", \
+RowBox[{SubscriptBox[StyleBox[\\\"e\\\", \\\"TI\\\"], StyleBox[\\\"1\\\", \
+\\\"TR\\\"]], \\\",\\\", SubscriptBox[StyleBox[\\\"e\\\", \\\"TI\\\"], \
+StyleBox[\\\"2\\\", \\\"TR\\\"]], \\\",\\\", StyleBox[\\\"\[Ellipsis]\\\", \\\
+\"TR\\\"]}], \\\"}\\\"}]}], \\\"]\\\"}]\\) yields the graph with vertices \\!\
+\\(\\*SubscriptBox[StyleBox[\\\"v\\\", \\\"TI\\\"], StyleBox[\\\"i\\\", \
+\\\"TI\\\"]]\\) and edges \\!\\(\\*SubscriptBox[StyleBox[\\\"e\\\", \
+\\\"TI\\\"], StyleBox[\\\"j\\\", \\\"TI\\\"]]\\). \
+\\n\\!\\(\\*RowBox[{\\\"Graph\\\", \\\"[\\\", RowBox[{RowBox[{\\\"{\\\", \
+RowBox[{StyleBox[\\\"\[Ellipsis]\\\", \\\"TR\\\"], \\\",\\\", \
+RowBox[{SubscriptBox[StyleBox[\\\"w\\\", \\\"TI\\\"], StyleBox[\\\"i\\\", \
+\\\"TI\\\"]], \\\"[\\\", RowBox[{SubscriptBox[StyleBox[\\\"v\\\", \
+\\\"TI\\\"], StyleBox[\\\"i\\\", \\\"TI\\\"]], \\\",\\\", StyleBox[\\\"\
+\[Ellipsis]\\\", \\\"TR\\\"]}], \\\"]\\\"}], \\\",\\\", StyleBox[\\\"\
+\[Ellipsis]\\\", \\\"TR\\\"]}], \\\"}\\\"}], \\\",\\\", RowBox[{\\\"{\\\", \
+RowBox[{StyleBox[\\\"\[Ellipsis]\\\", \\\"TR\\\"], \\\",\\\", \
+RowBox[{SubscriptBox[StyleBox[\\\"w\\\", \\\"TI\\\"], StyleBox[\\\"j\\\", \
+\\\"TI\\\"]], \\\"[\\\", RowBox[{SubscriptBox[StyleBox[\\\"e\\\", \
+\\\"TI\\\"], StyleBox[\\\"j\\\", \\\"TI\\\"]], \\\",\\\", StyleBox[\\\"\
+\[Ellipsis]\\\", \\\"TR\\\"]}], \\\"]\\\"}], \\\",\\\", StyleBox[\\\"\
+\[Ellipsis]\\\", \\\"TR\\\"]}], \\\"}\\\"}]}], \\\"]\\\"}]\\) yields a graph \
+with vertex and edge properties defined by the symbolic wrappers \
+\\!\\(\\*SubscriptBox[StyleBox[\\\"w\\\", \\\"TI\\\"], StyleBox[\\\"k\\\", \\\
+\"TI\\\"]]\\).\"\>", "MSG"], "\[NonBreakingSpace]", 
+  ButtonBox[
+   StyleBox["\[RightSkeleton]", "SR"],
+   Active->True,
+   BaseStyle->"Link",
+   ButtonData->"paclet:ref/Graph"]}]], "Print", "PrintUsage",
+ CellChangeTimes->{3.70017204738089*^9},
+ CellTags->"Info3700146847-8495612"]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{"g", "=", 
+  RowBox[{"Graph", "[", 
+   RowBox[{
+    RowBox[{"Range", "[", "9", "]"}], ",", 
+    RowBox[{
+     RowBox[{"Transpose", "[", 
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"Range", "[", 
+         RowBox[{"1", ",", "9"}], "]"}], ",", 
+        RowBox[{
+         RowBox[{"Range", "[", 
+          RowBox[{"2", ",", "9"}], "]"}], "~", "Join", "~", 
+         RowBox[{"{", "1", "}"}]}]}], "}"}], "]"}], "~", "Join", "~", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{"1", ",", "4"}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"4", ",", "2"}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"2", ",", "8"}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"8", ",", "5"}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"5", ",", "7"}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"7", ",", "1"}], "}"}]}], "}"}], "~", "Join", "~", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{"3", ",", "6"}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"6", ",", "9"}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"9", ",", "3"}], "}"}]}], "}"}]}]}], "]"}]}]], "Input",
+ CellChangeTimes->{{3.7001720485403433`*^9, 3.70017216074163*^9}, {
+  3.700172219107346*^9, 3.700172219640647*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"PlanarGraphQ", "[", "g", "]"}]], "Input",
+ CellChangeTimes->{{3.7001722252747927`*^9, 3.700172230180891*^9}}],
+
+Cell[BoxData["False"], "Output",
+ CellChangeTimes->{{3.700172227795343*^9, 3.700172230731866*^9}}]
+}, Open  ]],
+
+Cell[BoxData[
+ GraphicsBox[
+  NamespaceBox["NetworkGraphics",
+   DynamicModuleBox[{Typeset`graph = HoldComplete[
+     Graph[{1, 2, 3, 4, 5, 6, 7, 8, 9}, {
+      Null, {{1, 2}, {2, 3}, {3, 4}, {4, 5}, {5, 6}, {6, 7}, {7, 8}, {8, 9}, {
+       9, 1}, {1, 4}, {4, 2}, {2, 8}, {8, 5}, {5, 7}, {7, 1}, {3, 6}, {6, 
+       9}, {9, 3}}}, {
+      GraphLayout -> "CircularEmbedding", GridLinesStyle -> Directive[
+         GrayLevel[0.5, 0.4]]}]]}, 
+    TagBox[
+     GraphicsGroupBox[
+      GraphicsComplexBox[{{-0.6427876096865398, 
+       0.7660444431189786}, {-0.9848077530122081, 
+       0.17364817766693114`}, {-0.8660254037844384, -0.4999999999999994}, \
+{-0.3420201433256684, -0.9396926207859079}, {
+       0.3420201433256691, -0.9396926207859085}, {
+       0.8660254037844389, -0.5000000000000012}, {0.984807753012208, 
+       0.17364817766692903`}, {0.6427876096865388, 
+       0.7660444431189772}, {-7.044813998280222*^-16, 1.}}, {
+        {Hue[0.6, 0.7, 0.5], Opacity[0.7], 
+         {Arrowheads[0.], ArrowBox[{1, 2}, 0.022364449578799767`]}, 
+         {Arrowheads[0.], ArrowBox[{1, 4}, 0.022364449578799767`]}, 
+         {Arrowheads[0.], ArrowBox[{1, 7}, 0.022364449578799767`]}, 
+         {Arrowheads[0.], ArrowBox[{1, 9}, 0.022364449578799767`]}, 
+         {Arrowheads[0.], ArrowBox[{2, 3}, 0.022364449578799767`]}, 
+         {Arrowheads[0.], ArrowBox[{2, 4}, 0.022364449578799767`]}, 
+         {Arrowheads[0.], ArrowBox[{2, 8}, 0.022364449578799767`]}, 
+         {Arrowheads[0.], ArrowBox[{3, 4}, 0.022364449578799767`]}, 
+         {Arrowheads[0.], ArrowBox[{3, 6}, 0.022364449578799767`]}, 
+         {Arrowheads[0.], ArrowBox[{3, 9}, 0.022364449578799767`]}, 
+         {Arrowheads[0.], ArrowBox[{4, 5}, 0.022364449578799767`]}, 
+         {Arrowheads[0.], ArrowBox[{5, 6}, 0.022364449578799767`]}, 
+         {Arrowheads[0.], ArrowBox[{5, 7}, 0.022364449578799767`]}, 
+         {Arrowheads[0.], ArrowBox[{5, 8}, 0.022364449578799767`]}, 
+         {Arrowheads[0.], ArrowBox[{6, 7}, 0.022364449578799767`]}, 
+         {Arrowheads[0.], ArrowBox[{6, 9}, 0.022364449578799767`]}, 
+         {Arrowheads[0.], ArrowBox[{7, 8}, 0.022364449578799767`]}, 
+         {Arrowheads[0.], ArrowBox[{8, 9}, 0.022364449578799767`]}}, 
+        {Hue[0.6, 0.2, 0.8], EdgeForm[{GrayLevel[0], Opacity[0.7]}], 
+         DiskBox[1, 0.022364449578799767`], DiskBox[2, 0.022364449578799767`],
+          DiskBox[3, 0.022364449578799767`], 
+         DiskBox[4, 0.022364449578799767`], DiskBox[5, 0.022364449578799767`],
+          DiskBox[6, 0.022364449578799767`], 
+         DiskBox[7, 0.022364449578799767`], DiskBox[8, 0.022364449578799767`],
+          DiskBox[9, 0.022364449578799767`]}}]],
+     MouseAppearanceTag["NetworkGraphics"]],
+    AllowKernelInitialization->False]],
+  DefaultBaseStyle->{
+   "NetworkGraphics", FrontEnd`GraphicsHighlightColor -> Hue[0.8, 1., 0.6]},
+  FrameTicks->None,
+  GridLinesStyle->Directive[
+    GrayLevel[0.5, 0.4]]]], "Input",
+ CellChangeTimes->{{3.700172195381812*^9, 3.70017220750733*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Transpose", "[", 
+  RowBox[{"{", 
+   RowBox[{
+    RowBox[{"Range", "[", 
+     RowBox[{"1", ",", "9"}], "]"}], ",", 
+    RowBox[{
+     RowBox[{"Range", "[", 
+      RowBox[{"2", ",", "9"}], "]"}], "~", "Join", "~", 
+     RowBox[{"{", "1", "}"}]}]}], "}"}], "]"}]], "Input",
+ CellChangeTimes->{{3.700172062001371*^9, 3.70017210634203*^9}}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{"1", ",", "2"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"2", ",", "3"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"3", ",", "4"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"4", ",", "5"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"5", ",", "6"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"6", ",", "7"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"7", ",", "8"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"8", ",", "9"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"9", ",", "1"}], "}"}]}], "}"}]], "Output",
+ CellChangeTimes->{
+  3.700172071560433*^9, {3.7001721035066853`*^9, 3.700172106592017*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Transpose", "[", 
+  RowBox[{"{", 
+   RowBox[{
+    RowBox[{"{", 
+     RowBox[{"1", ",", "4", ",", "2", ",", "8", ",", "5", ",", "7"}], "}"}], 
+    ",", 
+    RowBox[{"{", 
+     RowBox[{"4", ",", "2", ",", "8", ",", "5", ",", "7", ",", "1"}], "}"}]}],
+    "}"}], "]"}]], "Input",
+ CellChangeTimes->{{3.7001720924631643`*^9, 3.700172128641876*^9}}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{"1", ",", "4"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"4", ",", "2"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"2", ",", "8"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"8", ",", "5"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"5", ",", "7"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"7", ",", "1"}], "}"}]}], "}"}]], "Output",
+ CellChangeTimes->{3.700172128905383*^9}]
+}, Open  ]]
+},
+WindowSize->{810, 655},
+WindowMargins->{{Automatic, 127}, {14, Automatic}},
+FrontEndVersion->"10.0 for Linux x86 (64-bit) (June 27, 2014)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{
+ "Info3700146847-8495612"->{
+  Cell[699, 26, 2768, 43, 110, "Print",
+   CellTags->"Info3700146847-8495612"]}
+ }
+*)
+(*CellTagsIndex
+CellTagsIndex->{
+ {"Info3700146847-8495612", 10282, 258}
+ }
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 116, 2, 32, "Input"],
+Cell[699, 26, 2768, 43, 110, "Print",
+ CellTags->"Info3700146847-8495612"]
+}, Open  ]],
+Cell[3482, 72, 1289, 38, 77, "Input"],
+Cell[CellGroupData[{
+Cell[4796, 114, 133, 2, 32, "Input"],
+Cell[4932, 118, 98, 1, 32, "Output"]
+}, Open  ]],
+Cell[5045, 122, 3000, 53, 369, InheritFromParent],
+Cell[CellGroupData[{
+Cell[8070, 179, 360, 10, 32, "Input"],
+Cell[8433, 191, 677, 22, 32, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[9147, 218, 368, 10, 32, "Input"],
+Cell[9518, 230, 449, 15, 32, "Output"]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)

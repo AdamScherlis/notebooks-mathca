@@ -1,0 +1,856 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 10.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     31911,        847]
+NotebookOptionsPosition[     30325,        788]
+NotebookOutlinePosition[     30660,        803]
+CellTagsIndexPosition[     30617,        800]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"c", "=", 
+   RowBox[{"299792458", 
+    RowBox[{"m", "/", "s"}]}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"nu133", "=", 
+   RowBox[{"9192631770", "/", "s"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"h", "=", 
+   RowBox[{"6626070040", "*", 
+    RowBox[{"10", "^", 
+     RowBox[{"-", "43"}]}], "J", " ", "s"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"e", "=", 
+   RowBox[{"16021766208", "*", 
+    RowBox[{"10", "^", 
+     RowBox[{"-", "29"}]}], "Co"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"k", "=", 
+   RowBox[{"138064852", "*", 
+    RowBox[{"10", "^", 
+     RowBox[{"-", "31"}]}], 
+    RowBox[{"J", "/", "Ke"}]}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"NA", "=", 
+   RowBox[{"6022140857", "*", 
+    RowBox[{
+     RowBox[{"10", "^", "14"}], "/", "mol"}]}]}], ";"}]}], "Input",
+ CellChangeTimes->{{3.6999850325009327`*^9, 3.699985240281664*^9}, {
+  3.6999853364719143`*^9, 3.699985341524015*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"J", "=", 
+  RowBox[{"kg", " ", 
+   RowBox[{
+    RowBox[{"m", "^", "2"}], "/", 
+    RowBox[{"s", "^", "2"}]}]}]}]], "Input",
+ CellChangeTimes->{{3.6999979259001207`*^9, 3.6999979290018873`*^9}}],
+
+Cell[BoxData[
+ FractionBox[
+  RowBox[{"kg", " ", 
+   SuperscriptBox["m", "2"]}], 
+  SuperscriptBox["s", "2"]]], "Output",
+ CellChangeTimes->{3.699997929819734*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"s", "/", 
+  RowBox[{"(", 
+   RowBox[{"nu133", "^", 
+    RowBox[{"-", "1"}]}], ")"}]}]], "Input",
+ CellChangeTimes->{{3.699985260978416*^9, 3.699985269747044*^9}, {
+  3.6999853129702463`*^9, 3.6999853458771477`*^9}}],
+
+Cell[BoxData["9192631770"], "Output",
+ CellChangeTimes->{{3.699985262920019*^9, 3.6999852701399612`*^9}, {
+  3.699985316355917*^9, 3.6999853461524057`*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{"m", "/", 
+  RowBox[{"(", 
+   RowBox[{"c", "/", "nu133"}], ")"}]}], "\[IndentingNewLine]", 
+ RowBox[{"%", "//", "N"}]}], "Input",
+ CellChangeTimes->{{3.6999853063455*^9, 3.699985330009788*^9}}],
+
+Cell[BoxData[
+ FractionBox["656616555", "21413747"]], "Output",
+ CellChangeTimes->{{3.699985311326086*^9, 3.699985347042263*^9}}],
+
+Cell[BoxData["30.66331898849837`"], "Output",
+ CellChangeTimes->{{3.699985311326086*^9, 3.6999853470436974`*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{"J", "/", 
+  RowBox[{"(", 
+   RowBox[{"h", "*", "nu133"}], ")"}]}], "\[IndentingNewLine]", 
+ RowBox[{"%", "//", "N"}]}], "Input",
+ CellChangeTimes->{{3.699985372411501*^9, 3.699985399111116*^9}}],
+
+Cell[BoxData[
+ FractionBox["25000000000000000000000000000000000000000", 
+  "152277554899872927"]], "Output",
+ CellChangeTimes->{{3.699985386265052*^9, 3.699985399432356*^9}}],
+
+Cell[BoxData["1.6417389953784228`*^23"], "Output",
+ CellChangeTimes->{{3.699985386265052*^9, 3.699985399434272*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"J", "/", "mol"}], "/", 
+  RowBox[{"(", 
+   RowBox[{"h", "*", "nu133", "*", "NA"}], ")"}]}], "\[IndentingNewLine]", 
+ RowBox[{"%", "//", "N"}]}], "Input",
+ CellChangeTimes->{{3.699985568827035*^9, 3.6999855748480997`*^9}, {
+  3.699992796268676*^9, 3.699992797057378*^9}}],
+
+Cell[BoxData[
+ FractionBox["250000000000000000000000000", 
+  "917036884966585297794878439"]], "Output",
+ CellChangeTimes->{{3.699985570216572*^9, 3.699985575047606*^9}, 
+   3.699992798034753*^9}],
+
+Cell[BoxData["0.27261716960175425`"], "Output",
+ CellChangeTimes->{{3.699985570216572*^9, 3.699985575047606*^9}, 
+   3.699992798037787*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{"Ke", "/", 
+  RowBox[{"(", 
+   RowBox[{"h", "*", 
+    RowBox[{"nu133", "/", "k"}]}], ")"}]}], "\[IndentingNewLine]", 
+ RowBox[{"%", "//", "N"}]}], "Input",
+ CellChangeTimes->{{3.699985410137114*^9, 3.699985423110608*^9}}],
+
+Cell[BoxData[
+ FractionBox["345162130000000000", "152277554899872927"]], "Output",
+ CellChangeTimes->{3.6999854233478947`*^9}],
+
+Cell[BoxData["2.266664514195506`"], "Output",
+ CellChangeTimes->{3.699985423348874*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{"(", 
+    RowBox[{"h", "*", 
+     RowBox[{"nu133", "/", "k"}]}], ")"}], "*", 
+   RowBox[{"(", 
+    RowBox[{"9", 
+     RowBox[{"F", "/", 
+      RowBox[{"(", 
+       RowBox[{"5", "Ke"}], ")"}]}]}], ")"}]}], "//", "N"}]], "Input",
+ CellChangeTimes->{{3.699993281677534*^9, 3.6999933022009897`*^9}}],
+
+Cell[BoxData[
+ RowBox[{"0.7941184011692456`", " ", "F"}]], "Output",
+ CellChangeTimes->{{3.6999932821135073`*^9, 3.6999933025513353`*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{"kg", "/", 
+  RowBox[{"(", 
+   RowBox[{"h", "*", 
+    RowBox[{"nu133", "/", 
+     RowBox[{"c", "^", "2"}]}]}], ")"}]}], "\[IndentingNewLine]", 
+ RowBox[{"%", "//", "N"}]}], "Input",
+ CellChangeTimes->{{3.699993094893169*^9, 3.699993138712397*^9}, {
+  3.699997937388384*^9, 3.699997937503422*^9}}],
+
+Cell[BoxData[
+ FractionBox["45854856058000900000000000000000000000000000000000000000", 
+  "3107705202038223"]], "Output",
+ CellChangeTimes->{{3.6999931046286488`*^9, 3.6999931389238863`*^9}, 
+   3.699997937861341*^9}],
+
+Cell[BoxData["1.4755214242305377`*^40"], "Output",
+ CellChangeTimes->{{3.6999931046286488`*^9, 3.6999931389238863`*^9}, 
+   3.6999979378632507`*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ NamespaceBox["WolframAlphaQueryParseResults",
+  DynamicModuleBox[{Typeset`q$$ = "reduced planck mass*c in kg*m/s", 
+   Typeset`newq$$ = "reduced planck mass*c in kg*m/s", Typeset`chosen$$ = 
+   "UnitConvert[Quantity[1, \"ReducedPlanckMass\"*\"SpeedOfLight\"], \
+(\"Kilograms\"*\"Meters\")/\"Seconds\"]", Typeset`open$$ = False}, 
+   PaneSelectorBox[{False->
+    DynamicModuleBox[{WolframAlphaClient`Private`show$$ = False, 
+     WolframAlphaClient`Private`assumptionsQ$$ = True}, 
+     TagBox[
+      FrameBox[
+       TagBox[GridBox[{
+          {
+           InputFieldBox[Dynamic[Typeset`newq$$], String,
+            Appearance->None,
+            BaseStyle->{"CalculateInput"},
+            ContinuousAction->True,
+            Enabled->True,
+            FieldSize->{{1, 40}, {1, 
+               DirectedInfinity[1]}},
+            TrapSelection->False], 
+           ButtonBox[
+            TagBox[
+             TooltipBox[
+              StyleBox["\<\"\[RightGuillemet]\"\>",
+               StripOnInput->False,
+               LineColor->RGBColor[1, 0.5, 0],
+               FrontFaceColor->RGBColor[1, 0.5, 0],
+               BackFaceColor->RGBColor[1, 0.5, 0],
+               GraphicsColor->RGBColor[1, 0.5, 0],
+               FontColor->RGBColor[1, 0.5, 0]],
+              DynamicBox[
+               ToBoxes[
+                FEPrivate`FrontEndResource[
+                "WAStrings", "InterpretationAssumptions"], StandardForm]]],
+             Annotation[#, 
+              Dynamic[
+               FEPrivate`FrontEndResource[
+               "WAStrings", "InterpretationAssumptions"]], "Tooltip"]& ],
+            Appearance->None,
+            BaselinePosition->Baseline,
+            ButtonFunction:>(Quiet[
+               WolframAlpha[]]; Typeset`open$$ = True; 
+             WolframAlphaClient`Private`extrudeFromFastParse[
+              "reduced planck mass*c in kg*m/s", 
+               Defer[
+                UnitConvert[
+                 Quantity[
+                 1, "ReducedPlanckMass" "SpeedOfLight"], ("Kilograms" 
+                  "Meters")/"Seconds"]], "Fast parse"]; 
+             Typeset`open$$ = False),
+            ContentPadding->False,
+            Evaluator->Automatic,
+            Method->"Queued"], 
+           ItemBox[
+            ButtonBox[
+             PaneSelectorBox[{True->
+              TagBox[
+               TooltipBox[
+                
+                DynamicBox[FEPrivate`FrontEndResource[
+                 "WABitmaps", "OrangeSquarePlus"],
+                 ImageSizeCache->{10., {3., 8.}}],
+                DynamicBox[
+                 ToBoxes[
+                  FEPrivate`FrontEndResource["WAStrings", "ShowAllResults"], 
+                  StandardForm]]],
+               Annotation[#, 
+                Dynamic[
+                 FEPrivate`FrontEndResource["WAStrings", "ShowAllResults"]], 
+                "Tooltip"]& ], False->
+              TagBox[
+               TooltipBox[
+                
+                DynamicBox[FEPrivate`FrontEndResource[
+                 "WABitmaps", "GraySquarePlus"],
+                 ImageSizeCache->{10., {3., 8.}}],
+                DynamicBox[
+                 ToBoxes[
+                  FEPrivate`FrontEndResource["WAStrings", "ShowAllResults"], 
+                  StandardForm]]],
+               Annotation[#, 
+                Dynamic[
+                 FEPrivate`FrontEndResource["WAStrings", "ShowAllResults"]], 
+                "Tooltip"]& ]}, Dynamic[WolframAlphaClient`Private`show$$],
+              ImageSize->All],
+             Appearance->None,
+             ButtonFunction:>(Quiet[
+                WolframAlpha[]]; If[
+                Or[
+                 CurrentValue["OptionKey"], 
+                 CurrentValue["AltKey"]], SelectionMove[
+                  ButtonNotebook[], All, ButtonCell, AutoScroll -> False]; 
+                NotebookWrite[
+                  ButtonNotebook[], 
+                  Cell[
+                  Typeset`newq$$, "WolframAlphaShort", FormatType -> 
+                   "TextForm"], All], Typeset`open$$ = True; 
+                WolframAlphaClient`Private`extrudeFromFastParse[
+                 "reduced planck mass*c in kg*m/s", 
+                  Defer[
+                   UnitConvert[
+                    Quantity[
+                    1, "ReducedPlanckMass" "SpeedOfLight"], ("Kilograms" 
+                    "Meters")/"Seconds"]], "Fast parse"]; 
+                Typeset`open$$ = False]),
+             Evaluator->Automatic,
+             Method->"Queued"],
+            Alignment->{Right, Top},
+            StripOnInput->False]},
+          {
+           PaneBox[
+            TagBox[
+             TooltipBox[
+              ButtonBox[
+               PaneSelectorBox[{False->
+                StyleBox[
+                 RowBox[{"UnitConvert", "[", 
+                  RowBox[{
+                   TemplateBox[{"1"},
+                    "QuantityUnit",
+                    DisplayFunction->(TooltipBox[
+                    StyleBox[
+                    RowBox[{#, "\[InvisibleSpace]", 
+                    StyleBox[
+                    RowBox[{" ", 
+                    RowBox[{"\"reduced Planck mass\"", "\[ThinSpace]", 
+                    StyleBox["\"c\"", Italic, StripOnInput -> False]}]}], 
+                    "QuantityUnitTraditionalLabel"]}], ShowStringCharacters -> 
+                    False], 
+                    "Unit: reduced Planck mass speed of light in vacuum"]& ),
+                    InterpretationFunction->(RowBox[{"Quantity", "[", 
+                    RowBox[{#, ",", 
+                    
+                    RowBox[{
+                    "\"ReducedPlanckMass\"", " ", "\"SpeedOfLight\""}]}], 
+                    "]"}]& )], ",", " ", 
+                   RowBox[{
+                    RowBox[{"(", 
+                    RowBox[{"\"\<Kilograms\>\"", "*", "\"\<Meters\>\""}], 
+                    ")"}], "/", "\"\<Seconds\>\""}]}], "]"}],
+                 StripOnInput->False,
+                 NumberMarks->False], True->
+                StyleBox[
+                 RowBox[{"UnitConvert", "[", 
+                  RowBox[{
+                   TemplateBox[{"1"},
+                    "QuantityUnit",
+                    DisplayFunction->(TooltipBox[
+                    StyleBox[
+                    RowBox[{#, "\[InvisibleSpace]", 
+                    StyleBox[
+                    RowBox[{" ", 
+                    RowBox[{"\"reduced Planck mass\"", "\[ThinSpace]", 
+                    StyleBox["\"c\"", Italic, StripOnInput -> False]}]}], 
+                    "QuantityUnitTraditionalLabel"]}], ShowStringCharacters -> 
+                    False], 
+                    "Unit: reduced Planck mass speed of light in vacuum"]& ),
+                    InterpretationFunction->(RowBox[{"Quantity", "[", 
+                    RowBox[{#, ",", 
+                    
+                    RowBox[{
+                    "\"ReducedPlanckMass\"", " ", "\"SpeedOfLight\""}]}], 
+                    "]"}]& )], ",", " ", 
+                   RowBox[{
+                    RowBox[{"(", 
+                    RowBox[{"\<\"Kilograms\"\>", "*", "\<\"Meters\"\>"}], 
+                    ")"}], "/", "\<\"Seconds\"\>"}]}], "]"}],
+                 StripOnInput->False,
+                 ShowSyntaxStyles->False,
+                 NumberMarks->False,
+                 FontColor->RGBColor[1, 0.5, 0]]}, Dynamic[
+                 CurrentValue["MouseOver"]],
+                BaseStyle->{ShowStringCharacters -> True},
+                FrameMargins->0,
+                ImageSize->Automatic],
+               Alignment->Left,
+               Appearance->None,
+               BaseStyle->{},
+               ButtonFunction:>(SelectionMove[
+                  ButtonNotebook[], All, ButtonCell]; NotebookWrite[
+                  ButtonNotebook[], 
+                  Cell[
+                   BoxData[
+                    RowBox[{"UnitConvert", "[", 
+                    RowBox[{
+                    
+                    TemplateBox[{"1"}, "QuantityUnit", 
+                    DisplayFunction -> (TooltipBox[
+                    StyleBox[
+                    RowBox[{#, "\[InvisibleSpace]", 
+                    StyleBox[
+                    RowBox[{" ", 
+                    RowBox[{"\"reduced Planck mass\"", "\[ThinSpace]", 
+                    StyleBox["\"c\"", Italic, StripOnInput -> False]}]}], 
+                    "QuantityUnitTraditionalLabel"]}], ShowStringCharacters -> 
+                    False], 
+                    "Unit: reduced Planck mass speed of light in vacuum"]& ), 
+                    InterpretationFunction -> (RowBox[{"Quantity", "[", 
+                    RowBox[{#, ",", 
+                    
+                    RowBox[{"\"ReducedPlanckMass\"", " ", 
+                    "\"SpeedOfLight\""}]}], "]"}]& ), SyntaxForm -> Mod], ",",
+                     " ", 
+                    RowBox[{
+                    RowBox[{"(", 
+                    RowBox[{"\"Kilograms\"", "*", "\"Meters\""}], ")"}], "/", 
+                    "\"Seconds\""}]}], "]"}]], "Input"], All]; SelectionMove[
+                  ButtonNotebook[], After, CellContents]),
+               Evaluator->Automatic,
+               ImageSize->Automatic,
+               Method->"Preemptive"],
+              DynamicBox[
+               ToBoxes[
+                FEPrivate`FrontEndResource["WAStrings", "RemoveResults"], 
+                StandardForm]]],
+             Annotation[#, 
+              Dynamic[
+               FEPrivate`FrontEndResource["WAStrings", "RemoveResults"]], 
+              "Tooltip"]& ],
+            AppearanceElements->{},
+            BaseStyle->{ShowStringCharacters -> True, ScriptLevel -> 0},
+            ImageSize->{Automatic, {1, 100}},
+            Scrollbars->{False, Automatic}], "\[SpanFromLeft]", 
+           "\[SpanFromLeft]"}
+         },
+         AutoDelete->False,
+         BaselinePosition->{1, 1},
+         FrameStyle->GrayLevel[0.85],
+         GridBoxAlignment->{"Columns" -> {{Left}}},
+         GridBoxDividers->{
+          "Columns" -> {{False}}, "Rows" -> {False, {True}, False}},
+         GridBoxItemSize->{
+          "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+        "Grid"],
+       Alignment->Top,
+       Background->Dynamic[
+         FEPrivate`If[
+          FEPrivate`And[
+           FEPrivate`SameQ[
+            FEPrivate`Head[Typeset`newq$$], String], 
+           FEPrivate`UnsameQ[Typeset`q$$, Typeset`newq$$]], 
+          RGBColor[1., 0.975, 0.95], 
+          GrayLevel[1]]],
+       BaselinePosition->Baseline,
+       FrameStyle->GrayLevel[0.85],
+       ImageSize->Automatic,
+       RoundingRadius->5,
+       StripOnInput->False],
+      EventHandlerTag[{
+       "MouseEntered" :> 
+        FEPrivate`Set[WolframAlphaClient`Private`show$$, True], "MouseExited" :> 
+        FEPrivate`Set[WolframAlphaClient`Private`show$$, False], 
+        PassEventsDown -> Automatic, PassEventsUp -> True}]],
+     DynamicModuleValues:>{}], True->
+    TagBox[GridBox[{
+       {
+        DynamicModuleBox[{WolframAlphaClient`Private`show$$ = False, 
+         WolframAlphaClient`Private`assumptionsQ$$ = True}, 
+         TagBox[
+          FrameBox[
+           TagBox[GridBox[{
+              {
+               InputFieldBox[Dynamic[Typeset`newq$$], String,
+                Appearance->None,
+                BaseStyle->{"CalculateInput"},
+                ContinuousAction->True,
+                Enabled->True,
+                FieldSize->{{1, 40}, {1, 
+                   DirectedInfinity[1]}},
+                TrapSelection->False], 
+               ButtonBox[
+                TagBox[
+                 TooltipBox[
+                  StyleBox["\<\"\[RightGuillemet]\"\>",
+                   StripOnInput->False,
+                   LineColor->RGBColor[1, 0.5, 0],
+                   FrontFaceColor->RGBColor[1, 0.5, 0],
+                   BackFaceColor->RGBColor[1, 0.5, 0],
+                   GraphicsColor->RGBColor[1, 0.5, 0],
+                   FontColor->RGBColor[1, 0.5, 0]],
+                  DynamicBox[
+                   ToBoxes[
+                    FEPrivate`FrontEndResource[
+                    "WAStrings", "InterpretationAssumptions"], StandardForm]]],
+                 Annotation[#, 
+                  Dynamic[
+                   FEPrivate`FrontEndResource[
+                   "WAStrings", "InterpretationAssumptions"]], "Tooltip"]& ],
+                Appearance->None,
+                BaselinePosition->Baseline,
+                ButtonFunction:>(Quiet[
+                   WolframAlpha[]]; Typeset`open$$ = True; 
+                 WolframAlphaClient`Private`extrudeFromFastParse[
+                  "reduced planck mass*c in kg*m/s", 
+                   Defer[
+                    UnitConvert[
+                    Quantity[
+                    1, "ReducedPlanckMass" "SpeedOfLight"], ("Kilograms" 
+                    "Meters")/"Seconds"]], "Fast parse"]; 
+                 Typeset`open$$ = False),
+                ContentPadding->False,
+                Evaluator->Automatic,
+                Method->"Queued"], 
+               ItemBox[
+                ButtonBox[
+                 PaneSelectorBox[{True->
+                  TagBox[
+                   TooltipBox[
+                    
+                    DynamicBox[FEPrivate`FrontEndResource[
+                    "WABitmaps", "OrangeSquarePlus"]],
+                    DynamicBox[
+                    ToBoxes[
+                    FEPrivate`FrontEndResource["WAStrings", "ShowAllResults"],
+                     StandardForm]]],
+                   Annotation[#, 
+                    Dynamic[
+                    FEPrivate`FrontEndResource[
+                    "WAStrings", "ShowAllResults"]], "Tooltip"]& ], False->
+                  TagBox[
+                   TooltipBox[
+                    
+                    DynamicBox[FEPrivate`FrontEndResource[
+                    "WABitmaps", "GraySquarePlus"]],
+                    DynamicBox[
+                    ToBoxes[
+                    FEPrivate`FrontEndResource["WAStrings", "ShowAllResults"],
+                     StandardForm]]],
+                   Annotation[#, 
+                    Dynamic[
+                    FEPrivate`FrontEndResource[
+                    "WAStrings", "ShowAllResults"]], "Tooltip"]& ]}, Dynamic[
+                  WolframAlphaClient`Private`show$$],
+                  ImageSize->All],
+                 Appearance->None,
+                 ButtonFunction:>(Quiet[
+                    WolframAlpha[]]; If[
+                    Or[
+                    CurrentValue["OptionKey"], 
+                    CurrentValue["AltKey"]], SelectionMove[
+                    ButtonNotebook[], All, ButtonCell, AutoScroll -> False]; 
+                    NotebookWrite[
+                    ButtonNotebook[], 
+                    Cell[
+                    Typeset`newq$$, "WolframAlphaShort", FormatType -> 
+                    "TextForm"], All], Typeset`open$$ = True; 
+                    WolframAlphaClient`Private`extrudeFromFastParse[
+                    "reduced planck mass*c in kg*m/s", 
+                    Defer[
+                    UnitConvert[
+                    Quantity[
+                    1, "ReducedPlanckMass" "SpeedOfLight"], ("Kilograms" 
+                    "Meters")/"Seconds"]], "Fast parse"]; 
+                    Typeset`open$$ = False]),
+                 Evaluator->Automatic,
+                 Method->"Queued"],
+                Alignment->{Right, Top},
+                StripOnInput->False]},
+              {
+               PaneBox[
+                TagBox[
+                 TooltipBox[
+                  ButtonBox[
+                   PaneSelectorBox[{False->
+                    StyleBox[
+                    RowBox[{"UnitConvert", "[", 
+                    RowBox[{
+                    TemplateBox[{"1"},
+                    "QuantityUnit",
+                    DisplayFunction->(TooltipBox[
+                    StyleBox[
+                    RowBox[{#, "\[InvisibleSpace]", 
+                    StyleBox[
+                    RowBox[{" ", 
+                    RowBox[{"\"reduced Planck mass\"", "\[ThinSpace]", 
+                    StyleBox["\"c\"", Italic, StripOnInput -> False]}]}], 
+                    "QuantityUnitTraditionalLabel"]}], ShowStringCharacters -> 
+                    False], 
+                    "Unit: reduced Planck mass speed of light in vacuum"]& ),
+                    InterpretationFunction->(RowBox[{"Quantity", "[", 
+                    RowBox[{#, ",", 
+                    
+                    RowBox[{"\"ReducedPlanckMass\"", " ", 
+                    "\"SpeedOfLight\""}]}], "]"}]& )], ",", " ", 
+                    RowBox[{
+                    RowBox[{"(", 
+                    RowBox[{"\<\"Kilograms\"\>", "*", "\<\"Meters\"\>"}], 
+                    ")"}], "/", "\<\"Seconds\"\>"}]}], "]"}],
+                    StripOnInput->False,
+                    NumberMarks->False], True->
+                    StyleBox[
+                    RowBox[{"UnitConvert", "[", 
+                    RowBox[{
+                    TemplateBox[{"1"},
+                    "QuantityUnit",
+                    DisplayFunction->(TooltipBox[
+                    StyleBox[
+                    RowBox[{#, "\[InvisibleSpace]", 
+                    StyleBox[
+                    RowBox[{" ", 
+                    RowBox[{"\"reduced Planck mass\"", "\[ThinSpace]", 
+                    StyleBox["\"c\"", Italic, StripOnInput -> False]}]}], 
+                    "QuantityUnitTraditionalLabel"]}], ShowStringCharacters -> 
+                    False], 
+                    "Unit: reduced Planck mass speed of light in vacuum"]& ),
+                    InterpretationFunction->(RowBox[{"Quantity", "[", 
+                    RowBox[{#, ",", 
+                    
+                    RowBox[{"\"ReducedPlanckMass\"", " ", 
+                    "\"SpeedOfLight\""}]}], "]"}]& )], ",", " ", 
+                    RowBox[{
+                    RowBox[{"(", 
+                    RowBox[{"\<\"Kilograms\"\>", "*", "\<\"Meters\"\>"}], 
+                    ")"}], "/", "\<\"Seconds\"\>"}]}], "]"}],
+                    StripOnInput->False,
+                    ShowSyntaxStyles->False,
+                    NumberMarks->False,
+                    FontColor->RGBColor[1, 0.5, 0]]}, Dynamic[
+                    CurrentValue["MouseOver"]],
+                    BaseStyle->{ShowStringCharacters -> True},
+                    FrameMargins->0,
+                    ImageSize->Automatic],
+                   Alignment->Left,
+                   Appearance->None,
+                   BaseStyle->{},
+                   ButtonFunction:>(SelectionMove[
+                    ButtonNotebook[], All, ButtonCell]; NotebookWrite[
+                    ButtonNotebook[], 
+                    Cell[
+                    BoxData[
+                    RowBox[{"UnitConvert", "[", 
+                    RowBox[{
+                    
+                    TemplateBox[{"1"}, "QuantityUnit", 
+                    DisplayFunction -> (TooltipBox[
+                    StyleBox[
+                    RowBox[{#, "\[InvisibleSpace]", 
+                    StyleBox[
+                    RowBox[{" ", 
+                    RowBox[{"\"reduced Planck mass\"", "\[ThinSpace]", 
+                    StyleBox["\"c\"", Italic, StripOnInput -> False]}]}], 
+                    "QuantityUnitTraditionalLabel"]}], ShowStringCharacters -> 
+                    False], 
+                    "Unit: reduced Planck mass speed of light in vacuum"]& ), 
+                    InterpretationFunction -> (RowBox[{"Quantity", "[", 
+                    RowBox[{#, ",", 
+                    
+                    RowBox[{"\"ReducedPlanckMass\"", " ", 
+                    "\"SpeedOfLight\""}]}], "]"}]& ), SyntaxForm -> Mod], ",",
+                     " ", 
+                    RowBox[{
+                    RowBox[{"(", 
+                    RowBox[{"\"Kilograms\"", "*", "\"Meters\""}], ")"}], "/", 
+                    "\"Seconds\""}]}], "]"}]], "Input"], All]; SelectionMove[
+                    ButtonNotebook[], After, CellContents]),
+                   Evaluator->Automatic,
+                   ImageSize->Automatic,
+                   Method->"Preemptive"],
+                  DynamicBox[
+                   ToBoxes[
+                    FEPrivate`FrontEndResource["WAStrings", "RemoveResults"], 
+                    StandardForm]]],
+                 Annotation[#, 
+                  Dynamic[
+                   FEPrivate`FrontEndResource["WAStrings", "RemoveResults"]], 
+                  "Tooltip"]& ],
+                AppearanceElements->{},
+                BaseStyle->{ShowStringCharacters -> True, ScriptLevel -> 0},
+                ImageSize->{Automatic, {1, 100}},
+                Scrollbars->{False, Automatic}], "\[SpanFromLeft]", 
+               "\[SpanFromLeft]"}
+             },
+             AutoDelete->False,
+             BaselinePosition->{1, 1},
+             FrameStyle->GrayLevel[0.85],
+             GridBoxAlignment->{"Columns" -> {{Left}}},
+             GridBoxDividers->{
+              "Columns" -> {{False}}, "Rows" -> {False, {True}, False}},
+             
+             GridBoxItemSize->{
+              "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+            "Grid"],
+           Alignment->Top,
+           Background->Dynamic[
+             FEPrivate`If[
+              FEPrivate`And[
+               FEPrivate`SameQ[
+                FEPrivate`Head[Typeset`newq$$], String], 
+               FEPrivate`UnsameQ[Typeset`q$$, Typeset`newq$$]], 
+              RGBColor[1., 0.975, 0.95], 
+              GrayLevel[1]]],
+           BaselinePosition->Baseline,
+           FrameStyle->GrayLevel[0.85],
+           ImageSize->Automatic,
+           RoundingRadius->5,
+           StripOnInput->False],
+          
+          EventHandlerTag[{
+           "MouseEntered" :> 
+            FEPrivate`Set[WolframAlphaClient`Private`show$$, True], 
+            "MouseExited" :> 
+            FEPrivate`Set[WolframAlphaClient`Private`show$$, False], 
+            PassEventsDown -> Automatic, PassEventsUp -> True}]],
+         DynamicModuleValues:>{}]},
+       {
+        InterpretationBox[
+         StyleBox[
+          
+          DynamicBox[FEPrivate`FrontEndResource[
+           "FEExpressions", "NecklaceAnimator"][20]],
+          AnimatorBoxOptions->{ImageSize->20}],
+         Animator[Appearance -> "Necklace", ImageSize -> 20],
+         BaseStyle->{"Deploy"}]}
+      },
+      BaselinePosition->{1, 1},
+      DefaultBaseStyle->"Column",
+      GridBoxAlignment->{"Columns" -> {{Left}}},
+      GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+     
+     "Column"]}, Dynamic[
+     TrueQ[Typeset`open$$]],
+    BaseStyle->{Deployed -> True},
+    ImageSize->Automatic],
+   DynamicModuleValues:>{}],
+  BaseStyle->{Deployed -> True},
+  DeleteWithContents->True,
+  Editable->False,
+  SelectWithContents->True]], "WolframAlphaShortInput"],
+
+Cell[BoxData[
+ TemplateBox[{"1.30155174854882372275873495800147796262`3.9227873188981293"},
+  "QuantityUnit",
+  DisplayFunction->(TooltipBox[
+    StyleBox[
+     RowBox[{#, "\[InvisibleSpace]", 
+       StyleBox[
+        RowBox[{" ", 
+          
+          RowBox[{"\"kg\"", "\[ThinSpace]", "\"m\"", "\[InvisibleSpace]", 
+            "\"/\"", "\[InvisibleSpace]", "\"s\""}]}], 
+        "QuantityUnitTraditionalLabel"]}], ShowStringCharacters -> False], 
+    "Unit: kilogram meters per second"]& ),
+  InterpretationFunction->(RowBox[{"Quantity", "[", 
+     RowBox[{#, ",", 
+       FractionBox[
+        RowBox[{"\"Kilograms\"", " ", "\"Meters\""}], "\"Seconds\""]}], 
+     "]"}]& )]], "Output",
+ CellChangeTimes->{{3.699987421001438*^9, 3.699987435768299*^9}, 
+   3.6999874673506727`*^9, 3.6999925845671253`*^9, {3.699992633695459*^9, 
+   3.699992665607209*^9}}]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{"(*", " ", "cc", " ", "*)"}]], "Input",
+ CellChangeTimes->{{3.6999979154933233`*^9, 3.699997916345376*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"(", 
+   RowBox[{
+    RowBox[{"h", "/", "c"}], "/", 
+    RowBox[{"(", 
+     RowBox[{"1.501", "*", 
+      RowBox[{"10", "^", 
+       RowBox[{"-", "25"}]}], " ", 
+      RowBox[{"kg", "/", 
+       RowBox[{"m", "^", "3"}]}]}], ")"}]}], ")"}], "^", 
+  RowBox[{"(", 
+   RowBox[{"1", "/", "4"}], ")"}]}]], "Input",
+ CellChangeTimes->{{3.699997913367935*^9, 3.699998003936986*^9}}],
+
+Cell[BoxData[
+ RowBox[{"0.00006194605542395462`", " ", 
+  SuperscriptBox[
+   RowBox[{"(", 
+    SuperscriptBox["m", "4"], ")"}], 
+   RowBox[{"1", "/", "4"}]]}]], "Output",
+ CellChangeTimes->{{3.6999979507635098`*^9, 3.699998004331263*^9}}]
+}, Open  ]]
+},
+WindowSize->{808, 621},
+WindowMargins->{{Automatic, 106}, {Automatic, 15}},
+FrontEndVersion->"10.0 for Linux x86 (64-bit) (June 27, 2014)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 1001, 30, 143, "Input"],
+Cell[CellGroupData[{
+Cell[1584, 54, 217, 6, 32, "Input"],
+Cell[1804, 62, 163, 5, 54, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[2004, 72, 239, 6, 32, "Input"],
+Cell[2246, 80, 156, 2, 32, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[2439, 87, 217, 5, 55, "Input"],
+Cell[2659, 94, 129, 2, 49, "Output"],
+Cell[2791, 98, 113, 1, 32, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[2941, 104, 219, 5, 55, "Input"],
+Cell[3163, 111, 174, 3, 49, "Output"],
+Cell[3340, 116, 116, 1, 34, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[3493, 122, 306, 7, 55, "Input"],
+Cell[3802, 131, 195, 4, 49, "Output"],
+Cell[4000, 137, 139, 2, 32, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[4176, 144, 245, 6, 55, "Input"],
+Cell[4424, 152, 126, 2, 49, "Output"],
+Cell[4553, 156, 87, 1, 32, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[4677, 162, 341, 11, 32, "Input"],
+Cell[5021, 175, 138, 2, 32, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[5196, 182, 320, 8, 55, "Input"],
+Cell[5519, 192, 217, 4, 49, "Output"],
+Cell[5739, 198, 148, 2, 34, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[5924, 205, 22707, 528, 70, "WolframAlphaShortInput"],
+Cell[28634, 735, 857, 20, 32, "Output"]
+}, Open  ]],
+Cell[29506, 758, 130, 2, 32, "Input"],
+Cell[CellGroupData[{
+Cell[29661, 764, 407, 13, 32, "Input"],
+Cell[30071, 779, 238, 6, 37, "Output"]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)

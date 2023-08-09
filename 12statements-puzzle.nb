@@ -1,0 +1,215 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 10.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      6757,        206]
+NotebookOptionsPosition[      6414,        189]
+NotebookOutlinePosition[      6746,        204]
+CellTagsIndexPosition[      6703,        201]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"of", "[", 
+   RowBox[{"l_", ",", "n_"}], "]"}], ":=", 
+  RowBox[{"Fold", "[", 
+   RowBox[{"Or", ",", "False", ",", "\[IndentingNewLine]", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"Fold", "[", 
+       RowBox[{"And", ",", "True", ",", "\[IndentingNewLine]", 
+        RowBox[{"Join", "[", 
+         RowBox[{"#", ",", 
+          RowBox[{"Not", "/@", 
+           RowBox[{"Complement", "[", 
+            RowBox[{"l", ",", "#"}], "]"}]}]}], "]"}]}], "]"}], 
+      "\[IndentingNewLine]", "&"}], "/@", 
+     RowBox[{"Subsets", "[", 
+      RowBox[{"l", ",", 
+       RowBox[{"{", "n", "}"}]}], "]"}]}]}], "]"}]}]], "Input",
+ CellChangeTimes->{{3.708803562028405*^9, 3.7088035755577803`*^9}, {
+   3.7088037211227217`*^9, 3.7088037725407543`*^9}, {3.708803807308927*^9, 
+   3.708803825683221*^9}, {3.708803865699911*^9, 3.708803871499893*^9}, {
+   3.70880425043441*^9, 3.70880430068312*^9}, {3.708804385479328*^9, 
+   3.708804393701096*^9}, {3.708804438955638*^9, 3.708804445233306*^9}, 
+   3.7088060594719467`*^9}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"BooleanConvert", "[", "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{"(", 
+    RowBox[{
+     RowBox[{"P", "[", "1", "]"}], "\[Equivalent]", "True"}], ")"}], 
+   "\[IndentingNewLine]", "&&", 
+   RowBox[{"(", 
+    RowBox[{
+     RowBox[{"P", "[", "2", "]"}], "\[Equivalent]", 
+     RowBox[{"of", "[", 
+      RowBox[{
+       RowBox[{"P", "/@", 
+        RowBox[{"Range", "[", 
+         RowBox[{"7", ",", "12"}], "]"}]}], ",", "3"}], "]"}]}], ")"}], 
+   "\[IndentingNewLine]", "&&", 
+   RowBox[{"(", 
+    RowBox[{
+     RowBox[{"P", "[", "3", "]"}], "\[Equivalent]", 
+     RowBox[{"of", "[", 
+      RowBox[{
+       RowBox[{"P", "/@", 
+        RowBox[{"Range", "[", 
+         RowBox[{"2", ",", "12", ",", "2"}], "]"}]}], ",", "2"}], "]"}]}], 
+    ")"}], "\[IndentingNewLine]", "&&", 
+   RowBox[{"(", 
+    RowBox[{
+     RowBox[{"P", "[", "4", "]"}], "\[Equivalent]", 
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{"P", "[", "5", "]"}], "\[Implies]", 
+       RowBox[{"(", 
+        RowBox[{
+         RowBox[{"P", "[", "6", "]"}], "&&", 
+         RowBox[{"P", "[", "7", "]"}]}], ")"}]}], ")"}]}], ")"}], 
+   "\[IndentingNewLine]", "&&", 
+   RowBox[{"(", 
+    RowBox[{
+     RowBox[{"P", "[", "5", "]"}], "\[Equivalent]", 
+     RowBox[{"of", "[", 
+      RowBox[{
+       RowBox[{"P", "/@", 
+        RowBox[{"Range", "[", 
+         RowBox[{"2", ",", "4"}], "]"}]}], ",", "0"}], "]"}]}], ")"}], 
+   "\[IndentingNewLine]", "&&", 
+   RowBox[{"(", 
+    RowBox[{
+     RowBox[{"P", "[", "6", "]"}], "\[Equivalent]", 
+     RowBox[{"of", "[", 
+      RowBox[{
+       RowBox[{"P", "/@", 
+        RowBox[{"Range", "[", 
+         RowBox[{"1", ",", "12", ",", "2"}], "]"}]}], ",", "4"}], "]"}]}], 
+    ")"}], "\[IndentingNewLine]", "&&", 
+   RowBox[{"(", 
+    RowBox[{
+     RowBox[{"P", "[", "7", "]"}], "\[Equivalent]", 
+     RowBox[{"Xor", "[", 
+      RowBox[{
+       RowBox[{"P", "[", "2", "]"}], ",", 
+       RowBox[{"P", "[", "3", "]"}]}], "]"}]}], ")"}], "\[IndentingNewLine]", 
+   "&&", 
+   RowBox[{"(", 
+    RowBox[{
+     RowBox[{"P", "[", "8", "]"}], "\[Equivalent]", 
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{"P", "[", "7", "]"}], "\[Implies]", 
+       RowBox[{"(", 
+        RowBox[{
+         RowBox[{"P", "[", "5", "]"}], "&&", 
+         RowBox[{"P", "[", "6", "]"}]}], ")"}]}], ")"}]}], ")"}], 
+   "\[IndentingNewLine]", "&&", 
+   RowBox[{"(", 
+    RowBox[{
+     RowBox[{"P", "[", "9", "]"}], "\[Equivalent]", 
+     RowBox[{"of", "[", 
+      RowBox[{
+       RowBox[{"P", "/@", 
+        RowBox[{"Range", "[", 
+         RowBox[{"1", ",", "6"}], "]"}]}], ",", "3"}], "]"}]}], ")"}], 
+   "\[IndentingNewLine]", "&&", 
+   RowBox[{"(", 
+    RowBox[{
+     RowBox[{"P", "[", "10", "]"}], "\[Equivalent]", 
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{"P", "[", "11", "]"}], "&&", 
+       RowBox[{"P", "[", "12", "]"}]}], ")"}]}], ")"}], "\[IndentingNewLine]",
+    "&&", 
+   RowBox[{"(", 
+    RowBox[{
+     RowBox[{"P", "[", "11", "]"}], "\[Equivalent]", 
+     RowBox[{"of", "[", 
+      RowBox[{
+       RowBox[{"P", "/@", 
+        RowBox[{"Range", "[", 
+         RowBox[{"7", ",", "9"}], "]"}]}], ",", "1"}], "]"}]}], ")"}], 
+   "\[IndentingNewLine]", "&&", 
+   RowBox[{"(", 
+    RowBox[{
+     RowBox[{"P", "[", "12", "]"}], "\[Equivalent]", 
+     RowBox[{"of", "[", 
+      RowBox[{
+       RowBox[{"P", "/@", 
+        RowBox[{"Range", "[", "11", "]"}]}], ",", "4"}], "]"}]}], ")"}]}], 
+  "\[IndentingNewLine]", "]"}]], "Input",
+ CellChangeTimes->{{3.7088032532384567`*^9, 3.708803257286772*^9}, {
+  3.7088033002153482`*^9, 3.708803304262908*^9}, {3.7088033940091677`*^9, 
+  3.708803417464566*^9}, {3.708803471925651*^9, 3.708803538535602*^9}, {
+  3.708803578457095*^9, 3.708803652884638*^9}, {3.7088044257198477`*^9, 
+  3.708804455529994*^9}, {3.708805280338806*^9, 3.7088053072907267`*^9}, {
+  3.70880539624921*^9, 3.708805440117393*^9}, {3.708805728251553*^9, 
+  3.708805770435924*^9}, {3.708805819874606*^9, 3.708806012307856*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"P", "[", "1", "]"}], "&&", 
+  RowBox[{"!", 
+   RowBox[{"P", "[", "2", "]"}]}], "&&", 
+  RowBox[{"P", "[", "3", "]"}], "&&", 
+  RowBox[{"P", "[", "4", "]"}], "&&", 
+  RowBox[{"!", 
+   RowBox[{"P", "[", "5", "]"}]}], "&&", 
+  RowBox[{"P", "[", "6", "]"}], "&&", 
+  RowBox[{"P", "[", "7", "]"}], "&&", 
+  RowBox[{"!", 
+   RowBox[{"P", "[", "8", "]"}]}], "&&", 
+  RowBox[{"!", 
+   RowBox[{"P", "[", "9", "]"}]}], "&&", 
+  RowBox[{"!", 
+   RowBox[{"P", "[", "10", "]"}]}], "&&", 
+  RowBox[{"P", "[", "11", "]"}], "&&", 
+  RowBox[{"!", 
+   RowBox[{"P", "[", "12", "]"}]}]}]], "Output",
+ CellChangeTimes->{
+  3.708805420045308*^9, 3.708805453162653*^9, {3.7088057317807913`*^9, 
+   3.708805770978065*^9}, 3.708805821392714*^9, 3.708806018384151*^9, {
+   3.70880604899439*^9, 3.7088060691412354`*^9}}]
+}, Open  ]]
+},
+WindowSize->{548, 686},
+WindowMargins->{{Automatic, 0}, {Automatic, 0}},
+FrontEndVersion->"10.0 for Linux x86 (64-bit) (June 27, 2014)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 1038, 24, 99, "Input"],
+Cell[CellGroupData[{
+Cell[1621, 48, 3946, 113, 319, "Input"],
+Cell[5570, 163, 828, 23, 55, "Output"]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)

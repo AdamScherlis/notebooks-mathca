@@ -1,0 +1,418 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 11.3' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     15849,        410]
+NotebookOptionsPosition[     13756,        362]
+NotebookOutlinePosition[     14307,        383]
+CellTagsIndexPosition[     14219,        378]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[BoxData[
+ RowBox[{"7200", "*", 
+  RowBox[{"Sum", "[", 
+   RowBox[{
+    RowBox[{"Binomial", "[", 
+     RowBox[{"23", ",", "i"}], "]"}], ",", 
+    RowBox[{"{", 
+     RowBox[{"i", ",", "0", ",", "3"}], "}"}]}], "]"}]}]], "Input",
+ CellChangeTimes->{{3.76935789509999*^9, 3.769357926203437*^9}},
+ CellLabel->
+  "In[282]:=",ExpressionUUID->"a7d9039a-871f-4848-8906-2f2c5fffa5fe"],
+
+Cell[BoxData["14745600"], "Output",
+ CellChangeTimes->{3.769357926819132*^9},
+ CellLabel->
+  "Out[282]=",ExpressionUUID->"7b185980-2e1b-426e-a8e5-c9b11b87359d"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"2", "^", "23"}]], "Input",
+ CellChangeTimes->{{3.769357930642838*^9, 3.7693579313706217`*^9}},
+ CellLabel->
+  "In[283]:=",ExpressionUUID->"f20a889d-7437-40b5-ae48-1dd860685bc8"],
+
+Cell[BoxData["8388608"], "Output",
+ CellChangeTimes->{3.7693579316348877`*^9},
+ CellLabel->
+  "Out[283]=",ExpressionUUID->"92e26842-982c-4136-a0da-fa38443e1ef0"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{"Join", "[", 
+  RowBox[{
+   RowBox[{
+    RowBox[{
+     RowBox[{"Quantity", "[", 
+      RowBox[{"#", ",", "\"\<Fahrenheit\>\""}], "]"}], "&"}], "/@", 
+    RowBox[{"Range", "[", 
+     RowBox[{"0", ",", "100", ",", "5"}], "]"}]}], ",", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"Quantity", "[", 
+      RowBox[{"#", ",", "\"\<Celsius\>\""}], "]"}], "&"}], "/@", 
+    RowBox[{"Range", "[", 
+     RowBox[{
+      RowBox[{"-", "15"}], ",", "35", ",", "5"}], "]"}]}]}], 
+  "]"}], "\[IndentingNewLine]", 
+ RowBox[{"SortBy", "[", 
+  RowBox[{"%", ",", "UnitConvert"}], "]"}]}], "Input",
+ CellChangeTimes->{{3.7693745575886707`*^9, 3.769374616917947*^9}, {
+  3.769374671454473*^9, 3.769374722394578*^9}},
+ CellLabel->
+  "In[292]:=",ExpressionUUID->"715d0ad2-9f72-464a-8ec2-28bba9bc5351"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   TemplateBox[{"0","\"\[Degree]F\"","degrees Fahrenheit","\"Fahrenheit\""},
+    "Quantity"], ",", 
+   TemplateBox[{"5","\"\[Degree]F\"","degrees Fahrenheit","\"Fahrenheit\""},
+    "Quantity"], ",", 
+   TemplateBox[{"10","\"\[Degree]F\"","degrees Fahrenheit","\"Fahrenheit\""},
+    "Quantity"], ",", 
+   TemplateBox[{"15","\"\[Degree]F\"","degrees Fahrenheit","\"Fahrenheit\""},
+    "Quantity"], ",", 
+   TemplateBox[{"20","\"\[Degree]F\"","degrees Fahrenheit","\"Fahrenheit\""},
+    "Quantity"], ",", 
+   TemplateBox[{"25","\"\[Degree]F\"","degrees Fahrenheit","\"Fahrenheit\""},
+    "Quantity"], ",", 
+   TemplateBox[{"30","\"\[Degree]F\"","degrees Fahrenheit","\"Fahrenheit\""},
+    "Quantity"], ",", 
+   TemplateBox[{"35","\"\[Degree]F\"","degrees Fahrenheit","\"Fahrenheit\""},
+    "Quantity"], ",", 
+   TemplateBox[{"40","\"\[Degree]F\"","degrees Fahrenheit","\"Fahrenheit\""},
+    "Quantity"], ",", 
+   TemplateBox[{"45","\"\[Degree]F\"","degrees Fahrenheit","\"Fahrenheit\""},
+    "Quantity"], ",", 
+   TemplateBox[{"50","\"\[Degree]F\"","degrees Fahrenheit","\"Fahrenheit\""},
+    "Quantity"], ",", 
+   TemplateBox[{"55","\"\[Degree]F\"","degrees Fahrenheit","\"Fahrenheit\""},
+    "Quantity"], ",", 
+   TemplateBox[{"60","\"\[Degree]F\"","degrees Fahrenheit","\"Fahrenheit\""},
+    "Quantity"], ",", 
+   TemplateBox[{"65","\"\[Degree]F\"","degrees Fahrenheit","\"Fahrenheit\""},
+    "Quantity"], ",", 
+   TemplateBox[{"70","\"\[Degree]F\"","degrees Fahrenheit","\"Fahrenheit\""},
+    "Quantity"], ",", 
+   TemplateBox[{"75","\"\[Degree]F\"","degrees Fahrenheit","\"Fahrenheit\""},
+    "Quantity"], ",", 
+   TemplateBox[{"80","\"\[Degree]F\"","degrees Fahrenheit","\"Fahrenheit\""},
+    "Quantity"], ",", 
+   TemplateBox[{"85","\"\[Degree]F\"","degrees Fahrenheit","\"Fahrenheit\""},
+    "Quantity"], ",", 
+   TemplateBox[{"90","\"\[Degree]F\"","degrees Fahrenheit","\"Fahrenheit\""},
+    "Quantity"], ",", 
+   TemplateBox[{"95","\"\[Degree]F\"","degrees Fahrenheit","\"Fahrenheit\""},
+    "Quantity"], ",", 
+   TemplateBox[{"100","\"\[Degree]F\"","degrees Fahrenheit","\"Fahrenheit\""},
+    
+    "Quantity"], ",", 
+   TemplateBox[{
+    RowBox[{"-", "15"}],"\"\[Degree]C\"","degrees Celsius","\"Celsius\""},
+    "Quantity"], ",", 
+   TemplateBox[{
+    RowBox[{"-", "10"}],"\"\[Degree]C\"","degrees Celsius","\"Celsius\""},
+    "Quantity"], ",", 
+   TemplateBox[{
+    RowBox[{"-", "5"}],"\"\[Degree]C\"","degrees Celsius","\"Celsius\""},
+    "Quantity"], ",", 
+   TemplateBox[{"0","\"\[Degree]C\"","degrees Celsius","\"Celsius\""},
+    "Quantity"], ",", 
+   TemplateBox[{"5","\"\[Degree]C\"","degrees Celsius","\"Celsius\""},
+    "Quantity"], ",", 
+   TemplateBox[{"10","\"\[Degree]C\"","degrees Celsius","\"Celsius\""},
+    "Quantity"], ",", 
+   TemplateBox[{"15","\"\[Degree]C\"","degrees Celsius","\"Celsius\""},
+    "Quantity"], ",", 
+   TemplateBox[{"20","\"\[Degree]C\"","degrees Celsius","\"Celsius\""},
+    "Quantity"], ",", 
+   TemplateBox[{"25","\"\[Degree]C\"","degrees Celsius","\"Celsius\""},
+    "Quantity"], ",", 
+   TemplateBox[{"30","\"\[Degree]C\"","degrees Celsius","\"Celsius\""},
+    "Quantity"], ",", 
+   TemplateBox[{"35","\"\[Degree]C\"","degrees Celsius","\"Celsius\""},
+    "Quantity"]}], "}"}]], "Output",
+ CellChangeTimes->{3.769374722755484*^9},
+ CellLabel->
+  "Out[292]=",ExpressionUUID->"61abaf1a-eb99-48f6-8a85-0a8d96980fa2"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   TemplateBox[{"0","\"\[Degree]F\"","degrees Fahrenheit","\"Fahrenheit\""},
+    "Quantity"], ",", 
+   TemplateBox[{
+    RowBox[{"-", "15"}],"\"\[Degree]C\"","degrees Celsius","\"Celsius\""},
+    "Quantity"], ",", 
+   TemplateBox[{"5","\"\[Degree]F\"","degrees Fahrenheit","\"Fahrenheit\""},
+    "Quantity"], ",", 
+   TemplateBox[{"10","\"\[Degree]F\"","degrees Fahrenheit","\"Fahrenheit\""},
+    "Quantity"], ",", 
+   TemplateBox[{
+    RowBox[{"-", "10"}],"\"\[Degree]C\"","degrees Celsius","\"Celsius\""},
+    "Quantity"], ",", 
+   TemplateBox[{"15","\"\[Degree]F\"","degrees Fahrenheit","\"Fahrenheit\""},
+    "Quantity"], ",", 
+   TemplateBox[{"20","\"\[Degree]F\"","degrees Fahrenheit","\"Fahrenheit\""},
+    "Quantity"], ",", 
+   TemplateBox[{
+    RowBox[{"-", "5"}],"\"\[Degree]C\"","degrees Celsius","\"Celsius\""},
+    "Quantity"], ",", 
+   TemplateBox[{"25","\"\[Degree]F\"","degrees Fahrenheit","\"Fahrenheit\""},
+    "Quantity"], ",", 
+   TemplateBox[{"30","\"\[Degree]F\"","degrees Fahrenheit","\"Fahrenheit\""},
+    "Quantity"], ",", 
+   TemplateBox[{"0","\"\[Degree]C\"","degrees Celsius","\"Celsius\""},
+    "Quantity"], ",", 
+   TemplateBox[{"35","\"\[Degree]F\"","degrees Fahrenheit","\"Fahrenheit\""},
+    "Quantity"], ",", 
+   TemplateBox[{"40","\"\[Degree]F\"","degrees Fahrenheit","\"Fahrenheit\""},
+    "Quantity"], ",", 
+   TemplateBox[{"5","\"\[Degree]C\"","degrees Celsius","\"Celsius\""},
+    "Quantity"], ",", 
+   TemplateBox[{"45","\"\[Degree]F\"","degrees Fahrenheit","\"Fahrenheit\""},
+    "Quantity"], ",", 
+   TemplateBox[{"10","\"\[Degree]C\"","degrees Celsius","\"Celsius\""},
+    "Quantity"], ",", 
+   TemplateBox[{"50","\"\[Degree]F\"","degrees Fahrenheit","\"Fahrenheit\""},
+    "Quantity"], ",", 
+   TemplateBox[{"55","\"\[Degree]F\"","degrees Fahrenheit","\"Fahrenheit\""},
+    "Quantity"], ",", 
+   TemplateBox[{"15","\"\[Degree]C\"","degrees Celsius","\"Celsius\""},
+    "Quantity"], ",", 
+   TemplateBox[{"60","\"\[Degree]F\"","degrees Fahrenheit","\"Fahrenheit\""},
+    "Quantity"], ",", 
+   TemplateBox[{"65","\"\[Degree]F\"","degrees Fahrenheit","\"Fahrenheit\""},
+    "Quantity"], ",", 
+   TemplateBox[{"20","\"\[Degree]C\"","degrees Celsius","\"Celsius\""},
+    "Quantity"], ",", 
+   TemplateBox[{"70","\"\[Degree]F\"","degrees Fahrenheit","\"Fahrenheit\""},
+    "Quantity"], ",", 
+   TemplateBox[{"75","\"\[Degree]F\"","degrees Fahrenheit","\"Fahrenheit\""},
+    "Quantity"], ",", 
+   TemplateBox[{"25","\"\[Degree]C\"","degrees Celsius","\"Celsius\""},
+    "Quantity"], ",", 
+   TemplateBox[{"80","\"\[Degree]F\"","degrees Fahrenheit","\"Fahrenheit\""},
+    "Quantity"], ",", 
+   TemplateBox[{"85","\"\[Degree]F\"","degrees Fahrenheit","\"Fahrenheit\""},
+    "Quantity"], ",", 
+   TemplateBox[{"30","\"\[Degree]C\"","degrees Celsius","\"Celsius\""},
+    "Quantity"], ",", 
+   TemplateBox[{"90","\"\[Degree]F\"","degrees Fahrenheit","\"Fahrenheit\""},
+    "Quantity"], ",", 
+   TemplateBox[{"35","\"\[Degree]C\"","degrees Celsius","\"Celsius\""},
+    "Quantity"], ",", 
+   TemplateBox[{"95","\"\[Degree]F\"","degrees Fahrenheit","\"Fahrenheit\""},
+    "Quantity"], ",", 
+   TemplateBox[{"100","\"\[Degree]F\"","degrees Fahrenheit","\"Fahrenheit\""},
+    
+    "Quantity"]}], "}"}]], "Output",
+ CellChangeTimes->{3.7693747233335533`*^9},
+ CellLabel->
+  "Out[293]=",ExpressionUUID->"384c6a79-3f19-4104-b1d6-4e1bcdcf6275"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"ListPlot", "[", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"UnitConvert", "[", 
+     RowBox[{"#", ",", "\"\<Celsius\>\""}], "]"}], "&"}], "/@", "%293"}], 
+  "]"}]], "Input",
+ CellChangeTimes->{{3.769374799617416*^9, 3.769374804052411*^9}, {
+  3.76937484404605*^9, 3.769374850677874*^9}},
+ CellLabel->
+  "In[295]:=",ExpressionUUID->"875e398b-0dae-48c5-9fef-b3a987569105"],
+
+Cell[BoxData[
+ GraphicsBox[{{}, {{}, 
+    {RGBColor[0.368417, 0.506779, 0.709798], PointSize[0.012833333333333334`],
+      AbsoluteThickness[1.6], PointBox[CompressedData["
+1:eJxdkE0OwVAUhV+MzJB0IPIGNI0g4p+2/npZgsQGJMbCCqygC2ERzCyEBTA1
+on1fJXqT5uS77/T09FU2u9U2o5Qqf59IzTyDg77t9a17ZSFGWnA2xXmJ7fsa
+bHHuwEXxw7sX3m1Yy/kUTQku47dgW+I4nYMdMX1eF8NVUX9TI+8dGG7gL+Br
+JvlJb/pouJP0Rbsp7snDi16ow/1fjtEBfdvwUNbx9ODRz2fUxT+EPfq4sJ/S
+Mf83hifc9wyeonN0Rr78748LOEix8P2lfAAmi1tA
+      "]]}, {}}, {}, {}, {}, {}},
+  AspectRatio->NCache[GoldenRatio^(-1), 0.6180339887498948],
+  Axes->{True, True},
+  AxesLabel->{None, None},
+  AxesOrigin->{0., 0},
+  DisplayFunction->Identity,
+  Frame->{{False, False}, {False, False}},
+  FrameLabel->{{None, None}, {None, None}},
+  FrameTicks->{{Automatic, Automatic}, {Automatic, Automatic}},
+  GridLines->{None, None},
+  GridLinesStyle->Directive[
+    GrayLevel[0.5, 0.4]],
+  ImagePadding->All,
+  ImageSize->{466., Automatic},
+  Method->{"CoordinatesToolOptions" -> {"DisplayFunction" -> ({
+        (Identity[#]& )[
+         Part[#, 1]], 
+        (Identity[#]& )[
+         Part[#, 2]]}& ), "CopiedValueFunction" -> ({
+        (Identity[#]& )[
+         Part[#, 1]], 
+        (Identity[#]& )[
+         Part[#, 2]]}& )}},
+  PlotRange->{{0., 32.}, {-17.77777777777778, 37.77777777777778}},
+  PlotRangeClipping->True,
+  PlotRangePadding->{{
+     Scaled[0.02], 
+     Scaled[0.02]}, {
+     Scaled[0.05], 
+     Scaled[0.05]}},
+  Ticks->{Automatic, Automatic}]], "Output",
+ CellChangeTimes->{3.769374804652122*^9, 3.769374851065761*^9},
+ CellLabel->
+  "Out[295]=",ExpressionUUID->"40f51536-6b0f-455e-b033-badbc6f2f7af"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"?", "UnitConvert"}]], "Input",
+ CellChangeTimes->{{3.769374617897346*^9, 3.769374626209165*^9}},
+ CellLabel->
+  "In[284]:=",ExpressionUUID->"b651d3ac-f5b4-4a46-b3e1-80815ff0b069"],
+
+Cell[BoxData[
+ RowBox[{"\<\"\\!\\(\\*RowBox[{\\\"UnitConvert\\\", \\\"[\\\", \
+RowBox[{StyleBox[\\\"quantity\\\", \\\"TI\\\"], \\\",\\\", \
+StyleBox[\\\"targetunit\\\", \\\"TI\\\"]}], \\\"]\\\"}]\\) attempts to \
+convert the specified \\!\\(\\*StyleBox[\\\"quantity\\\", \\\"TI\\\"]\\) to \
+the specified \\!\\(\\*StyleBox[\\\"targetunit\\\", \
+\\\"TI\\\"]\\).\\n\\!\\(\\*RowBox[{\\\"UnitConvert\\\", \\\"[\\\", \
+StyleBox[\\\"quantity\\\", \\\"TI\\\"], \\\"]\\\"}]\\) converts the specified \
+\\!\\(\\*StyleBox[\\\"quantity\\\", \\\"TI\\\"]\\) to SI base units.\"\>", 
+  "\[NonBreakingSpace]", 
+  ButtonBox[
+   StyleBox["\[RightSkeleton]", "SR"],
+   Active->True,
+   BaseStyle->"Link",
+   ButtonData->"paclet:ref/UnitConvert"]}]], "Print", "PrintUsage",
+ CellChangeTimes->{3.769374626985705*^9},
+ CellTags->
+  "Info2843769349426-8949005",ExpressionUUID->"9337900f-7f28-4949-917c-\
+526f0916ee6c"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"UnitConvert", "[", 
+  RowBox[{
+   RowBox[{"Quantity", "[", 
+    RowBox[{
+     RowBox[{"-", "17.5"}], ",", "\"\<Fahrenheit\>\""}], "]"}], ",", 
+   "\"\<Celsius\>\""}], "]"}]], "Input",
+ CellChangeTimes->{{3.769374627801676*^9, 3.769374692147045*^9}, {
+  3.7693748654875727`*^9, 3.769374936839512*^9}, {3.769375163721099*^9, 
+  3.769375208662184*^9}},
+ CellLabel->
+  "In[302]:=",ExpressionUUID->"9158b375-7f94-4b4e-acb3-7e8f681e2692"],
+
+Cell[BoxData[
+ TemplateBox[{
+  RowBox[{"-", "27.49999999999997`"}],"\"\[Degree]C\"","degrees Celsius",
+   "\"DegreesCelsius\""},
+  "Quantity"]], "Output",
+ CellChangeTimes->{{3.769374655747847*^9, 3.769374692422978*^9}, {
+  3.769374866368904*^9, 3.7693749393638*^9}, {3.769375165826689*^9, 
+  3.769375211357711*^9}},
+ CellLabel->
+  "Out[302]=",ExpressionUUID->"b99eeb2d-3135-4559-b6f7-64a64988417e"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"?", "Double"}]], "Input",
+ CellChangeTimes->{{3.774125449501912*^9, 3.7741254509203*^9}},
+ CellLabel->
+  "In[405]:=",ExpressionUUID->"ca1bc9c3-3847-4f58-bf7d-ce64d3e591d3"],
+
+Cell[BoxData[
+ RowBox[{"Missing", "[", 
+  RowBox[{"\<\"UnknownSymbol\"\>", ",", "\<\"Double\"\>"}], "]"}]], "Output",
+ CellChangeTimes->{3.7741254512861853`*^9},
+ CellLabel->
+  "Out[405]=",ExpressionUUID->"7bc6d903-8ef4-42ef-a80a-6edb701c0f0a"]
+}, Open  ]]
+},
+WindowSize->{1364, 686},
+WindowMargins->{{1, Automatic}, {2, Automatic}},
+FrontEndVersion->"12.0 for Linux x86 (64-bit) (April 8, 2019)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{
+ "Info2843769349426-8949005"->{
+  Cell[11469, 298, 896, 18, 73, "Print",ExpressionUUID->"9337900f-7f28-4949-917c-526f0916ee6c",
+   CellTags->"Info2843769349426-8949005"]}
+ }
+*)
+(*CellTagsIndex
+CellTagsIndex->{
+ {"Info2843769349426-8949005", 14056, 372}
+ }
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 379, 10, 31, "Input",ExpressionUUID->"a7d9039a-871f-4848-8906-2f2c5fffa5fe"],
+Cell[962, 34, 160, 3, 35, "Output",ExpressionUUID->"7b185980-2e1b-426e-a8e5-c9b11b87359d"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[1159, 42, 201, 4, 31, "Input",ExpressionUUID->"f20a889d-7437-40b5-ae48-1dd860685bc8"],
+Cell[1363, 48, 161, 3, 35, "Output",ExpressionUUID->"92e26842-982c-4136-a0da-fa38443e1ef0"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[1561, 56, 795, 22, 55, "Input",ExpressionUUID->"715d0ad2-9f72-464a-8ec2-28bba9bc5351"],
+Cell[2359, 80, 3405, 73, 63, "Output",ExpressionUUID->"61abaf1a-eb99-48f6-8a85-0a8d96980fa2"],
+Cell[5767, 155, 3407, 73, 63, "Output",ExpressionUUID->"384c6a79-3f19-4104-b1d6-4e1bcdcf6275"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[9211, 233, 387, 10, 31, "Input",ExpressionUUID->"875e398b-0dae-48c5-9fef-b3a987569105"],
+Cell[9601, 245, 1625, 42, 302, "Output",ExpressionUUID->"40f51536-6b0f-455e-b033-badbc6f2f7af"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[11263, 292, 203, 4, 31, "Input",ExpressionUUID->"b651d3ac-f5b4-4a46-b3e1-80815ff0b069"],
+Cell[11469, 298, 896, 18, 73, "Print",ExpressionUUID->"9337900f-7f28-4949-917c-526f0916ee6c",
+ CellTags->"Info2843769349426-8949005"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[12402, 321, 456, 11, 31, "Input",ExpressionUUID->"9158b375-7f94-4b4e-acb3-7e8f681e2692"],
+Cell[12861, 334, 399, 9, 35, "Output",ExpressionUUID->"b99eeb2d-3135-4559-b6f7-64a64988417e"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[13297, 348, 196, 4, 31, "Input",ExpressionUUID->"ca1bc9c3-3847-4f58-bf7d-ce64d3e591d3"],
+Cell[13496, 354, 244, 5, 35, "Output",ExpressionUUID->"7bc6d903-8ef4-42ef-a80a-6edb701c0f0a"]
+}, Open  ]]
+}
+]
+*)
+

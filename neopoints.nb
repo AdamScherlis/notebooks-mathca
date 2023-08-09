@@ -1,0 +1,619 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 10.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     23749,        610]
+NotebookOptionsPosition[     22683,        568]
+NotebookOutlinePosition[     23016,        583]
+CellTagsIndexPosition[     22973,        580]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"items2", "=", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"StringCases", "[", 
+      RowBox[{"#", ",", 
+       RowBox[{
+        RowBox[{"a__", "~~", "\"\<\\n\>\"", "~~", "b__"}], "\[RuleDelayed]", 
+        "a"}]}], "]"}], "&"}], "/@", "items"}]}], ";"}]], "Input",
+ CellChangeTimes->{{3.644706733834182*^9, 3.6447068778443937`*^9}, 
+   3.644707111903523*^9}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"items3", "=", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"If", "[", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"items2", "[", 
+        RowBox[{"[", "#", "]"}], "]"}], "===", 
+       RowBox[{"{", "}"}]}], ",", 
+      RowBox[{"items", "[", 
+       RowBox[{"[", "#", "]"}], "]"}], ",", 
+      RowBox[{"items2", "[", 
+       RowBox[{"[", 
+        RowBox[{"#", ",", "1"}], "]"}], "]"}]}], "]"}], "&"}], "/@", 
+   RowBox[{"Range", "[", 
+    RowBox[{"Length", "[", "items", "]"}], "]"}]}]}]], "Input",
+ CellChangeTimes->{{3.644706894590006*^9, 3.644706933332386*^9}}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"\<\"Water Mote\"\>", ",", "\<\"Bitten Green Apple\"\>", 
+   ",", "\<\"Wooden Blocking Shield\"\>", ",", "\<\"Spiced Apple Pie\"\>", 
+   ",", "\<\"Exploding Snowball\"\>", ",", "\<\"Secret Laboratory Map\"\>", 
+   ",", "\<\"Mint Chocolate Moehog\"\>", ",", "\<\"Juicy Elixir\"\>", 
+   ",", "\<\"Pale Elixir\"\>", ",", "\<\"Little Timmy Battlecard\"\>", 
+   ",", "\<\"Watery Hot Dog\"\>", ",", "\<\"Cheese Omelette\"\>", 
+   ",", "\<\"Tomato Omelette\"\>", ",", "\<\"Tomato and Pepper Omelette\"\>", 
+   ",", "\<\"Pickled Leeches\"\>", ",", "\<\"Yellow Sticky Hand\"\>", 
+   ",", "\<\"Ummagine\"\>", ",", "\<\"Sand Apple\"\>", 
+   ",", "\<\"Coltzans Gem\"\>", ",", "\<\"Serf Lens\"\>", 
+   ",", "\<\"Pottery Shard Dagger\"\>", ",", "\<\"Poisonous Snowflake\"\>", 
+   ",", "\<\"Strawberry Jelly\"\>", ",", "\<\"Pear Jelly\"\>", 
+   ",", "\<\"Poisonous Jelly\"\>", ",", "\<\"Moon Paving Stone\"\>", 
+   ",", "\<\"Zeenana Peel\"\>", ",", "\<\"Mint Jelly\"\>", 
+   ",", "\<\"Rotten Carrot\"\>", ",", "\<\"Ham and Cheese Omelette\"\>", 
+   ",", "\<\"Tigerbuggle Fruit Pancakes\"\>", 
+   ",", "\<\"Ornate Rainbow Sand\"\>", 
+   ",", "\<\"Mashed Potato With Gravy\"\>", 
+   ",", "\<\"Whole Blunella Jelly\"\>", ",", "\<\"Meat Feast Omelette\"\>", 
+   ",", "\<\"Black Currant Omelette\"\>", 
+   ",", "\<\"Tombola Pencil Sharpener\"\>", 
+   ",", "\<\"Starter Green Paint Brush\"\>", 
+   ",", "\<\"Starter Red Paint Brush\"\>", ",", "\<\"Ditsy\"\>", 
+   ",", "\<\"Weeble\"\>", ",", "\<\"Clay Omelette\"\>", 
+   ",", "\<\"Blandfish\"\>", ",", "\<\"Giant Brown Kelp\"\>", 
+   ",", "\<\"Cubical Sea Fungus\"\>", ",", "\<\"Spongy Algae\"\>", 
+   ",", "\<\"Old Rotten Left Sandal\"\>", ",", "\<\"Rotawheel\"\>", 
+   ",", "\<\"Pirate Attack Stamp\"\>", ",", "\<\"Metallic Mote\"\>", 
+   ",", "\<\"Scroll of the Sea\"\>", ",", "\<\"Altadorian Bread\"\>", 
+   ",", "\<\"Green Tea Custard\"\>", 
+   ",", "\<\"Fruit and Vegetable Hand Roll\"\>", ",", "\<\"Lint Jelly\"\>", 
+   ",", "\<\"Smelly Jelly\"\>", ",", "\<\"Squished Jelly\"\>", 
+   ",", "\<\"Biyako\"\>", ",", "\<\"Kazeriu\"\>", 
+   ",", "\<\"Steaming Skeem Potion\"\>", ",", "\<\"Carved Seashell\"\>", 
+   ",", "\<\"Organic Peanut\"\>", ",", "\<\"Desert Kabob\"\>", 
+   ",", "\<\"Negg Latte\"\>", ",", "\<\"Broken Heart Keyring\"\>", 
+   ",", "\<\"Shenkuu Postcard\"\>", ",", "\<\"Cyodrakes Gaze Keychain\"\>", 
+   ",", "\<\"Mechanical Molla Flower\"\>", 
+   ",", "\<\"Loveberry Peophin Tail Cookie\"\>", 
+   ",", "\<\"Vanilla-Dipped Chocolate Biscotti\"\>", 
+   ",", "\<\"Organic Korbat Pumpkins\"\>", ",", "\<\"Tempura-Fried Worms\"\>",
+    ",", "\<\"Shiny Obsidian\"\>", ",", "\<\"Pirate Potato Crisps\"\>", 
+   ",", "\<\"Healing Springs Residue\"\>", 
+   ",", "\<\"Gummy Pirate Candies\"\>", 
+   ",", "\<\"Forgotten Shore Map Piece\"\>", 
+   ",", "\<\"Ridiculously Heavy Battle Hammer\"\>", 
+   ",", "\<\"Really Big Chunk of Ice\"\>"}], "}"}]], "Output",
+ CellChangeTimes->{{3.644706922982938*^9, 3.6447069338504972`*^9}, {
+  3.644707095985484*^9, 3.6447071147810717`*^9}}]
+}, Open  ]],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{
+   RowBox[{"url", "[", "it_", "]"}], ":=", 
+   RowBox[{"URLFetch", "[", 
+    RowBox[{
+    "\"\<http://items.jellyneo.net/index.php?go=show_items&name_type=exact&\
+name=\>\"", "~~", 
+     RowBox[{"StringReplace", "[", 
+      RowBox[{"it", ",", 
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{"\"\< \>\"", "\[Rule]", "\"\<+\>\""}], ",", 
+         RowBox[{"\"\<&\>\"", "\[Rule]", "\"\<%26\>\""}]}], "}"}]}], "]"}]}], 
+    "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"price", "[", "it_", "]"}], ":=", 
+   RowBox[{"StringCases", "[", 
+    RowBox[{
+     RowBox[{"url", "[", "it", "]"}], ",", 
+     RowBox[{
+      RowBox[{"Shortest", "[", 
+       RowBox[{
+       "\"\<style=\\\"font-weight:bold;\\\">\>\"", "~~", "nn__", "~~", 
+        "\"\< NP</a>\>\""}], "]"}], "\[RuleDelayed]", "nn"}]}], "]"}]}], 
+  ";"}]}], "Input",
+ CellChangeTimes->{{3.644707355076581*^9, 3.644707391974873*^9}, {
+  3.64470779413559*^9, 3.644707800187838*^9}, {3.644712578901471*^9, 
+  3.644712593854329*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"price", "/@", "items3"}]], "Input",
+ CellChangeTimes->{{3.644707395428512*^9, 3.644707413138043*^9}}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{"{", "\<\"1\"\>", "}"}], ",", 
+   RowBox[{"{", "\<\"65\"\>", "}"}], ",", 
+   RowBox[{"{", "\<\"2\"\>", "}"}], ",", 
+   RowBox[{"{", "\<\"9\"\>", "}"}], ",", 
+   RowBox[{"{", "\<\"4\"\>", "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"29,000\"\>", ",", "\<\"150,000\"\>", ",", "\<\"25,000\"\>", 
+     ",", "\<\"600,000\"\>", ",", "\<\"150,000\"\>", ",", "\<\"8,800\"\>", 
+     ",", "\<\"180,000\"\>", ",", "\<\"48,000\"\>", ",", "\<\"150,000\"\>"}], 
+    "}"}], ",", 
+   RowBox[{"{", "\<\"1,275\"\>", "}"}], ",", 
+   RowBox[{"{", "\<\"2\"\>", "}"}], ",", 
+   RowBox[{"{", "\<\"5\"\>", "}"}], ",", 
+   RowBox[{"{", "\<\"1\"\>", "}"}], ",", 
+   RowBox[{"{", "\<\"3\"\>", "}"}], ",", 
+   RowBox[{"{", "\<\"25\"\>", "}"}], ",", 
+   RowBox[{"{", "\<\"25\"\>", "}"}], ",", 
+   RowBox[{"{", "\<\"30\"\>", "}"}], ",", 
+   RowBox[{"{", "\<\"2\"\>", "}"}], ",", 
+   RowBox[{"{", "\<\"1\"\>", "}"}], ",", 
+   RowBox[{"{", "\<\"70\"\>", "}"}], ",", 
+   RowBox[{"{", "\<\"960\"\>", "}"}], ",", 
+   RowBox[{"{", "\<\"1\"\>", "}"}], ",", 
+   RowBox[{"{", "\<\"1\"\>", "}"}], ",", 
+   RowBox[{"{", "\<\"3\"\>", "}"}], ",", 
+   RowBox[{"{", "\<\"2\"\>", "}"}], ",", 
+   RowBox[{"{", "\<\"3\"\>", "}"}], ",", 
+   RowBox[{"{", "\<\"1\"\>", "}"}], ",", 
+   RowBox[{"{", "\<\"1\"\>", "}"}], ",", 
+   RowBox[{"{", "\<\"1\"\>", "}"}], ",", 
+   RowBox[{"{", "\<\"5\"\>", "}"}], ",", 
+   RowBox[{"{", "\<\"4\"\>", "}"}], ",", 
+   RowBox[{"{", "\<\"6\"\>", "}"}], ",", 
+   RowBox[{"{", "\<\"30\"\>", "}"}], ",", 
+   RowBox[{"{", "\<\"65\"\>", "}"}], ",", 
+   RowBox[{"{", "\<\"4\"\>", "}"}], ",", 
+   RowBox[{"{", "\<\"20\"\>", "}"}], ",", 
+   RowBox[{"{", "\<\"2\"\>", "}"}], ",", 
+   RowBox[{"{", "\<\"30\"\>", "}"}], ",", 
+   RowBox[{"{", "\<\"25\"\>", "}"}], ",", 
+   RowBox[{"{", "\<\"1\"\>", "}"}], ",", 
+   RowBox[{"{", "}"}], ",", 
+   RowBox[{"{", "}"}], ",", 
+   RowBox[{"{", "}"}], ",", 
+   RowBox[{"{", "}"}], ",", 
+   RowBox[{"{", "\<\"2\"\>", "}"}], ",", 
+   RowBox[{"{", "\<\"400\"\>", "}"}], ",", 
+   RowBox[{"{", "\<\"1\"\>", "}"}], ",", 
+   RowBox[{"{", "\<\"2\"\>", "}"}], ",", 
+   RowBox[{"{", "\<\"1\"\>", "}"}], ",", 
+   RowBox[{"{", "\<\"1\"\>", "}"}], ",", 
+   RowBox[{"{", "\<\"2,400\"\>", "}"}], ",", 
+   RowBox[{"{", "\<\"1\"\>", "}"}], ",", 
+   RowBox[{"{", "\<\"1\"\>", "}"}], ",", 
+   RowBox[{"{", "\<\"6\"\>", "}"}], ",", 
+   RowBox[{"{", "\<\"4\"\>", "}"}], ",", 
+   RowBox[{"{", "\<\"4\"\>", "}"}], ",", 
+   RowBox[{"{", "\<\"11\"\>", "}"}], ",", 
+   RowBox[{"{", "\<\"1\"\>", "}"}], ",", 
+   RowBox[{"{", "\<\"1\"\>", "}"}], ",", 
+   RowBox[{"{", "\<\"1\"\>", "}"}], ",", 
+   RowBox[{"{", "\<\"4\"\>", "}"}], ",", 
+   RowBox[{"{", "\<\"10\"\>", "}"}], ",", 
+   RowBox[{"{", "\<\"60\"\>", "}"}], ",", 
+   RowBox[{"{", "\<\"1\"\>", "}"}], ",", 
+   RowBox[{"{", "\<\"9\"\>", "}"}], ",", 
+   RowBox[{"{", "\<\"8\"\>", "}"}], ",", 
+   RowBox[{"{", "\<\"7\"\>", "}"}], ",", 
+   RowBox[{"{", "\<\"5\"\>", "}"}], ",", 
+   RowBox[{"{", "\<\"10\"\>", "}"}], ",", 
+   RowBox[{"{", "\<\"1\"\>", "}"}], ",", 
+   RowBox[{"{", "\<\"95\"\>", "}"}], ",", 
+   RowBox[{"{", "\<\"880\"\>", "}"}], ",", 
+   RowBox[{"{", "\<\"600\"\>", "}"}], ",", 
+   RowBox[{"{", "\<\"9\"\>", "}"}], ",", 
+   RowBox[{"{", "\<\"4\"\>", "}"}], ",", 
+   RowBox[{"{", "\<\"1\"\>", "}"}], ",", 
+   RowBox[{"{", "\<\"1\"\>", "}"}], ",", 
+   RowBox[{"{", "\<\"75\"\>", "}"}], ",", 
+   RowBox[{"{", "\<\"1\"\>", "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"25\"\>", ",", "\<\"19\"\>", ",", "\<\"20\"\>", 
+     ",", "\<\"90\"\>", ",", "\<\"17\"\>", ",", "\<\"18\"\>", 
+     ",", "\<\"16\"\>", ",", "\<\"25\"\>", ",", "\<\"25\"\>"}], "}"}], ",", 
+   RowBox[{"{", "\<\"4\"\>", "}"}], ",", 
+   RowBox[{"{", "\<\"8\"\>", "}"}]}], "}"}]], "Output",
+ CellChangeTimes->{3.6447080158483753`*^9, 3.6447081888898*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"prices", "=", 
+  RowBox[{"Map", "[", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"ToExpression", "[", 
+      RowBox[{"StringReplace", "[", 
+       RowBox[{"#", ",", 
+        RowBox[{"\"\<,\>\"", "\[Rule]", "\"\<\>\""}]}], "]"}], "]"}], "&"}], 
+    ",", "%63", ",", 
+    RowBox[{"{", "2", "}"}]}], "]"}]}]], "Input",
+ CellChangeTimes->{{3.6447080238600063`*^9, 3.644708070506631*^9}, {
+  3.64470819554182*^9, 3.644708202143787*^9}, {3.64470829893085*^9, 
+  3.6447082995720787`*^9}}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{"{", "1", "}"}], ",", 
+   RowBox[{"{", "65", "}"}], ",", 
+   RowBox[{"{", "2", "}"}], ",", 
+   RowBox[{"{", "9", "}"}], ",", 
+   RowBox[{"{", "4", "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+    "29000", ",", "150000", ",", "25000", ",", "600000", ",", "150000", ",", 
+     "8800", ",", "180000", ",", "48000", ",", "150000"}], "}"}], ",", 
+   RowBox[{"{", "1275", "}"}], ",", 
+   RowBox[{"{", "2", "}"}], ",", 
+   RowBox[{"{", "5", "}"}], ",", 
+   RowBox[{"{", "1", "}"}], ",", 
+   RowBox[{"{", "3", "}"}], ",", 
+   RowBox[{"{", "25", "}"}], ",", 
+   RowBox[{"{", "25", "}"}], ",", 
+   RowBox[{"{", "30", "}"}], ",", 
+   RowBox[{"{", "2", "}"}], ",", 
+   RowBox[{"{", "1", "}"}], ",", 
+   RowBox[{"{", "70", "}"}], ",", 
+   RowBox[{"{", "960", "}"}], ",", 
+   RowBox[{"{", "1", "}"}], ",", 
+   RowBox[{"{", "1", "}"}], ",", 
+   RowBox[{"{", "3", "}"}], ",", 
+   RowBox[{"{", "2", "}"}], ",", 
+   RowBox[{"{", "3", "}"}], ",", 
+   RowBox[{"{", "1", "}"}], ",", 
+   RowBox[{"{", "1", "}"}], ",", 
+   RowBox[{"{", "1", "}"}], ",", 
+   RowBox[{"{", "5", "}"}], ",", 
+   RowBox[{"{", "4", "}"}], ",", 
+   RowBox[{"{", "6", "}"}], ",", 
+   RowBox[{"{", "30", "}"}], ",", 
+   RowBox[{"{", "65", "}"}], ",", 
+   RowBox[{"{", "4", "}"}], ",", 
+   RowBox[{"{", "20", "}"}], ",", 
+   RowBox[{"{", "2", "}"}], ",", 
+   RowBox[{"{", "30", "}"}], ",", 
+   RowBox[{"{", "25", "}"}], ",", 
+   RowBox[{"{", "1", "}"}], ",", 
+   RowBox[{"{", "}"}], ",", 
+   RowBox[{"{", "}"}], ",", 
+   RowBox[{"{", "}"}], ",", 
+   RowBox[{"{", "}"}], ",", 
+   RowBox[{"{", "2", "}"}], ",", 
+   RowBox[{"{", "400", "}"}], ",", 
+   RowBox[{"{", "1", "}"}], ",", 
+   RowBox[{"{", "2", "}"}], ",", 
+   RowBox[{"{", "1", "}"}], ",", 
+   RowBox[{"{", "1", "}"}], ",", 
+   RowBox[{"{", "2400", "}"}], ",", 
+   RowBox[{"{", "1", "}"}], ",", 
+   RowBox[{"{", "1", "}"}], ",", 
+   RowBox[{"{", "6", "}"}], ",", 
+   RowBox[{"{", "4", "}"}], ",", 
+   RowBox[{"{", "4", "}"}], ",", 
+   RowBox[{"{", "11", "}"}], ",", 
+   RowBox[{"{", "1", "}"}], ",", 
+   RowBox[{"{", "1", "}"}], ",", 
+   RowBox[{"{", "1", "}"}], ",", 
+   RowBox[{"{", "4", "}"}], ",", 
+   RowBox[{"{", "10", "}"}], ",", 
+   RowBox[{"{", "60", "}"}], ",", 
+   RowBox[{"{", "1", "}"}], ",", 
+   RowBox[{"{", "9", "}"}], ",", 
+   RowBox[{"{", "8", "}"}], ",", 
+   RowBox[{"{", "7", "}"}], ",", 
+   RowBox[{"{", "5", "}"}], ",", 
+   RowBox[{"{", "10", "}"}], ",", 
+   RowBox[{"{", "1", "}"}], ",", 
+   RowBox[{"{", "95", "}"}], ",", 
+   RowBox[{"{", "880", "}"}], ",", 
+   RowBox[{"{", "600", "}"}], ",", 
+   RowBox[{"{", "9", "}"}], ",", 
+   RowBox[{"{", "4", "}"}], ",", 
+   RowBox[{"{", "1", "}"}], ",", 
+   RowBox[{"{", "1", "}"}], ",", 
+   RowBox[{"{", "75", "}"}], ",", 
+   RowBox[{"{", "1", "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+    "25", ",", "19", ",", "20", ",", "90", ",", "17", ",", "18", ",", "16", 
+     ",", "25", ",", "25"}], "}"}], ",", 
+   RowBox[{"{", "4", "}"}], ",", 
+   RowBox[{"{", "8", "}"}]}], "}"}]], "Output",
+ CellChangeTimes->{{3.644708025741946*^9, 3.644708070910877*^9}, 
+   3.644708202928577*^9, 3.6447083017143583`*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Sort", "[", 
+  RowBox[{"Max", "/@", "prices"}], "]"}]], "Input",
+ CellChangeTimes->{{3.644708265692734*^9, 3.64470827587184*^9}, {
+  3.64470830717313*^9, 3.644708309402832*^9}}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+  "1", ",", "1", ",", "1", ",", "1", ",", "1", ",", "1", ",", "1", ",", "1", 
+   ",", "1", ",", "1", ",", "1", ",", "1", ",", "1", ",", "1", ",", "1", ",", 
+   "1", ",", "1", ",", "1", ",", "1", ",", "1", ",", "1", ",", "1", ",", "2", 
+   ",", "2", ",", "2", ",", "2", ",", "2", ",", "2", ",", "2", ",", "3", ",", 
+   "3", ",", "3", ",", "4", ",", "4", ",", "4", ",", "4", ",", "4", ",", "4", 
+   ",", "4", ",", "4", ",", "5", ",", "5", ",", "5", ",", "6", ",", "6", ",", 
+   "7", ",", "8", ",", "8", ",", "9", ",", "9", ",", "9", ",", "10", ",", 
+   "10", ",", "11", ",", "20", ",", "25", ",", "25", ",", "25", ",", "30", 
+   ",", "30", ",", "30", ",", "60", ",", "65", ",", "65", ",", "70", ",", 
+   "75", ",", "90", ",", "95", ",", "400", ",", "600", ",", "880", ",", "960",
+    ",", "1275", ",", "2400", ",", "600000", ",", 
+   RowBox[{"-", "\[Infinity]"}], ",", 
+   RowBox[{"-", "\[Infinity]"}], ",", 
+   RowBox[{"-", "\[Infinity]"}], ",", 
+   RowBox[{"-", "\[Infinity]"}]}], "}"}]], "Output",
+ CellChangeTimes->{{3.6447082723446283`*^9, 3.6447082779111767`*^9}, {
+  3.644708309826342*^9, 3.644708319057398*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"items3", "[", 
+  RowBox[{"[", 
+   RowBox[{
+    RowBox[{"Position", "[", 
+     RowBox[{"prices", ",", 
+      RowBox[{"{", "1", "}"}]}], "]"}], "//", "Flatten"}], "]"}], 
+  "]"}]], "Input",
+ CellChangeTimes->{{3.644708247730977*^9, 3.644708250936314*^9}, {
+  3.644708294122973*^9, 3.644708317078741*^9}}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"\<\"Water Mote\"\>", ",", "\<\"Little Timmy Battlecard\"\>", 
+   ",", "\<\"Yellow Sticky Hand\"\>", ",", "\<\"Coltzans Gem\"\>", 
+   ",", "\<\"Serf Lens\"\>", ",", "\<\"Pear Jelly\"\>", 
+   ",", "\<\"Poisonous Jelly\"\>", ",", "\<\"Moon Paving Stone\"\>", 
+   ",", "\<\"Tombola Pencil Sharpener\"\>", ",", "\<\"Giant Brown Kelp\"\>", 
+   ",", "\<\"Spongy Algae\"\>", ",", "\<\"Old Rotten Left Sandal\"\>", 
+   ",", "\<\"Pirate Attack Stamp\"\>", ",", "\<\"Metallic Mote\"\>", 
+   ",", "\<\"Lint Jelly\"\>", ",", "\<\"Smelly Jelly\"\>", 
+   ",", "\<\"Squished Jelly\"\>", ",", "\<\"Carved Seashell\"\>", 
+   ",", "\<\"Cyodrakes Gaze Keychain\"\>", ",", "\<\"Shiny Obsidian\"\>", 
+   ",", "\<\"Pirate Potato Crisps\"\>", ",", "\<\"Gummy Pirate Candies\"\>"}],
+   "}"}]], "Output",
+ CellChangeTimes->{
+  3.644708251229089*^9, {3.644708294814774*^9, 3.644708317565748*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{
+   RowBox[{
+    RowBox[{
+     RowBox[{"Position", "[", 
+      RowBox[{
+       RowBox[{"Max", "/@", "prices"}], ",", "#"}], "]"}], "&"}], "/@", 
+    RowBox[{"Range", "[", "4", "]"}]}], "//", "Flatten"}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"items3", "[", 
+    RowBox[{"[", "%", "]"}], "]"}], "//", "Sort"}], "//", 
+  "MatrixForm"}]}], "Input",
+ CellChangeTimes->{{3.644708339951293*^9, 3.644708354404634*^9}, {
+  3.644708413719913*^9, 3.6447085128891773`*^9}, {3.644708623049281*^9, 
+  3.644708625651908*^9}, {3.644708919165436*^9, 3.644708923996153*^9}}],
+
+Cell[BoxData[
+ TagBox[
+  RowBox[{"(", "\[NoBreak]", 
+   TagBox[GridBox[{
+      {"\<\"Altadorian Bread\"\>"},
+      {"\<\"Biyako\"\>"},
+      {"\<\"Carved Seashell\"\>"},
+      {"\<\"Clay Omelette\"\>"},
+      {"\<\"Coltzans Gem\"\>"},
+      {"\<\"Cubical Sea Fungus\"\>"},
+      {"\<\"Cyodrakes Gaze Keychain\"\>"},
+      {"\<\"Exploding Snowball\"\>"},
+      {"\<\"Giant Brown Kelp\"\>"},
+      {"\<\"Green Tea Custard\"\>"},
+      {"\<\"Gummy Pirate Candies\"\>"},
+      {"\<\"Juicy Elixir\"\>"},
+      {"\<\"Lint Jelly\"\>"},
+      {"\<\"Little Timmy Battlecard\"\>"},
+      {"\<\"Metallic Mote\"\>"},
+      {"\<\"Mint Jelly\"\>"},
+      {"\<\"Moon Paving Stone\"\>"},
+      {"\<\"Old Rotten Left Sandal\"\>"},
+      {"\<\"Ornate Rainbow Sand\"\>"},
+      {"\<\"Pear Jelly\"\>"},
+      {"\<\"Pickled Leeches\"\>"},
+      {"\<\"Pirate Attack Stamp\"\>"},
+      {"\<\"Pirate Potato Crisps\"\>"},
+      {"\<\"Poisonous Jelly\"\>"},
+      {"\<\"Poisonous Snowflake\"\>"},
+      {"\<\"Pottery Shard Dagger\"\>"},
+      {"\<\"Ridiculously Heavy Battle Hammer\"\>"},
+      {"\<\"Serf Lens\"\>"},
+      {"\<\"Shiny Obsidian\"\>"},
+      {"\<\"Smelly Jelly\"\>"},
+      {"\<\"Spongy Algae\"\>"},
+      {"\<\"Squished Jelly\"\>"},
+      {"\<\"Strawberry Jelly\"\>"},
+      {"\<\"Tempura-Fried Worms\"\>"},
+      {"\<\"Tombola Pencil Sharpener\"\>"},
+      {"\<\"Water Mote\"\>"},
+      {"\<\"Watery Hot Dog\"\>"},
+      {"\<\"Whole Blunella Jelly\"\>"},
+      {"\<\"Wooden Blocking Shield\"\>"},
+      {"\<\"Yellow Sticky Hand\"\>"}
+     },
+     GridBoxAlignment->{
+      "Columns" -> {{Center}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}},
+        "RowsIndexed" -> {}},
+     GridBoxSpacings->{"Columns" -> {
+         Offset[0.27999999999999997`], {
+          Offset[0.5599999999999999]}, 
+         Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+         Offset[0.2], {
+          Offset[0.4]}, 
+         Offset[0.2]}, "RowsIndexed" -> {}}],
+    Column], "\[NoBreak]", ")"}],
+  Function[BoxForm`e$, 
+   MatrixForm[BoxForm`e$]]]], "Output",
+ CellChangeTimes->{
+  3.644708354741078*^9, {3.6447084142610483`*^9, 3.64470851337533*^9}, 
+   3.644708626009962*^9, {3.6447089201894493`*^9, 3.644708924289797*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{"%123", ",", 
+     RowBox[{
+      RowBox[{"Complement", "[", 
+       RowBox[{"items3", ",", "%123"}], "]"}], "~", "Join", "~", 
+      RowBox[{"{", "\"\<===\>\"", "}"}]}]}], "}"}], "//", "Transpose"}], "//",
+   "MatrixForm"}]], "Input",
+ CellChangeTimes->{{3.644708554350172*^9, 3.644708558125183*^9}, {
+  3.6447091196822643`*^9, 3.64470913909906*^9}, {3.6447091692235527`*^9, 
+  3.644709185660877*^9}}],
+
+Cell[BoxData[
+ TagBox[
+  RowBox[{"(", "\[NoBreak]", GridBox[{
+     {"\<\"Altadorian Bread\"\>", "\<\"Bitten Green Apple\"\>"},
+     {"\<\"Biyako\"\>", "\<\"Black Currant Omelette\"\>"},
+     {"\<\"Carved Seashell\"\>", "\<\"Blandfish\"\>"},
+     {"\<\"Clay Omelette\"\>", "\<\"Broken Heart Keyring\"\>"},
+     {"\<\"Coltzans Gem\"\>", "\<\"Cheese Omelette\"\>"},
+     {"\<\"Cubical Sea Fungus\"\>", "\<\"Desert Kabob\"\>"},
+     {"\<\"Cyodrakes Gaze Keychain\"\>", "\<\"Ditsy\"\>"},
+     {"\<\"Exploding Snowball\"\>", "\<\"Forgotten Shore Map Piece\"\>"},
+     {"\<\"Giant Brown Kelp\"\>", "\<\"Fruit and Vegetable Hand Roll\"\>"},
+     {"\<\"Green Tea Custard\"\>", "\<\"Ham and Cheese Omelette\"\>"},
+     {"\<\"Gummy Pirate Candies\"\>", "\<\"Healing Springs Residue\"\>"},
+     {"\<\"Juicy Elixir\"\>", "\<\"Kazeriu\"\>"},
+     {"\<\"Lint Jelly\"\>", "\<\"Loveberry Peophin Tail Cookie\"\>"},
+     {"\<\"Little Timmy Battlecard\"\>", "\<\"Mashed Potato With Gravy\"\>"},
+     {"\<\"Metallic Mote\"\>", "\<\"Meat Feast Omelette\"\>"},
+     {"\<\"Mint Jelly\"\>", "\<\"Mechanical Molla Flower\"\>"},
+     {"\<\"Moon Paving Stone\"\>", "\<\"Mint Chocolate Moehog\"\>"},
+     {"\<\"Old Rotten Left Sandal\"\>", "\<\"Negg Latte\"\>"},
+     {"\<\"Ornate Rainbow Sand\"\>", "\<\"Organic Korbat Pumpkins\"\>"},
+     {"\<\"Pear Jelly\"\>", "\<\"Organic Peanut\"\>"},
+     {"\<\"Pickled Leeches\"\>", "\<\"Pale Elixir\"\>"},
+     {"\<\"Pirate Attack Stamp\"\>", "\<\"Really Big Chunk of Ice\"\>"},
+     {"\<\"Pirate Potato Crisps\"\>", "\<\"Rotawheel\"\>"},
+     {"\<\"Poisonous Jelly\"\>", "\<\"Rotten Carrot\"\>"},
+     {"\<\"Poisonous Snowflake\"\>", "\<\"Sand Apple\"\>"},
+     {"\<\"Pottery Shard Dagger\"\>", "\<\"Scroll of the Sea\"\>"},
+     {"\<\"Ridiculously Heavy Battle Hammer\"\>", "\<\"Secret Laboratory \
+Map\"\>"},
+     {"\<\"Serf Lens\"\>", "\<\"Shenkuu Postcard\"\>"},
+     {"\<\"Shiny Obsidian\"\>", "\<\"Spiced Apple Pie\"\>"},
+     {"\<\"Smelly Jelly\"\>", "\<\"Starter Green Paint Brush\"\>"},
+     {"\<\"Spongy Algae\"\>", "\<\"Starter Red Paint Brush\"\>"},
+     {"\<\"Squished Jelly\"\>", "\<\"Steaming Skeem Potion\"\>"},
+     {"\<\"Strawberry Jelly\"\>", "\<\"Tigerbuggle Fruit Pancakes\"\>"},
+     {"\<\"Tempura-Fried Worms\"\>", "\<\"Tomato and Pepper Omelette\"\>"},
+     {"\<\"Tombola Pencil Sharpener\"\>", "\<\"Tomato Omelette\"\>"},
+     {"\<\"Water Mote\"\>", "\<\"Ummagine\"\>"},
+     {"\<\"Watery Hot Dog\"\>", "\<\"Vanilla-Dipped Chocolate Biscotti\"\>"},
+     {"\<\"Whole Blunella Jelly\"\>", "\<\"Weeble\"\>"},
+     {"\<\"Wooden Blocking Shield\"\>", "\<\"Zeenana Peel\"\>"},
+     {"\<\"Yellow Sticky Hand\"\>", "\<\"===\"\>"}
+    },
+    GridBoxAlignment->{
+     "Columns" -> {{Center}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}}, 
+      "RowsIndexed" -> {}},
+    GridBoxSpacings->{"Columns" -> {
+        Offset[0.27999999999999997`], {
+         Offset[0.7]}, 
+        Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+        Offset[0.2], {
+         Offset[0.4]}, 
+        Offset[0.2]}, "RowsIndexed" -> {}}], "\[NoBreak]", ")"}],
+  Function[BoxForm`e$, 
+   MatrixForm[BoxForm`e$]]]], "Output",
+ CellChangeTimes->{
+  3.6447085583733673`*^9, {3.644709120239921*^9, 3.644709139935117*^9}, {
+   3.6447091749094152`*^9, 3.64470918609839*^9}}]
+}, Open  ]]
+},
+WindowSize->{1366, 689},
+WindowMargins->{{0, Automatic}, {Automatic, 0}},
+FrontEndVersion->"10.0 for Linux x86 (64-bit) (June 27, 2014)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 388, 11, 32, "Input"],
+Cell[CellGroupData[{
+Cell[971, 35, 579, 17, 32, "Input"],
+Cell[1553, 54, 3055, 50, 297, "Output"]
+}, Open  ]],
+Cell[4623, 107, 1049, 29, 110, "Input"],
+Cell[CellGroupData[{
+Cell[5697, 140, 125, 2, 32, "Input"],
+Cell[5825, 144, 3820, 89, 99, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[9682, 238, 500, 13, 32, "Input"],
+Cell[10185, 253, 3126, 89, 99, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[13348, 347, 201, 4, 32, "Input"],
+Cell[13552, 353, 1157, 19, 55, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[14746, 377, 326, 9, 32, "Input"],
+Cell[15075, 388, 909, 15, 77, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[16021, 408, 620, 17, 55, "Input"],
+Cell[16644, 427, 2221, 60, 713, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[18902, 492, 466, 12, 32, "Input"],
+Cell[19371, 506, 3296, 59, 776, "Output"]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)

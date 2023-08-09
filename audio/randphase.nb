@@ -1,0 +1,228 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 11.3' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      8197,        220]
+NotebookOptionsPosition[      7313,        195]
+NotebookOutlinePosition[      7677,        211]
+CellTagsIndexPosition[      7634,        208]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[BoxData[
+ RowBox[{"SetDirectory", "[", 
+  RowBox[{"NotebookDirectory", "[", "]"}], "]"}]], "Input",
+ CellChangeTimes->{{3.764042639097825*^9, 3.764042644663246*^9}},
+ CellLabel->"In[1]:=",ExpressionUUID->"03addd58-7394-49f6-8019-28ed69bd73ff"],
+
+Cell[BoxData["\<\"/home/adam/Dropbox/personal/projects/mathca/audio\"\>"], \
+"Output",
+ CellChangeTimes->{3.76404264532787*^9, 3.764042768012991*^9, 
+  3.764130420430945*^9, 3.7648960992715063`*^9, 3.823568175645639*^9},
+ CellLabel->"Out[1]=",ExpressionUUID->"745e7dac-3b61-4436-aa69-a6a2f32e7eb6"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{"file", "=", "\"\<bartoli\>\""}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"im", "=", 
+   RowBox[{"Import", "[", 
+    RowBox[{"file", "<>", "\"\<.mp3\>\""}], "]"}]}], ";"}], "\n", 
+ RowBox[{
+  RowBox[{"ad", "=", 
+   RowBox[{"AudioData", "[", "im", "]"}]}], ";"}], "\n", 
+ RowBox[{
+  RowBox[{"l", "=", 
+   RowBox[{"Length", "[", 
+    RowBox[{"ad", "[", 
+     RowBox[{"[", "1", "]"}], "]"}], "]"}]}], ";"}], "\n", 
+ RowBox[{
+  RowBox[{"f", "=", 
+   RowBox[{
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"Exp", "[", 
+        RowBox[{"I", " ", "2", "Pi", " ", 
+         RowBox[{"Random", "[", "]"}]}], "]"}], "&"}], "/@", 
+      RowBox[{"Range", "[", "l", "]"}]}], ")"}], "*", 
+    RowBox[{"Fourier", "[", 
+     RowBox[{"ad", "[", 
+      RowBox[{"[", "1", "]"}], "]"}], "]"}]}]}], ";", "4", 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"ff", "=", 
+   RowBox[{"Re", "@", 
+    RowBox[{"Fourier", "[", "f", "]"}]}]}], ";", "4", ";"}], "\n", 
+ RowBox[{
+  RowBox[{"a", "=", 
+   RowBox[{"Audio", "[", 
+    RowBox[{
+     RowBox[{"ff", "[", 
+      RowBox[{"[", 
+       RowBox[{";;", 
+        RowBox[{"48000", "*", "10"}]}], "]"}], "]"}], ",", "\"\<Real32\>\"", 
+     ",", 
+     RowBox[{"Appearance", "\[Rule]", "Automatic"}], ",", 
+     RowBox[{"AudioOutputDevice", "\[Rule]", "Automatic"}], ",", 
+     RowBox[{"MetaInformation", "\[Rule]", 
+      RowBox[{"\[LeftAssociation]", 
+       RowBox[{"\"\<ID3v2\>\"", "\[Rule]", 
+        RowBox[{"\[LeftAssociation]", 
+         RowBox[{
+         "\"\<EncodingSettings\>\"", "\[Rule]", "\"\<Lavf53.21.1\>\""}], 
+         "\[RightAssociation]"}]}], "\[RightAssociation]"}]}], ",", 
+     RowBox[{"SampleRate", "\[Rule]", "48000"}], ",", 
+     RowBox[{"SoundVolume", "\[Rule]", "1"}]}], "]"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"Export", "[", 
+   RowBox[{
+    RowBox[{"file", "<>", "\"\<-randphase-10.mp3\>\""}], ",", "a"}], "]"}], 
+  ";"}]}], "Input",
+ CellChangeTimes->{{3.764042655514153*^9, 3.764042655687469*^9}, {
+  3.764042765982538*^9, 3.764042766398107*^9}, {3.7640431902526817`*^9, 
+  3.764043191869567*^9}, {3.764043332413316*^9, 3.7640433558244543`*^9}, {
+  3.764043590245657*^9, 3.764043591159997*^9}, {3.7640436957707977`*^9, 
+  3.76404375540136*^9}, {3.764043879602682*^9, 3.7640438798917513`*^9}, {
+  3.764044034675324*^9, 3.764044035206688*^9}, {3.764044069803529*^9, 
+  3.764044070220458*^9}, {3.7640442505913877`*^9, 3.76404425089279*^9}, {
+  3.7640443484149714`*^9, 3.7640443491781483`*^9}, {3.764130480399765*^9, 
+  3.764130480870027*^9}, {3.764896086394286*^9, 3.764896087121896*^9}, {
+  3.82356838339441*^9, 3.823568384365693*^9}},
+ CellLabel->"In[2]:=",ExpressionUUID->"22ea2c6a-7e8a-4f35-b832-f7d9f820818e"],
+
+Cell[BoxData["\<\"bartoli\"\>"], "Output",
+ CellChangeTimes->{
+  3.764044071760935*^9, 3.7640442512275248`*^9, 3.764044349839877*^9, 
+   3.764130484992725*^9, {3.764896092180171*^9, 3.764896100216103*^9}, 
+   3.82356838716679*^9},
+ CellLabel->"Out[2]=",ExpressionUUID->"4654fbbe-5d17-425a-bc79-659b8c94a313"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{"file", "=", "\"\<trek\>\""}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"im", "=", 
+   RowBox[{"Import", "[", 
+    RowBox[{"file", "<>", "\"\<.mp3\>\""}], "]"}]}], ";"}], "\n", 
+ RowBox[{
+  RowBox[{"ad", "=", 
+   RowBox[{"AudioData", "[", "im", "]"}]}], ";"}], "\n", 
+ RowBox[{
+  RowBox[{"l", "=", 
+   RowBox[{"Length", "[", 
+    RowBox[{"ad", "[", 
+     RowBox[{"[", "1", "]"}], "]"}], "]"}]}], ";"}], "\n", 
+ RowBox[{
+  RowBox[{"f", "=", 
+   RowBox[{
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"Exp", "[", 
+        RowBox[{"I", " ", "2", "Pi", " ", 
+         RowBox[{"Random", "[", "]"}]}], "]"}], "&"}], "/@", 
+      RowBox[{"Range", "[", "l", "]"}]}], ")"}], "*", 
+    RowBox[{"Fourier", "[", 
+     RowBox[{"ad", "[", 
+      RowBox[{"[", "1", "]"}], "]"}], "]"}]}]}], ";", "4", 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"ff", "=", 
+   RowBox[{"Re", "@", 
+    RowBox[{"Fourier", "[", "f", "]"}]}]}], ";", "4", ";"}], "\n", 
+ RowBox[{
+  RowBox[{"a", "=", 
+   RowBox[{"Audio", "[", 
+    RowBox[{
+     RowBox[{"ff", "[", 
+      RowBox[{"[", 
+       RowBox[{";;", 
+        RowBox[{"48000", "*", "10"}]}], "]"}], "]"}], ",", "\"\<Real32\>\"", 
+     ",", 
+     RowBox[{"Appearance", "\[Rule]", "Automatic"}], ",", 
+     RowBox[{"AudioOutputDevice", "\[Rule]", "Automatic"}], ",", 
+     RowBox[{"MetaInformation", "\[Rule]", 
+      RowBox[{"\[LeftAssociation]", 
+       RowBox[{"\"\<ID3v2\>\"", "\[Rule]", 
+        RowBox[{"\[LeftAssociation]", 
+         RowBox[{
+         "\"\<EncodingSettings\>\"", "\[Rule]", "\"\<Lavf53.21.1\>\""}], 
+         "\[RightAssociation]"}]}], "\[RightAssociation]"}]}], ",", 
+     RowBox[{"SampleRate", "\[Rule]", "48000"}], ",", 
+     RowBox[{"SoundVolume", "\[Rule]", "1"}]}], "]"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"Export", "[", 
+   RowBox[{
+    RowBox[{"file", "<>", "\"\<-randphase-10.mp3\>\""}], ",", "a"}], "]"}], 
+  ";"}]}], "Input",
+ CellChangeTimes->{{3.764042655514153*^9, 3.764042655687469*^9}, {
+  3.764042765982538*^9, 3.764042766398107*^9}, {3.7640431902526817`*^9, 
+  3.764043191869567*^9}, {3.764043332413316*^9, 3.7640433558244543`*^9}, {
+  3.764043590245657*^9, 3.764043591159997*^9}, {3.7640436957707977`*^9, 
+  3.76404375540136*^9}, {3.764043879602682*^9, 3.7640438798917513`*^9}, {
+  3.764044034675324*^9, 3.764044035206688*^9}, {3.764044069803529*^9, 
+  3.764044070220458*^9}, {3.7640442505913877`*^9, 3.76404425089279*^9}, {
+  3.7640443484149714`*^9, 3.7640443491781483`*^9}, {3.764044390365986*^9, 
+  3.764044391160948*^9}, {3.764130387287619*^9, 3.764130389006647*^9}, {
+  3.7641307430301313`*^9, 3.764130743342452*^9}},
+ CellLabel->"In[34]:=",ExpressionUUID->"817f04a2-4c8d-486e-87e5-7b9aab5d3471"],
+
+Cell[BoxData["\<\"trek\"\>"], "Output",
+ CellChangeTimes->{
+  3.764044071760935*^9, 3.7640442512275248`*^9, 3.764044349839877*^9, 
+   3.764044400169519*^9, {3.764130389622316*^9, 3.7641304213406677`*^9}, 
+   3.7641307435996017`*^9},
+ CellLabel->"Out[34]=",ExpressionUUID->"db3b5aae-f690-4d77-9ad3-de2e0a611b1f"]
+}, Open  ]]
+},
+WindowSize->{2560, 1311},
+WindowMargins->{{0, Automatic}, {2, Automatic}},
+Magnification:>1.8 Inherited,
+FrontEndVersion->"12.0 for Linux x86 (64-bit) (April 8, 2019)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 248, 4, 57, "Input",ExpressionUUID->"03addd58-7394-49f6-8019-28ed69bd73ff"],
+Cell[831, 28, 298, 4, 65, "Output",ExpressionUUID->"745e7dac-3b61-4436-aa69-a6a2f32e7eb6"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[1166, 37, 2734, 68, 402, "Input",ExpressionUUID->"22ea2c6a-7e8a-4f35-b832-f7d9f820818e"],
+Cell[3903, 107, 308, 5, 96, "Output",ExpressionUUID->"4654fbbe-5d17-425a-bc79-659b8c94a313"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[4248, 117, 2735, 68, 402, "Input",ExpressionUUID->"817f04a2-4c8d-486e-87e5-7b9aab5d3471"],
+Cell[6986, 187, 311, 5, 94, "Output",ExpressionUUID->"db3b5aae-f690-4d77-9ad3-de2e0a611b1f"]
+}, Open  ]]
+}
+]
+*)
+

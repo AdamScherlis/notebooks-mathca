@@ -1,0 +1,45 @@
+4= !3
+5=and{1,3}
+6=xor{5,3}
+7=and{4,2}
+8=xor{6,1}
+9=xor{2,7}
+10=xor{3,6}
+11=xor{9,10}
+12= !7
+13=xor{4,1}
+14=xor{10,9}
+15=xor{11,2}
+16=and{15,4}
+17=xor{16,12}
+NMaximize::nsol: There are no points that satisfy the constraints {0.0625 -1. p[-1,1,1]<=0,<<6>>,1. p[-1,1,1]<=0}.
+NMaximize::nsol: There are no points that satisfy the constraints {1.25593*10^-9-1. p[-1,1,1]<=0,<<6>>,1. p[-1,1,1]<=0}.
+.
+===
+.
+4=and{3,2}
+5=xor{2,1}
+6=xor{3,1}
+7= !6
+8=and{7,4}
+9=xor{7,4}
+10=and{2,9}
+11= !8
+12=and{6,2}
+13=xor{2,11}
+14= !2
+15=xor{8,7}
+16=xor{15,4}
+NMaximize::nsol: There are no points that satisfy the constraints {-0.4375-1. p[-1,1,1]<=0,<<6>>,1. p[-1,1,1]<=0}.
+.
+===
+.
+4=xor{3,1}
+5= !1
+6=and{5,4}
+7=xor{4,1}
+8=and{4,7}
+9=xor{7,1}
+10= !3
+11=xor{6,5}
+NMaximize::nsol: There are no points that satisfy the constraints {-0.375-1. p[-1,1,1]<=0,<<6>>,-0.25+1. p[-1,1,1]<=0}.

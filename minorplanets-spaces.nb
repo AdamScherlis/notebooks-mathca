@@ -1,0 +1,641 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 11.3' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     37449,        633]
+NotebookOptionsPosition[     35113,        580]
+NotebookOutlinePosition[     35868,        605]
+CellTagsIndexPosition[     35740,        599]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[BoxData[
+ RowBox[{"?", "StringReplace"}]], "Input",
+ CellChangeTimes->{{3.7556627323749523`*^9, 3.7556627336422462`*^9}},
+ CellLabel->"In[2]:=",ExpressionUUID->"0a6ba44c-3440-4fa0-a14b-8a0976d39d88"],
+
+Cell[BoxData[
+ RowBox[{"\<\"\\!\\(\\*RowBox[{\\\"StringReplace\\\", \\\"[\\\", \
+RowBox[{StyleBox[\\\"\\\\\\\"\\\\!\\\\(\\\\*StyleBox[\\\\\\\"string\\\\\\\",\\\
+\\\\\"TI\\\\\\\"]\\\\)\\\\\\\"\\\", ShowStringCharacters->True], \\\",\\\", \
+RowBox[{StyleBox[\\\"s\\\", \\\"TI\\\"], \\\"\[Rule]\\\", \
+StyleBox[\\\"sp\\\", \\\"TI\\\"]}]}], \\\"]\\\"}]\\) replaces the string \
+expression \\!\\(\\*StyleBox[\\\"s\\\", \\\"TI\\\"]\\) by \
+\\!\\(\\*StyleBox[\\\"sp\\\", \\\"TI\\\"]\\) wherever it appears in \
+\\\"\\!\\(\\*StyleBox[\\\"string\\\", \\\"TI\\\"]\\)\\\". \
+\\n\\!\\(\\*RowBox[{\\\"StringReplace\\\", \\\"[\\\", RowBox[{StyleBox[\\\"\\\
+\\\\\"\\\\!\\\\(\\\\*StyleBox[\\\\\\\"string\\\\\\\",\\\\\\\"TI\\\\\\\"]\\\\)\
+\\\\\\\"\\\", ShowStringCharacters->True], \\\",\\\", RowBox[{\\\"{\\\", \
+RowBox[{RowBox[{SubscriptBox[StyleBox[\\\"s\\\", \\\"TI\\\"], \
+StyleBox[\\\"1\\\", \\\"TR\\\"]], \\\"\[Rule]\\\", \
+SubscriptBox[StyleBox[\\\"sp\\\", \\\"TI\\\"], StyleBox[\\\"1\\\", \
+\\\"TR\\\"]]}], \\\",\\\", RowBox[{SubscriptBox[StyleBox[\\\"s\\\", \
+\\\"TI\\\"], StyleBox[\\\"2\\\", \\\"TR\\\"]], \\\"\[Rule]\\\", \
+SubscriptBox[StyleBox[\\\"sp\\\", \\\"TI\\\"], StyleBox[\\\"2\\\", \
+\\\"TR\\\"]]}], \\\",\\\", StyleBox[\\\"\[Ellipsis]\\\", \\\"TR\\\"]}], \\\"}\
+\\\"}]}], \\\"]\\\"}]\\) replaces the string expressions \
+\\!\\(\\*SubscriptBox[StyleBox[\\\"s\\\", \\\"TI\\\"], StyleBox[\\\"i\\\", \\\
+\"TI\\\"]]\\) by \\!\\(\\*SubscriptBox[StyleBox[\\\"sp\\\", \\\"TI\\\"], \
+StyleBox[\\\"i\\\", \\\"TI\\\"]]\\) whenever they appear as substrings of \
+\\\"\\!\\(\\*StyleBox[\\\"string\\\", \\\"TI\\\"]\\)\\\".\\n\\!\\(\\*RowBox[{\
+\\\"StringReplace\\\", \\\"[\\\", \
+RowBox[{StyleBox[\\\"\\\\\\\"\\\\!\\\\(\\\\*StyleBox[\\\\\\\"string\\\\\\\",\\\
+\\\\\"TI\\\\\\\"]\\\\)\\\\\\\"\\\", ShowStringCharacters->True], \\\",\\\", \
+StyleBox[\\\"srules\\\", \\\"TI\\\"], \\\",\\\", StyleBox[\\\"n\\\", \\\"TI\\\
+\"]}], \\\"]\\\"}]\\) does only the first \\!\\(\\*StyleBox[\\\"n\\\", \\\"TI\
+\\\"]\\) replacements. \\n\\!\\(\\*RowBox[{\\\"StringReplace\\\", \\\"[\\\", \
+RowBox[{RowBox[{\\\"{\\\", RowBox[{SubscriptBox[StyleBox[\\\"s\\\", \
+\\\"TI\\\"], StyleBox[\\\"1\\\", \\\"TR\\\"]], \\\",\\\", \
+SubscriptBox[StyleBox[\\\"s\\\", \\\"TI\\\"], StyleBox[\\\"2\\\", \
+\\\"TR\\\"]], \\\",\\\", StyleBox[\\\"\[Ellipsis]\\\", \\\"TR\\\"]}], \\\"}\\\
+\"}], \\\",\\\", StyleBox[\\\"srules\\\", \\\"TI\\\"]}], \\\"]\\\"}]\\) gives \
+the list of results for each of the \\!\\(\\*SubscriptBox[StyleBox[\\\"s\\\", \
+\\\"TI\\\"], StyleBox[\\\"i\\\", \\\"TI\\\"]]\\). \
+\\n\\!\\(\\*RowBox[{\\\"StringReplace\\\", \\\"[\\\", \
+StyleBox[\\\"srules\\\", \\\"TI\\\"], \\\"]\\\"}]\\) represents an operator \
+form of StringReplace that can be applied to an expression.\"\>", 
+  "\[NonBreakingSpace]", 
+  ButtonBox[
+   StyleBox["\[RightSkeleton]", "SR"],
+   Active->True,
+   BaseStyle->"Link",
+   ButtonData->"paclet:ref/StringReplace"]}]], "Print", "PrintUsage",
+ CellChangeTimes->{3.7556627341087217`*^9},
+ CellTags->
+  "Info23755633933-5269558",ExpressionUUID->"f3ae63ae-ea19-403c-ae3c-\
+1d9490d25c06"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"?", "StringSplit"}]], "Input",
+ CellChangeTimes->{{3.755662746593526*^9, 3.75566274876477*^9}},
+ CellLabel->"In[3]:=",ExpressionUUID->"4e109b3c-83bc-41ba-82fd-7af6111a830d"],
+
+Cell[BoxData[
+ RowBox[{"\<\"\\!\\(\\*RowBox[{\\\"StringSplit\\\", \\\"[\\\", \
+StyleBox[\\\"\\\\\\\"\\\\!\\\\(\\\\*StyleBox[\\\\\\\"string\\\\\\\",\\\\\\\"\
+TI\\\\\\\"]\\\\)\\\\\\\"\\\", ShowStringCharacters->True], \\\"]\\\"}]\\) \
+splits \\\"\\!\\(\\*StyleBox[\\\"string\\\", \\\"TI\\\"]\\)\\\" into a list \
+of substrings separated by whitespace. \
+\\n\\!\\(\\*RowBox[{\\\"StringSplit\\\", \\\"[\\\", RowBox[{StyleBox[\\\"\\\\\
+\\\"\\\\!\\\\(\\\\*StyleBox[\\\\\\\"string\\\\\\\",\\\\\\\"TI\\\\\\\"]\\\\)\\\
+\\\\\"\\\", ShowStringCharacters->True], \\\",\\\", StyleBox[\\\"patt\\\", \\\
+\"TI\\\"]}], \\\"]\\\"}]\\) splits into substrings separated by delimiters \
+matching the string expression \\!\\(\\*StyleBox[\\\"patt\\\", \
+\\\"TI\\\"]\\). \\n\\!\\(\\*RowBox[{\\\"StringSplit\\\", \\\"[\\\", \
+RowBox[{StyleBox[\\\"\\\\\\\"\\\\!\\\\(\\\\*StyleBox[\\\\\\\"string\\\\\\\",\\\
+\\\\\"TI\\\\\\\"]\\\\)\\\\\\\"\\\", ShowStringCharacters->True], \\\",\\\", \
+RowBox[{\\\"{\\\", RowBox[{SubscriptBox[StyleBox[\\\"p\\\", \\\"TI\\\"], \
+StyleBox[\\\"1\\\", \\\"TR\\\"]], \\\",\\\", SubscriptBox[StyleBox[\\\"p\\\", \
+\\\"TI\\\"], StyleBox[\\\"2\\\", \\\"TR\\\"]], \\\",\\\", StyleBox[\\\"\
+\[Ellipsis]\\\", \\\"TR\\\"]}], \\\"}\\\"}]}], \\\"]\\\"}]\\) splits at any \
+of the \\!\\(\\*SubscriptBox[StyleBox[\\\"p\\\", \\\"TI\\\"], \
+StyleBox[\\\"i\\\", \\\"TI\\\"]]\\). \\n\\!\\(\\*RowBox[{\\\"StringSplit\\\", \
+\\\"[\\\", \
+RowBox[{StyleBox[\\\"\\\\\\\"\\\\!\\\\(\\\\*StyleBox[\\\\\\\"string\\\\\\\",\\\
+\\\\\"TI\\\\\\\"]\\\\)\\\\\\\"\\\", ShowStringCharacters->True], \\\",\\\", \
+RowBox[{StyleBox[\\\"patt\\\", \\\"TI\\\"], \\\"\[Rule]\\\", StyleBox[\\\"val\
+\\\", \\\"TI\\\"]}]}], \\\"]\\\"}]\\) inserts \\!\\(\\*StyleBox[\\\"val\\\", \
+\\\"TI\\\"]\\) at the position of each delimiter. \
+\\n\\!\\(\\*RowBox[{\\\"StringSplit\\\", \\\"[\\\", RowBox[{StyleBox[\\\"\\\\\
+\\\"\\\\!\\\\(\\\\*StyleBox[\\\\\\\"string\\\\\\\",\\\\\\\"TI\\\\\\\"]\\\\)\\\
+\\\\\"\\\", ShowStringCharacters->True], \\\",\\\", RowBox[{\\\"{\\\", \
+RowBox[{RowBox[{SubscriptBox[StyleBox[\\\"p\\\", \\\"TI\\\"], \
+StyleBox[\\\"1\\\", \\\"TR\\\"]], \\\"\[Rule]\\\", \
+SubscriptBox[StyleBox[\\\"v\\\", \\\"TI\\\"], StyleBox[\\\"1\\\", \
+\\\"TR\\\"]]}], \\\",\\\", StyleBox[\\\"\[Ellipsis]\\\", \\\"TR\\\"]}], \\\"}\
+\\\"}]}], \\\"]\\\"}]\\) inserts \\!\\(\\*SubscriptBox[StyleBox[\\\"v\\\", \\\
+\"TI\\\"], StyleBox[\\\"i\\\", \\\"TI\\\"]]\\) at the position of each \
+delimiter \\!\\(\\*SubscriptBox[StyleBox[\\\"p\\\", \\\"TI\\\"], \
+StyleBox[\\\"i\\\", \\\"TI\\\"]]\\). \\n\\!\\(\\*RowBox[{\\\"StringSplit\\\", \
+\\\"[\\\", \
+RowBox[{StyleBox[\\\"\\\\\\\"\\\\!\\\\(\\\\*StyleBox[\\\\\\\"string\\\\\\\",\\\
+\\\\\"TI\\\\\\\"]\\\\)\\\\\\\"\\\", ShowStringCharacters->True], \\\",\\\", \
+StyleBox[\\\"patt\\\", \\\"TI\\\"], \\\",\\\", StyleBox[\\\"n\\\", \
+\\\"TI\\\"]}], \\\"]\\\"}]\\) splits into at most \
+\\!\\(\\*StyleBox[\\\"n\\\", \\\"TI\\\"]\\) substrings. \
+\\n\\!\\(\\*RowBox[{\\\"StringSplit\\\", \\\"[\\\", \
+RowBox[{RowBox[{\\\"{\\\", RowBox[{SubscriptBox[StyleBox[\\\"s\\\", \
+\\\"TI\\\"], StyleBox[\\\"1\\\", \\\"TR\\\"]], \\\",\\\", \
+SubscriptBox[StyleBox[\\\"s\\\", \\\"TI\\\"], StyleBox[\\\"2\\\", \
+\\\"TR\\\"]], \\\",\\\", StyleBox[\\\"\[Ellipsis]\\\", \\\"TR\\\"]}], \\\"}\\\
+\"}], \\\",\\\", StyleBox[\\\"p\\\", \\\"TI\\\"]}], \\\"]\\\"}]\\) gives the \
+list of results for each of the \\!\\(\\*SubscriptBox[StyleBox[\\\"s\\\", \
+\\\"TI\\\"], StyleBox[\\\"i\\\", \\\"TI\\\"]]\\). \"\>", 
+  "\[NonBreakingSpace]", 
+  ButtonBox[
+   StyleBox["\[RightSkeleton]", "SR"],
+   Active->True,
+   BaseStyle->"Link",
+   ButtonData->"paclet:ref/StringSplit"]}]], "Print", "PrintUsage",
+ CellChangeTimes->{3.755662749125442*^9},
+ CellTags->
+  "Info33755633949-5269558",ExpressionUUID->"1d066379-d094-47bb-b3eb-\
+28d3c608b08b"]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"lnames", "=", 
+   RowBox[{"StringSplit", "[", 
+    RowBox[{"names", ",", "\"\<\n\>\""}], "]"}]}], ";"}]], "Input",
+ CellChangeTimes->{{3.755662730337019*^9, 3.755662767811393*^9}},
+ CellLabel->"In[4]:=",ExpressionUUID->"3ae77156-3e07-490e-b21c-c177e95f05b5"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Select", "[", 
+  RowBox[{
+   RowBox[{
+    RowBox[{
+     RowBox[{"StringReplace", "[", 
+      RowBox[{"#", ",", 
+       RowBox[{
+        RowBox[{"RegularExpression", "[", "\"\<<[^<>]*>\>\"", "]"}], 
+        "\[Rule]", "\"\<\>\""}]}], "]"}], "&"}], "/@", "lnames"}], ",", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"Length", "[", 
+      RowBox[{"StringSplit", "[", "#", "]"}], "]"}], ">", "3"}], "&"}]}], 
+  "]"}]], "Input",
+ CellChangeTimes->{{3.755662769515958*^9, 3.755662864004058*^9}, {
+  3.755662896001527*^9, 3.755662903817357*^9}, {3.7556629749253273`*^9, 
+  3.755662986658121*^9}, {3.755663032631195*^9, 3.7556630424120502`*^9}, {
+  3.755663105472905*^9, 3.7556631071463537`*^9}},
+ CellLabel->"In[18]:=",ExpressionUUID->"e6fa0cdb-cbc4-46a3-9e53-dc4ae05bd087"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"\<\" (13498) Al Chwarizmi                  Al Chwarizmi\"\>", 
+   ",", "\<\"(111468) Alba Regia                    Alba Regia\"\>", 
+   ",", "\<\" (20006) Albertus Magnus               Albertus Magnus\"\>", 
+   ",", "\<\"(100122) Alpes Maritimes               Alpes Maritimes\"\>", 
+   ",", "\<\"  (2175) Andrea Doria                  Andrea Doria\"\>", 
+   ",", "\<\"  (2282) Andres Bello                  Andr&#233;s Bello\"\>", 
+   ",", "\<\" (16770) Angkor Wat                    Angkor Wat\"\>", 
+   ",", "\<\" (90022) Apache Point                  Apache Point\"\>", 
+   ",", "\<\"(100731) Ara Pacis                     Ara Pacis\"\>", 
+   ",", "\<\"(340980) Bad Vilbel                    Bad Vilbel\"\>", 
+   ",", "\<\" (11739) Baton Rouge                   Baton Rouge\"\>", 
+   ",", "\<\"  (3087) Beatrice Tinsley              Beatrice Tinsley\"\>", 
+   ",", "\<\" (10770) Belo Horizonte                Belo Horizonte\"\>", 
+   ",", "\<\"  (2863) Ben Mayer                     Ben Mayer\"\>", 
+   ",", "\<\" (12709) Bergen op Zoom                Bergen op Zoom\"\>", 
+   ",", "\<\" (90892) Betlemska kaple               Betl&#233;msk&#225; kaple\
+\"\>", ",", "\<\" (69263) Big Ben                       Big Ben\"\>", 
+   ",", "\<\" (47294) Blansky les                   Blansk&#253; les\"\>", 
+   ",", "\<\"  (3296) Bosque Alegre                 Bosque Alegre\"\>", 
+   ",", "\<\" (63387) Brazos Bend                   Brazos Bend\"\>", 
+   ",", "\<\"(128895) Bright Spring                 Bright Spring\"\>", 
+   ",", "\<\"  (2430) Bruce Helin                   Bruce Helin\"\>", 
+   ",", "\<\" (49272) Bryce Canyon                  Bryce Canyon\"\>", 
+   ",", "\<\"  (7850) Buenos Aires                  Buenos Aires\"\>", 
+   ",", "\<\"(200020) Cadi Ayyad                    Cadi Ayyad\"\>", 
+   ",", "\<\"(189202) Calar Alto                    Calar Alto\"\>", 
+   ",", "\<\" (16951) Carolus Quartus               Carolus Quartus\"\>", 
+   ",", "\<\" (11134) Ceske Budejovice              &#268;esk&#233; \
+Bud&#283;jovice\"\>", 
+   ",", "\<\"  (2747) Cesky Krumlov                 &#268;esk&#253; Krumlov\"\
+\>", ",", "\<\"  (2963) Chen Jiageng                  Chen Jiageng\"\>", 
+   ",", "\<\"(100456) Chichen Itza                  Chichen Itza\"\>", 
+   ",", "\<\"  (3797) Ching-Sung Yu                 Ching-Sung Yu\"\>", 
+   ",", "\<\"  (2834) Christy Carol                 Christy Carol\"\>", 
+   ",", "\<\" (11626) Church Stretton               Church Stretton\"\>", 
+   ",", "\<\" (43511) Cima Ekar                     Cima Ekar\"\>", 
+   ",", "\<\"(221769) Cima Rest                     Cima Rest\"\>", 
+   ",", "\<\" (16368) Citta di Alba                 Citt&#224; di Alba\"\>", 
+   ",", "\<\" (14539) Clocke Roeland                Clocke Roeland\"\>", 
+   ",", "\<\"(200025) Cloud Gate                    Cloud Gate\"\>", 
+   ",", "\<\"  (1655) Comas Sola                    Comas Sol&#225;\"\>", 
+   ",", "\<\"  (2645) Daphne Plane                  Daphne Plane\"\>", 
+   ",", "\<\"  (2725) David Bender                  David Bender\"\>", 
+   ",", "\<\"  (4205) David Hughes                  David Hughes\"\>", 
+   ",", "\<\" (22996) De Boo                        De Boo\"\>", 
+   ",", "\<\" (65821) De Curtis                     De Curtis\"\>", 
+   ",", "\<\"  (4279) De Gasparis                   De Gasparis\"\>", 
+   ",", "\<\" (76272) De Jong                       De Jong\"\>", 
+   ",", "\<\" (33219) De Los Santos                 De Los Santos\"\>", 
+   ",", "\<\"(190310) De Martin                     De Martin\"\>", 
+   ",", "\<\"  (5589) De Meis                       De Meis\"\>", 
+   ",", "\<\" (26849) De Paepe                      De Paepe\"\>", 
+   ",", "\<\"  (5522) De Rop                        De Rop\"\>", 
+   ",", "\<\" (12150) De Ruyter                     De Ruyter\"\>", 
+   ",", "\<\"  (3268) De Sanctis                    De Sanctis\"\>", 
+   ",", "\<\"  (1686) De Sitter                     De Sitter\"\>", 
+   ",", "\<\"(134244) De Young                      De Young\"\>", 
+   ",", "\<\"(325455) Della Valle                   Della Valle\"\>", 
+   ",", "\<\" (20243) Den Bosch                     Den Bosch\"\>", 
+   ",", "\<\"(108201) Di Blasi                      Di Blasi\"\>", 
+   ",", "\<\"  (3247) Di Martino                    Di Martino\"\>", 
+   ",", "\<\" (25673) Di Mascio                     Di Mascio\"\>", 
+   ",", "\<\"  (7484) Dogo Onsen                    Dogo Onsen\"\>", 
+   ",", "\<\"  (3552) Don Quixote                   Don Quixote\"\>", 
+   ",", "\<\" (12410) Donald Duck                   Donald Duck\"\>", 
+   ",", "\<\" (17602) Dr. G.                        Dr. G.\"\>", 
+   ",", "\<\" (22249) Dvorets Pionerov              Dvorets Pionerov\"\>", 
+   ",", "\<\"   (858) El Djezair                    El Djeza&#239;r\"\>", 
+   ",", "\<\"  (6224) El Goresy                     El Goresy\"\>", 
+   ",", "\<\"  (2311) El Leoncito                   El Leoncito\"\>", 
+   ",", "\<\" (41986) Fort Bend                     Fort Bend\"\>", 
+   ",", "\<\"  (3917) Franz Schubert                Franz Schubert\"\>", 
+   ",", "\<\" (34138) Frasso Sabino                 Frasso Sabino\"\>", 
+   ",", "\<\"  (1728) Goethe Link                   Goethe Link\"\>", 
+   ",", "\<\" (10960) Gran Sasso                    Gran Sasso\"\>", 
+   ",", "\<\"(217603) Grove Creek                   Grove Creek\"\>", 
+   ",", "\<\"  (2012) Guo Shou-Jing                 Guo Shou-Jing\"\>", 
+   ",", "\<\"  (2573) Hannu Olavi                   Hannu Olavi\"\>", 
+   ",", "\<\" (10243) Hohe Meissner                 Hohe Meissner\"\>", 
+   ",", "\<\" (14872) Hoher List                    Hoher List\"\>", 
+   ",", "\<\"  (3297) Hong Kong                     Hong Kong\"\>", 
+   ",", "\<\"  (8000) Isaac Newton                  Isaac Newton\"\>", 
+   ",", "\<\"  (2625) Jack London                   Jack London\"\>", 
+   ",", "\<\"  (9007) James Bond                    James Bond\"\>", 
+   ",", "\<\"  (2634) James Bradley                 James Bradley\"\>", 
+   ",", "\<\" (10877) Jiangnan Tianchi              Jiangnan Tianchi\"\>", 
+   ",", "\<\"  (2874) Jim Young                     Jim Young\"\>", 
+   ",", "\<\" (21257) Jizni Cechy                   Ji&#382;n&#237; \
+&#268;echy\"\>", 
+   ",", "\<\"  (2392) Jonathan Murray               Jonathan Murray\"\>", 
+   ",", "\<\"  (6304) Josephus Flavius              Josephus Flavius\"\>", 
+   ",", "\<\"  (2704) Julian Loewe                  Julian Loewe\"\>", 
+   ",", "\<\" (12833) Kamenny Ujezd                 Kamenn&#253; &#218;jezd\"\
+\>", ",", "\<\"  (2807) Karl Marx                     Karl Marx\"\>", 
+   ",", "\<\" (10039) Keet Seel                     Keet Seel\"\>", 
+   ",", "\<\" (22422) Kenmount Hill                 Kenmount Hill\"\>", 
+   ",", "\<\" (11778) Kingsford Smith               Kingsford Smith\"\>", 
+   ",", "\<\" (91890) Kiriko Matsuri                Kiriko Matsuri\"\>", 
+   ",", "\<\"  (2322) Kitt Peak                     Kitt Peak\"\>", 
+   ",", "\<\"  (3903) Kliment Ohridski              Kliment Ohridski\"\>", 
+   ",", "\<\" (76628) Kozi Hradek                   Koz&#237; \
+Hr&#225;dek\"\>", 
+   ",", "\<\" (13964) La Billardiere                La Billardi&#232;re\"\>", 
+   ",", "\<\"(315218) La Boetie                     La Boetie\"\>", 
+   ",", "\<\"(159164) La Canada                     La Ca&#241;ada\"\>", 
+   ",", "\<\"  (8221) La Condamine                  La Condamine\"\>", 
+   ",", "\<\" (13118) La Harpe                      La Harpe\"\>", 
+   ",", "\<\" (53093) La Orotava                    La Orotava\"\>", 
+   ",", "\<\"  (1008) La Paz                        La Paz\"\>", 
+   ",", "\<\" (13560) La Perouse                    La P&#233;rouse\"\>", 
+   ",", "\<\"  (1029) La Plata                      La Plata\"\>", 
+   ",", "\<\"(164589) La Sagra                      La Sagra\"\>", 
+   ",", "\<\"  (7082) La Serena                     La Serena\"\>", 
+   ",", "\<\"  (2187) La Silla                      La Silla\"\>", 
+   ",", "\<\" (10211) La Spezia                     La Spezia\"\>", 
+   ",", "\<\"  (4943) Lac d'Orient                  Lac d'Orient\"\>", 
+   ",", "\<\" (10379) Lake Placid                   Lake Placid\"\>", 
+   ",", "\<\" (29186) Lake Tekapo                   Lake Tekapo\"\>", 
+   ",", "\<\" (13052) Las Casas                     Las Casas\"\>", 
+   ",", "\<\" (60186) Las Cruces                    Las Cruces\"\>", 
+   ",", "\<\" (82332) Las Vegas                     Las Vegas\"\>", 
+   ",", "\<\" (19132) Le Clezio                     Le Cl&#233;zio\"\>", 
+   ",", "\<\"  (9285) Le Corre                      Le Corre\"\>", 
+   ",", "\<\" (10233) Le Creusot                    Le Creusot\"\>", 
+   ",", "\<\"(145445) Le Floch                      Le Floch\"\>", 
+   ",", "\<\" (12718) Le Gentil                     Le Gentil\"\>", 
+   ",", "\<\" (58460) Le Mouelic                    Le Mou&#233;lic\"\>", 
+   ",", "\<\"  (5342) Le Poole                      Le Poole\"\>", 
+   ",", "\<\" (16414) Le Procope                    Le Procope\"\>", 
+   ",", "\<\"  (2810) Lev Tolstoj                   Lev Tolstoj\"\>", 
+   ",", "\<\"  (4125) Lew Allen                     Lew Allen\"\>", 
+   ",", "\<\"  (2686) Linda Susan                   Linda Susan\"\>", 
+   ",", "\<\"  (3168) Lomnicky Stit                 Lomnick&#253; \
+&#352;t&#237;t\"\>", 
+   ",", "\<\" (10476) Los Molinos                   Los Molinos\"\>", 
+   ",", "\<\"  (2900) Lubos Perek                   Lubo&#353; Perek\"\>", 
+   ",", "\<\"  (6240) Lucretius Carus               Lucretius Carus\"\>", 
+   ",", "\<\" (31323) Lysa hora                     Lys&#225; hora\"\>", 
+   ",", "\<\" (10415) Mali Losinj                   Mali Lo&#353;inj\"\>", 
+   ",", "\<\"  (4300) Marg Edmondson                Marg Edmondson\"\>", 
+   ",", "\<\"  (2362) Mark Twain                    Mark Twain\"\>", 
+   ",", "\<\"  (7100) Martin Luther                 Martin Luther\"\>", 
+   ",", "\<\"(188534) Mauna Kea                     Mauna Kea\"\>", 
+   ",", "\<\" (34901) Mauna Loa                     Mauna Loa\"\>", 
+   ",", "\<\"  (9767) Midsomer Norton               Midsomer Norton\"\>", 
+   ",", "\<\" (10769) Minas Gerais                  Minas Gerais\"\>", 
+   ",", "\<\" (21651) Mission Valley                Mission Valley\"\>", 
+   ",", "\<\" (20964) Mons Naklethi                 Mons Naklethi\"\>", 
+   ",", "\<\" (10958) Mont Blanc                    Mont Blanc\"\>", 
+   ",", "\<\" (13681) Monty Python                  Monty Python\"\>", 
+   ",", "\<\" (30963) Mount Banzan                  Mount Banzan\"\>", 
+   ",", "\<\" (11927) Mount Kent                    Mount Kent\"\>", 
+   ",", "\<\"  (4182) Mount Locke                   Mount Locke\"\>", 
+   ",", "\<\" (17640) Mount Stromlo                 Mount Stromlo\"\>", 
+   ",", "\<\"  (2309) Mr. Spock                     Mr.&#32;Spock\"\>", 
+   ",", "\<\" (12448) Mr. Tompkins                  Mr. Tompkins\"\>", 
+   ",", "\<\" (24837) Msecke Zehrovice              M&#353;eck&#233; \
+&#381;ehrovice\"\>", 
+   ",", "\<\"  (2355) Nei Monggol                   Nei Monggol\"\>", 
+   ",", "\<\" (20936) Nemrut Dagi                   Nemrut Dagi\"\>", 
+   ",", "\<\"(386622) New Zealand                   New Zealand\"\>", 
+   ",", "\<\" (12382) Niagara Falls                 Niagara Falls\"\>", 
+   ",", "\<\" (18160) Nihon Uchu Forum              Nihon Uchu Forum\"\>", 
+   ",", "\<\"  (7736) Nizhnij Novgorod              Nizhnij Novgorod\"\>", 
+   ",", "\<\"(114703) North Dakota                  North Dakota\"\>", 
+   ",", "\<\" (22450) Nove Hrady                    Nov&#233; Hrady\"\>", 
+   ",", "\<\"(194262) Nove Zamky                    Nov&#233; Z&#225;mky\"\>",
+    ",", "\<\"  (4901) O Briain                      &#211; Briain\"\>", 
+   ",", "\<\"(177120) Ocampo Uria                   Ocampo \
+Ur{\\\\i&#225;)\"\>", 
+   ",", "\<\"  (2454) Olaus Magnus                  Olaus Magnus\"\>", 
+   ",", "\<\" (10515) Old Joe                       Old Joe\"\>", 
+   ",", "\<\"  (2897) Ole Romer                     Ole R&#246;mer\"\>", 
+   ",", "\<\"  (2108) Otto Schmidt                  Otto Schmidt\"\>", 
+   ",", "\<\"  (2227) Otto Struve                   Otto Struve\"\>", 
+   ",", "\<\" (10771) Ouro Preto                    Ouro Pr&#234;to\"\>", 
+   ",", "\<\"  (1740) Paavo Nurmi                   Paavo Nurmi\"\>", 
+   ",", "\<\"  (2748) Patrick Gene                  Patrick Gene\"\>", 
+   ",", "\<\"  (1680) Per Brahe                     Per Brahe\"\>", 
+   ",", "\<\" (12465) Perth Amboy                   Perth Amboy\"\>", 
+   ",", "\<\"(100897) Piatra Neamt                  Piatra Neamt\"\>", 
+   ",", "\<\" (19367) Pink Floyd                    Pink Floyd\"\>", 
+   ",", "\<\"  (2694) Pino Torinese                 Pino Torinese\"\>", 
+   ",", "\<\"(322390) Planes de Son                 Planes de Son\"\>", 
+   ",", "\<\"  (3276) Porta Coeli                   Porta Coeli\"\>", 
+   ",", "\<\" (24779) Presque Isle                  Presque Isle\"\>", 
+   ",", "\<\" (14024) Procol Harum                  Procol Harum\"\>", 
+   ",", "\<\"  (3494) Purple Mountain               Purple Mountain\"\>", 
+   ",", "\<\"  (2720) Pyotr Pervyj                  Pyotr Pervyj\"\>", 
+   ",", "\<\"(221465) Rapa Nui                      Rapa Nui\"\>", 
+   ",", "\<\" (20495) Rimavska Sobota               Rimavsk&#225; Sobota\"\>",
+    ",", "\<\" (11334) Rio de Janeiro                Rio de Janeiro\"\>", 
+   ",", "\<\"  (2529) Rockwell Kent                 Rockwell Kent\"\>", 
+   ",", "\<\" (19383) Rolling Stones                Rolling Stones\"\>", 
+   ",", "\<\"  (2285) Ron Helin                     Ron Helin\"\>", 
+   ",", "\<\"  (7700) Rote Kapelle                  Rote Kapelle\"\>", 
+   ",", "\<\"  (2899) Runrun Shaw                   Runrun Shaw\"\>", 
+   ",", "\<\"  (3285) Ruth Wolfe                    Ruth Wolfe\"\>", 
+   ",", "\<\"  (9395) Saint Michel                  Saint Michel\"\>", 
+   ",", "\<\" (18335) San Cassiano                  San Cassiano\"\>", 
+   ",", "\<\"  (3043) San Diego                     San Diego\"\>", 
+   ",", "\<\"  (6216) San Jose                      San Jose\"\>", 
+   ",", "\<\"  (2284) San Juan                      San Juan\"\>", 
+   ",", "\<\"  (7481) San Marcello                  San Marcello\"\>", 
+   ",", "\<\"  (2745) San Martin                    San Mart&#237;n\"\>", 
+   ",", "\<\" (18745) San Pedro                     San Pedro\"\>", 
+   ",", "\<\"  (2917) Sawyer Hogg                   Sawyer Hogg\"\>", 
+   ",", "\<\" (26971) Sezimovo Usti                 Sezimovo &#218;st&#237;\"\
+\>", ",", "\<\"  (2027) Shen Guo                      Shen Guo\"\>", 
+   ",", "\<\"(185636) Shiao Lin                     Shiao Lin\"\>", 
+   ",", "\<\"  (2343) Siding Spring                 Siding Spring\"\>", 
+   ",", "\<\" (22618) Silva Nortica                 Silva Nortica\"\>", 
+   ",", "\<\"  (2619) Skalnate Pleso                Skalnat&#233; Pleso\"\>", 
+   ",", "\<\" (26715) South Dakota                  South Dakota\"\>", 
+   ",", "\<\"  (3282) Spencer Jones                 Spencer Jones\"\>", 
+   ",", "\<\" (19407) Standing Bear                 Standing Bear\"\>", 
+   ",", "\<\" (10168) Stony Ridge                   Stony Ridge\"\>", 
+   ",", "\<\" (84882) Table Mountain                Table Mountain\"\>", 
+   ",", "\<\" (85267) Taj Mahal                     Taj Mahal\"\>", 
+   ",", "\<\" (15295) Tante Riek                    Tante Riek\"\>", 
+   ",", "\<\"  (1625) The NORC                      The NORC\"\>", 
+   ",", "\<\" (73687) Thomas Aquinas                Thomas Aquinas\"\>", 
+   ",", "\<\" (11780) Thunder Bay                   Thunder Bay\"\>", 
+   ",", "\<\" (10244) Thuringer Wald                Th&#252;ringer Wald\"\>", 
+   ",", "\<\"  (1677) Tycho Brahe                   Tycho Brahe\"\>", 
+   ",", "\<\" (14537) Tyn nad Vltavou               T&#253;n nad Vltavou\"\>",
+    ",", "\<\"(192208) Tzu Chi                       Tzu Chi\"\>", 
+   ",", "\<\"  (6000) United Nations                United Nations\"\>", 
+   ",", "\<\"  (2596) Vainu Bappu                   Vainu Bappu\"\>", 
+   ",", "\<\"  (1781) Van Biesbroeck                Van Biesbroeck\"\>", 
+   ",", "\<\" (41049) Van Citters                   Van Citters\"\>", 
+   ",", "\<\" (29244) Van Damme                     Van Damme\"\>", 
+   ",", "\<\"  (8205) Van Dijck                     Van Dijck\"\>", 
+   ",", "\<\"  (7059) Van Dokkum                    Van Dokkum\"\>", 
+   ",", "\<\" (26200) Van Doren                     Van Doren\"\>", 
+   ",", "\<\" (52266) Van Flandern                  Van Flandern\"\>", 
+   ",", "\<\" (14616) Van Gaal                      Van Gaal\"\>", 
+   ",", "\<\"  (9859) Van Lierde                    Van Lierde\"\>", 
+   ",", "\<\" (26293) Van Muyden                    Van Muyden\"\>", 
+   ",", "\<\" (14185) Van Ness                      Van Ness\"\>", 
+   ",", "\<\" (24679) Van Rensbergen                Van Rensbergen\"\>", 
+   ",", "\<\" (12324) Van Rompaey                   Van Rompaey\"\>", 
+   ",", "\<\" (25832) Van Scoyoc                    Van Scoyoc\"\>", 
+   ",", "\<\" (12708) Van Straten                   Van Straten\"\>", 
+   ",", "\<\"(152233) Van Till                      Van Till\"\>", 
+   ",", "\<\"(230691) Van Vogt                      Van Vogt\"\>", 
+   ",", "\<\" (10074) Van den Berghe                Van den Berghe\"\>", 
+   ",", "\<\"  (9749) Van den Eijnde                Van den Eijnde\"\>", 
+   ",", "\<\" (11480) Velikij Ustyug                Velikij Ustyug\"\>", 
+   ",", "\<\"  (2644) Victor Jara                   Victor Jara\"\>", 
+   ",", "\<\"(121089) Vyssi Brod                    Vy&#353;&#353;&#237; Brod\
+\"\>", ",", "\<\"  (3145) Walter Adams                  Walter Adams\"\>", 
+   ",", "\<\"  (7571) Weisse Rose                   Weisse Rose\"\>", 
+   ",", "\<\"  (3641) Williams Bay                  Williams Bay\"\>", 
+   ",", "\<\"  (2752) Wu Chien-Shiung               Wu Chien-Shiung\"\>", 
+   ",", "\<\"  (1972) Yi Xing                       Yi Xing\"\>", 
+   ",", "\<\" (22521) ZZ Top                        ZZ Top\"\>", 
+   ",", "\<\"  (1802) Zhang Heng                    Zhang Heng\"\>", 
+   ",", "\<\"  (4408) Zlata Koruna                  Zlat&#225; Koruna\"\>", 
+   ",", "\<\"  (1888) Zu Chong-Zhi                  Zu Chong-Zhi\"\>", 
+   ",", "\<\" (15330) de Almeida                    de Almeida\"\>", 
+   ",", "\<\"  (6512) de Bergh                      de Bergh\"\>", 
+   ",", "\<\" (30883) de Broglie                    de Broglie\"\>", 
+   ",", "\<\"(273230) de Bruyn                      de Bruyn\"\>", 
+   ",", "\<\" (12526) de Coninck                    de Coninck\"\>", 
+   ",", "\<\" (10674) de Elia                       de Elia\"\>", 
+   ",", "\<\" (69434) de Gerlache                   de Gerlache\"\>", 
+   ",", "\<\" (11243) de Graauw                     de Graauw\"\>", 
+   ",", "\<\" (10444) de Hevesy                     de Hevesy\"\>", 
+   ",", "\<\"  (3798) de Jager                      de Jager\"\>", 
+   ",", "\<\" (13641) de Lesseps                    de Lesseps\"\>", 
+   ",", "\<\" (14403) de Machault                   de Machault\"\>", 
+   ",", "\<\" (44039) de Sahagun                    de Sahagun\"\>", 
+   ",", "\<\" (13580) de Saussure                   de Saussure\"\>", 
+   ",", "\<\"(154714) de Schepper                   de Schepper\"\>", 
+   ",", "\<\"(161315) de Shalit                     de Shalit\"\>", 
+   ",", "\<\"(291325) de Tyard                      de Tyard\"\>", 
+   ",", "\<\" (12687) de Valory                     de Valory\"\>", 
+   ",", "\<\" (20103) de Vico                       de Vico\"\>", 
+   ",", "\<\" (15785) de Villegas                   de Villegas\"\>", 
+   ",", "\<\" (12650) de Vries                      de Vries\"\>", 
+   ",", "\<\" (10970) de Zeeuw                      de Zeeuw\"\>", 
+   ",", "\<\" (17435) di Giovanni                   di Giovanni\"\>", 
+   ",", "\<\" (12059) du Chatelet                   du Ch&#226;telet\"\>", 
+   ",", "\<\"  (2019) van Albada                    van Albada\"\>", 
+   ",", "\<\"  (2370) van Altena                    van Altena\"\>", 
+   ",", "\<\" (25155) van Belle                     van Belle\"\>", 
+   ",", "\<\" (10971) van Dishoeck                  van Dishoeck\"\>", 
+   ",", "\<\"  (9561) van Eyck                      van Eyck\"\>", 
+   ",", "\<\"  (6751) van Genderen                  van Genderen\"\>", 
+   ",", "\<\"  (1666) van Gent                      van Gent\"\>", 
+   ",", "\<\"  (4457) van Gogh                      van Gogh\"\>", 
+   ",", "\<\"  (1752) van Herk                      van Herk\"\>", 
+   ",", "\<\"  (1673) van Houten                    van Houten\"\>", 
+   ",", "\<\" (10965) van Leverink                  van Leverink\"\>", 
+   ",", "\<\" (10651) van Linschoten                van Linschoten\"\>", 
+   ",", "\<\" (10667) van Marxveldt                 van Marxveldt\"\>", 
+   ",", "\<\"  (9748) van Ostaijen                  van Ostaijen\"\>", 
+   ",", "\<\"  (2203) van Rhijn                     van Rhijn\"\>", 
+   ",", "\<\"  (9239) van Riebeeck                  van Riebeeck\"\>", 
+   ",", "\<\" (10441) van Rijckevorsel              van Rijckevorsel\"\>", 
+   ",", "\<\" (18643) van Rysselberghe              van Rysselberghe\"\>", 
+   ",", "\<\" (10439) van Schooten                  van Schooten\"\>", 
+   ",", "\<\" (19235) van Schurman                  van Schurman\"\>", 
+   ",", "\<\"  (3098) van Sprang                    van Sprang\"\>", 
+   ",", "\<\" (10440) van Swinden                   van Swinden\"\>", 
+   ",", "\<\" (22907) van Voorthuijsen              van Voorthuijsen\"\>", 
+   ",", "\<\" (10429) van Woerden                   van Woerden\"\>", 
+   ",", "\<\"  (4296) van Woerkom                   van Woerkom\"\>", 
+   ",", "\<\"  (8320) van Zee                       van Zee\"\>", 
+   ",", "\<\"  (2413) van de Hulst                  van de Hulst\"\>", 
+   ",", "\<\"  (1965) van de Kamp                   van de Kamp\"\>", 
+   ",", "\<\" (10753) van de Velde                  van de Velde\"\>", 
+   ",", "\<\"  (4230) van den Bergh                 van den Bergh\"\>", 
+   ",", "\<\"  (1663) van den Bos                   van den Bos\"\>", 
+   ",", "\<\"  (3091) van den Heuvel                van den Heuvel\"\>", 
+   ",", "\<\" (10963) van der Brugge                van der Brugge\"\>", 
+   ",", "\<\" (10966) van der Hucht                 van der Hucht\"\>", 
+   ",", "\<\" (10437) van der Kruit                 van der Kruit\"\>", 
+   ",", "\<\"  (2823) van der Laan                  van der Laan\"\>", 
+   ",", "\<\"  (9678) van der Meer                  van der Meer\"\>", 
+   ",", "\<\" (10443) van der Pol                   van der Pol\"\>", 
+   ",", "\<\" (32893) van der Waals                 van der Waals\"\>", 
+   ",", "\<\"  (9576) van der Weyden                van der Weyden\"\>", 
+   ",", "\<\"  (5916) van der Woude                 van der Woude\"\>", 
+   ",", "\<\" (12174) van het Reve                  van het Reve\"\>", 
+   ",", "\<\"(100028) von Canstein                  von Canstein\"\>", 
+   ",", "\<\" (27764) von Flue                      von Fl&#252;e\"\>", 
+   ",", "\<\" (85195) von Helfta                    von Helfta\"\>", 
+   ",", "\<\" (58215) von Klitzing                  von Klitzing\"\>", 
+   ",", "\<\" (73700) von Kues                      von Kues\"\>", 
+   ",", "\<\" (10762) von Laue                      von Laue\"\>", 
+   ",", "\<\" (69286) von Liebig                    von Liebig\"\>", 
+   ",", "\<\"  (2350) von Lude                      von L&#252;de\"\>", 
+   ",", "\<\"  (9816) von Matt                      von Matt\"\>", 
+   ",", "\<\" (22824) von Neumann                   von Neumann\"\>", 
+   ",", "\<\" (22788) von Steuben                   von Steuben\"\>", 
+   ",", "\<\" (12799) von Suttner                   von Suttner\"\>", 
+   ",", "\<\" (35087) von Sydow                     von Sydow\"\>", 
+   ",", "\<\" (48529) von Wrangel                   von Wrangel\"\>", 
+   ",", "\<\" (23265) von Wurden                    von Wurden\"\>", 
+   ",", "\<\"  (8870) von Zeipel                    von Zeipel\"\>"}], 
+  "}"}]], "Output",
+ CellChangeTimes->{{3.755662772706196*^9, 3.755662826303185*^9}, 
+   3.7556628646072206`*^9, {3.755662896868211*^9, 3.755662904307856*^9}, 
+   3.755663043776832*^9, 3.7556631085470867`*^9},
+ CellLabel->"Out[18]=",ExpressionUUID->"bf7152c3-17d2-4fd4-8f40-a5a99e0cdeed"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Length", "@", "%"}]], "Input",
+ CellChangeTimes->{{3.755663128720628*^9, 3.755663129961608*^9}},
+ CellLabel->"In[19]:=",ExpressionUUID->"42b1dfe4-bfed-48e7-bcca-036afc4672a5"],
+
+Cell[BoxData["336"], "Output",
+ CellChangeTimes->{3.755663130632819*^9},
+ CellLabel->"Out[19]=",ExpressionUUID->"e920330d-bdb5-4482-ab39-2d796af1b7f6"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Length", "@", "lnames"}]], "Input",
+ CellChangeTimes->{{3.755663162407028*^9, 3.755663164752974*^9}},
+ CellLabel->"In[20]:=",ExpressionUUID->"daaea96e-a583-43d3-b20d-2f159e87f452"],
+
+Cell[BoxData["21786"], "Output",
+ CellChangeTimes->{3.755663164947165*^9},
+ CellLabel->"Out[20]=",ExpressionUUID->"f220641e-bf72-477e-9980-51cb1d61be9d"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"%%", "/", "%"}], "//", "N"}]], "Input",
+ CellChangeTimes->{{3.7556631980899267`*^9, 3.755663200171476*^9}},
+ CellLabel->"In[21]:=",ExpressionUUID->"e2718a4e-db8a-4989-ae12-3ba307b9d7b5"],
+
+Cell[BoxData["0.015422748554117323`"], "Output",
+ CellChangeTimes->{3.755663200449081*^9},
+ CellLabel->"Out[21]=",ExpressionUUID->"2b25400c-6ec4-4b1a-9b02-ee7da1181aba"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"1", "/", "%"}]], "Input",
+ CellChangeTimes->{{3.755663207360496*^9, 3.755663207746169*^9}},
+ CellLabel->"In[22]:=",ExpressionUUID->"91fecb51-3f69-4186-8dbc-a0d34ba1445d"],
+
+Cell[BoxData["64.83928571428571`"], "Output",
+ CellChangeTimes->{3.75566320797322*^9},
+ CellLabel->"Out[22]=",ExpressionUUID->"daddb857-0a8c-4248-a5e8-378a79284086"]
+}, Open  ]]
+},
+WindowSize->{808, 621},
+WindowMargins->{{Automatic, 127}, {2, Automatic}},
+FrontEndVersion->"11.3 for Linux x86 (64-bit) (March 6, 2018)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{
+ "Info23755633933-5269558"->{
+  Cell[787, 27, 3084, 49, 194, "Print",ExpressionUUID->"f3ae63ae-ea19-403c-ae3c-1d9490d25c06",
+   CellTags->"Info23755633933-5269558"]},
+ "Info33755633949-5269558"->{
+  Cell[4108, 86, 3802, 60, 216, "Print",ExpressionUUID->"1d066379-d094-47bb-b3eb-28d3c608b08b",
+   CellTags->"Info33755633949-5269558"]}
+ }
+*)
+(*CellTagsIndex
+CellTagsIndex->{
+ {"Info23755633933-5269558", 35412, 590},
+ {"Info33755633949-5269558", 35579, 593}
+ }
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 204, 3, 31, "Input",ExpressionUUID->"0a6ba44c-3440-4fa0-a14b-8a0976d39d88"],
+Cell[787, 27, 3084, 49, 194, "Print",ExpressionUUID->"f3ae63ae-ea19-403c-ae3c-1d9490d25c06",
+ CellTags->"Info23755633933-5269558"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[3908, 81, 197, 3, 31, "Input",ExpressionUUID->"4e109b3c-83bc-41ba-82fd-7af6111a830d"],
+Cell[4108, 86, 3802, 60, 216, "Print",ExpressionUUID->"1d066379-d094-47bb-b3eb-28d3c608b08b",
+ CellTags->"Info33755633949-5269558"]
+}, Open  ]],
+Cell[7925, 149, 293, 6, 55, "Input",ExpressionUUID->"3ae77156-3e07-490e-b21c-c177e95f05b5"],
+Cell[CellGroupData[{
+Cell[8243, 159, 786, 19, 55, "Input",ExpressionUUID->"e6fa0cdb-cbc4-46a3-9e53-dc4ae05bd087"],
+Cell[9032, 180, 24449, 348, 7741, "Output",ExpressionUUID->"bf7152c3-17d2-4fd4-8f40-a5a99e0cdeed"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[33518, 533, 199, 3, 31, "Input",ExpressionUUID->"42b1dfe4-bfed-48e7-bcca-036afc4672a5"],
+Cell[33720, 538, 151, 2, 35, "Output",ExpressionUUID->"e920330d-bdb5-4482-ab39-2d796af1b7f6"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[33908, 545, 204, 3, 31, "Input",ExpressionUUID->"daaea96e-a583-43d3-b20d-2f159e87f452"],
+Cell[34115, 550, 153, 2, 35, "Output",ExpressionUUID->"f220641e-bf72-477e-9980-51cb1d61be9d"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[34305, 557, 221, 4, 31, "Input",ExpressionUUID->"e2718a4e-db8a-4989-ae12-3ba307b9d7b5"],
+Cell[34529, 563, 169, 2, 35, "Output",ExpressionUUID->"2b25400c-6ec4-4b1a-9b02-ee7da1181aba"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[34735, 570, 194, 3, 31, "Input",ExpressionUUID->"91fecb51-3f69-4186-8dbc-a0d34ba1445d"],
+Cell[34932, 575, 165, 2, 68, "Output",ExpressionUUID->"daddb857-0a8c-4248-a5e8-378a79284086"]
+}, Open  ]]
+}
+]
+*)
+

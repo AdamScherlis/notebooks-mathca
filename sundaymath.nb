@@ -1,0 +1,174 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 10.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      6074,        165]
+NotebookOptionsPosition[      5573,        145]
+NotebookOutlinePosition[      5909,        160]
+CellTagsIndexPosition[      5866,        157]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[{"1000000000", "\[IndentingNewLine]", "9100000000", "\
+\[IndentingNewLine]", "8100000001", "\[IndentingNewLine]", "7100000010", "\
+\[IndentingNewLine]", "7200000100", "\[IndentingNewLine]", "7110000100", "\
+\[IndentingNewLine]", "6300000100", "\[IndentingNewLine]", "7101001000", "\
+\[IndentingNewLine]", "6300000100"}], "Input",
+ CellChangeTimes->{{3.6161990054268293`*^9, 3.6161992080143948`*^9}, 
+   3.616199329837276*^9, {3.616199551341795*^9, 3.616199554783061*^9}}],
+
+Cell[BoxData[{
+ RowBox[{"6210001000", 
+  RowBox[{"(", 
+   RowBox[{"1", "+", "1", "+", "2", "+", "6"}], ")"}], 
+  "x"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"-", "6120010000"}], 
+  RowBox[{"(", 
+   RowBox[{"1", "+", "2", "+", "2", "+", "5"}], ")"}], 
+  "x"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"--", "5212000000"}], " ", 
+  RowBox[{"(", 
+   RowBox[{"1", "+", "1", "+", "2", "+", "3", "+", "3"}], ")"}], 
+  "x"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"--", "5220100000"}], 
+  RowBox[{"(", 
+   RowBox[{"1", "+", "1", "+", "2", "+", "2", "+", "4"}], ")"}], 
+  "x"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"-", "6201010000"}], 
+  RowBox[{"(", 
+   RowBox[{"1", "+", "1", "+", "3", "+", "5"}], ")"}], 
+  "x"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"--", "3511000000"}], 
+  RowBox[{"(", 
+   RowBox[{"1", "+", "1", "+", "1", "+", "1", "+", "1", "+", "2", "+", "3"}], 
+   ")"}], "x"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"--", "5131000000"}], 
+  RowBox[{"(", 
+   RowBox[{"1", "+", "2", "+", "2", "+", "2", "+", "3"}], ")"}], 
+  "x"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"--", "5301100000"}], 
+  RowBox[{"(", 
+   RowBox[{"1", "+", "1", "+", "1", "+", "3", "+", "4"}], ")"}], 
+  "x"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"--", "5310010000"}], 
+  RowBox[{"(", 
+   RowBox[{"1", "+", "1", "+", "1", "+", "2", "+", "5"}], ")"}], 
+  "x"}]}], "Input",
+ CellChangeTimes->{{3.6161995386632023`*^9, 3.616199591710692*^9}, {
+   3.61619966321104*^9, 3.616199706366354*^9}, {3.6162013327507267`*^9, 
+   3.6162013541885147`*^9}, {3.616201422222657*^9, 3.6162015218880253`*^9}, {
+   3.6162015751208982`*^9, 3.61620164484649*^9}, {3.616201681532186*^9, 
+   3.616201708959968*^9}, {3.6162017389932423`*^9, 3.616201790063735*^9}, {
+   3.616201835872613*^9, 3.6162019927555656`*^9}, {3.616202031488188*^9, 
+   3.61620209489736*^9}, {3.616202130703375*^9, 3.6162022633334417`*^9}, {
+   3.616202331601233*^9, 3.616202425472925*^9}, 3.616202476179283*^9}],
+
+Cell[BoxData[{
+ RowBox[{"1210", ",", 
+  "2020"}], "\[IndentingNewLine]", "21200", "\[IndentingNewLine]", "3211000", \
+"\[IndentingNewLine]", "42101000", "\[IndentingNewLine]", "...", "\
+\[IndentingNewLine]", "9210000001000"}], "Input",
+ CellChangeTimes->{{3.616202521141872*^9, 3.616202683196321*^9}, {
+  3.616202716860036*^9, 3.616202790059431*^9}, {3.616203162221889*^9, 
+  3.616203287307678*^9}, {3.616203348926586*^9, 3.616203351920497*^9}, {
+  3.616203439197072*^9, 3.616203439328333*^9}, {3.616203504510405*^9, 
+  3.6162035173751593`*^9}, {3.616203590159583*^9, 3.61620364798238*^9}, {
+  3.616203756350018*^9, 3.616203800300324*^9}, {3.616203975006221*^9, 
+  3.61620400046316*^9}, {3.616204039902631*^9, 3.6162040401588383`*^9}, {
+  3.616204088028384*^9, 3.6162041115320253`*^9}, {3.616204307262171*^9, 
+  3.6162043078378973`*^9}, {3.616204525439443*^9, 3.616204526863544*^9}, {
+  3.616204615423802*^9, 3.616204802063313*^9}, {3.61620488022386*^9, 
+  3.616205075516638*^9}}],
+
+Cell[BoxData["\[IndentingNewLine]"], "Input",
+ CellChangeTimes->{3.616237089285081*^9}],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{
+   RowBox[{"19", "x"}], "+", 
+   RowBox[{"30", "b"}]}], "=", "1000"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"19", "y"}], "+", 
+   RowBox[{"3", "b"}]}], "=", "100"}]}], "Input",
+ CellChangeTimes->{{3.616200071192487*^9, 3.616200110333218*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{"19", "*", "40"}], "+", 
+   RowBox[{"30", "*", "8"}]}], "=", "1000"}]], "Input",
+ CellChangeTimes->{{3.616200150539774*^9, 3.616200193150728*^9}}],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{
+   RowBox[{"40", "*", "11"}], "+", 
+   RowBox[{"70", "*", "8"}]}], "=", "1000"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"48", "*", "11"}], "+", 
+   RowBox[{"59", "*", "8"}]}], "=", "1000"}]}], "Input",
+ CellChangeTimes->{{3.616200246713695*^9, 3.616200281903528*^9}}],
+
+Cell[BoxData[
+ RowBox[{"\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{"1", "\[Rule]", "3"}], "\[IndentingNewLine]", 
+   RowBox[{"2", "\[Rule]", "6"}], "\[IndentingNewLine]", 
+   RowBox[{"3", "\[Rule]", "2"}], "\[IndentingNewLine]", 
+   RowBox[{"4", "\[Rule]", "12"}], "\[IndentingNewLine]", 
+   RowBox[{"6", "\[Rule]", "4"}], "\[IndentingNewLine]", 
+   RowBox[{"8", "\[Rule]", "24"}], "\[IndentingNewLine]", 
+   RowBox[{"16", "\[Rule]", "48"}], "\[IndentingNewLine]", 
+   RowBox[{"12", "\[Rule]", "8"}], "\[IndentingNewLine]", 
+   RowBox[{"24", "\[Rule]", "16"}]}]}]], "Input",
+ CellChangeTimes->{{3.616237091828269*^9, 3.616237126015687*^9}}]
+},
+WindowSize->{1045, 671},
+WindowMargins->{{403, Automatic}, {Automatic, 98}},
+FrontEndVersion->"10.0 for Linux x86 (64-bit) (June 27, 2014)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 484, 6, 209, "Input"],
+Cell[1045, 28, 1987, 52, 209, "Input"],
+Cell[3035, 82, 980, 15, 143, "Input"],
+Cell[4018, 99, 87, 1, 55, "Input"],
+Cell[4108, 102, 297, 9, 55, "Input"],
+Cell[4408, 113, 192, 5, 32, "Input"],
+Cell[4603, 120, 321, 9, 55, "Input"],
+Cell[4927, 131, 642, 12, 231, "Input"]
+}
+]
+*)
+
+(* End of internal cache information *)

@@ -1,0 +1,229 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 10.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      8701,        220]
+NotebookOptionsPosition[      7584,        176]
+NotebookOutlinePosition[      8221,        201]
+CellTagsIndexPosition[      8097,        195]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[BoxData[
+ RowBox[{"?", "Sum"}]], "Input",
+ CellChangeTimes->{{3.68037548074856*^9, 3.680375482081917*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox["\<\"\\!\\(\\*RowBox[{\\\"Sum\\\", \\\"[\\\", \
+RowBox[{StyleBox[\\\"f\\\", \\\"TI\\\"], \\\",\\\", RowBox[{\\\"{\\\", \
+RowBox[{StyleBox[\\\"i\\\", \\\"TI\\\"], \\\",\\\", \
+SubscriptBox[StyleBox[\\\"i\\\", \\\"TI\\\"], StyleBox[\\\"max\\\", \
+\\\"TI\\\"]]}], \\\"}\\\"}]}], \\\"]\\\"}]\\) evaluates the sum \
+\\!\\(\\*RowBox[{UnderoverscriptBox[\\\"\[Sum]\\\", \
+RowBox[{StyleBox[\\\"i\\\", \\\"TI\\\"], \\\"=\\\", \\\"1\\\"}], \
+SubscriptBox[StyleBox[\\\"i\\\", \\\"TI\\\"], StyleBox[\\\"max\\\", FontSlant \
+-> \\\"Italic\\\"]], LimitsPositioning -> True], StyleBox[\\\"f\\\", \\\"TI\\\
+\"]}]\\). \\n\\!\\(\\*RowBox[{\\\"Sum\\\", \\\"[\\\", \
+RowBox[{StyleBox[\\\"f\\\", \\\"TI\\\"], \\\",\\\", RowBox[{\\\"{\\\", \
+RowBox[{StyleBox[\\\"i\\\", \\\"TI\\\"], \\\",\\\", \
+SubscriptBox[StyleBox[\\\"i\\\", \\\"TI\\\"], StyleBox[\\\"min\\\", \
+\\\"TI\\\"]], \\\",\\\", SubscriptBox[StyleBox[\\\"i\\\", \\\"TI\\\"], \
+StyleBox[\\\"max\\\", \\\"TI\\\"]]}], \\\"}\\\"}]}], \\\"]\\\"}]\\) starts \
+with \\!\\(\\*RowBox[{StyleBox[\\\"i\\\", \\\"TI\\\"], \\\"=\\\", \
+SubscriptBox[StyleBox[\\\"i\\\", \\\"TI\\\"], StyleBox[\\\"min\\\", \
+\\\"TI\\\"]]}]\\). \\n\\!\\(\\*RowBox[{\\\"Sum\\\", \\\"[\\\", \
+RowBox[{StyleBox[\\\"f\\\", \\\"TI\\\"], \\\",\\\", RowBox[{\\\"{\\\", \
+RowBox[{StyleBox[\\\"i\\\", \\\"TI\\\"], \\\",\\\", \
+SubscriptBox[StyleBox[\\\"i\\\", \\\"TI\\\"], StyleBox[\\\"min\\\", \
+\\\"TI\\\"]], \\\",\\\", SubscriptBox[StyleBox[\\\"i\\\", \\\"TI\\\"], \
+StyleBox[\\\"max\\\", \\\"TI\\\"]], \\\",\\\", StyleBox[\\\"di\\\", \
+\\\"TI\\\"]}], \\\"}\\\"}]}], \\\"]\\\"}]\\) uses steps \
+\\!\\(\\*RowBox[{StyleBox[\\\"d\\\", \\\"TI\\\"], \\\"\[InvisibleSpace]\\\", \
+StyleBox[\\\"i\\\", \\\"TI\\\"]}]\\). \\n\\!\\(\\*RowBox[{\\\"Sum\\\", \
+\\\"[\\\", RowBox[{StyleBox[\\\"f\\\", \\\"TI\\\"], \\\",\\\", \
+RowBox[{\\\"{\\\", RowBox[{StyleBox[\\\"i\\\", \\\"TI\\\"], \\\",\\\", \
+RowBox[{\\\"{\\\", RowBox[{SubscriptBox[StyleBox[\\\"i\\\", \\\"TI\\\"], \
+StyleBox[\\\"1\\\", \\\"TR\\\"]], \\\",\\\", SubscriptBox[StyleBox[\\\"i\\\", \
+\\\"TI\\\"], StyleBox[\\\"2\\\", \\\"TR\\\"]], \\\",\\\", StyleBox[\\\"\
+\[Ellipsis]\\\", \\\"TR\\\"]}], \\\"}\\\"}]}], \\\"}\\\"}]}], \\\"]\\\"}]\\) \
+uses successive values \\!\\(\\*SubscriptBox[StyleBox[\\\"i\\\", \\\"TI\\\"], \
+StyleBox[\\\"1\\\", \\\"TR\\\"]]\\), \
+\\!\\(\\*SubscriptBox[StyleBox[\\\"i\\\", \\\"TI\\\"], StyleBox[\\\"2\\\", \\\
+\"TR\\\"]]\\), \[Ellipsis] .\\n\\!\\(\\*RowBox[{\\\"Sum\\\", \\\"[\\\", \
+RowBox[{StyleBox[\\\"f\\\", \\\"TI\\\"], \\\",\\\", RowBox[{\\\"{\\\", \
+RowBox[{StyleBox[\\\"i\\\", \\\"TI\\\"], \\\",\\\", \
+SubscriptBox[StyleBox[\\\"i\\\", \\\"TI\\\"], StyleBox[\\\"min\\\", \
+\\\"TI\\\"]], \\\",\\\", SubscriptBox[StyleBox[\\\"i\\\", \\\"TI\\\"], \
+StyleBox[\\\"max\\\", \\\"TI\\\"]]}], \\\"}\\\"}], \\\",\\\", RowBox[{\\\"{\\\
+\", RowBox[{StyleBox[\\\"j\\\", \\\"TI\\\"], \\\",\\\", \
+SubscriptBox[StyleBox[\\\"j\\\", \\\"TI\\\"], StyleBox[\\\"min\\\", \
+\\\"TI\\\"]], \\\",\\\", SubscriptBox[StyleBox[\\\"j\\\", \\\"TI\\\"], \
+StyleBox[\\\"max\\\", \\\"TI\\\"]]}], \\\"}\\\"}], \\\",\\\", StyleBox[\\\"\
+\[Ellipsis]\\\", \\\"TR\\\"]}], \\\"]\\\"}]\\) evaluates the multiple sum \\!\
+\\(\\*RowBox[{UnderoverscriptBox[\\\"\[Sum]\\\", RowBox[{StyleBox[\\\"i\\\", \
+\\\"TI\\\"], \\\"=\\\", SubscriptBox[StyleBox[\\\"i\\\", \\\"TI\\\"], \
+StyleBox[\\\"min\\\", FontSlant -> \\\"Italic\\\"]]}], SubscriptBox[StyleBox[\
+\\\"i\\\", \\\"TI\\\"], StyleBox[\\\"max\\\", FontSlant -> \\\"Italic\\\"]], \
+LimitsPositioning -> True], RowBox[{UnderoverscriptBox[\\\"\[Sum]\\\", \
+RowBox[{StyleBox[\\\"j\\\", \\\"TI\\\"], \\\"=\\\", \
+SubscriptBox[StyleBox[\\\"j\\\", \\\"TI\\\"], StyleBox[\\\"min\\\", FontSlant \
+-> \\\"Italic\\\"]]}], SubscriptBox[StyleBox[\\\"j\\\", \\\"TI\\\"], \
+StyleBox[\\\"max\\\", FontSlant -> \\\"Italic\\\"]], LimitsPositioning -> \
+True], RowBox[{\\\"\[Ellipsis]\\\", StyleBox[\\\"f\\\", \\\"TI\\\"]}]}]}]\\). \
+\\n\\!\\(\\*RowBox[{\\\"Sum\\\", \\\"[\\\", RowBox[{StyleBox[\\\"f\\\", \
+\\\"TI\\\"], \\\",\\\", StyleBox[\\\"i\\\", \\\"TI\\\"]}], \\\"]\\\"}]\\) \
+gives the indefinite sum \\!\\(\\*RowBox[{UnderscriptBox[\\\"\[Sum]\\\", \
+StyleBox[\\\"i\\\", \\\"TI\\\"]], StyleBox[\\\"f\\\", \\\"TI\\\"]}]\\).\"\>", 
+   "MSG"], "\[NonBreakingSpace]", 
+  ButtonBox[
+   StyleBox["\[RightSkeleton]", "SR"],
+   Active->True,
+   BaseStyle->"Link",
+   ButtonData->"paclet:ref/Sum"]}]], "Print", "PrintUsage",
+ CellChangeTimes->{3.68037548543867*^9},
+ CellTags->"Info3680350285-9724442"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"?", "Binomial"}]], "Input",
+ CellChangeTimes->{{3.6803754992268867`*^9, 3.680375500114176*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox["\<\"\\!\\(\\*RowBox[{\\\"Binomial\\\", \\\"[\\\", \
+RowBox[{StyleBox[\\\"n\\\", \\\"TI\\\"], \\\",\\\", StyleBox[\\\"m\\\", \
+\\\"TI\\\"]}], \\\"]\\\"}]\\) gives the binomial coefficient \
+\\!\\(\\*RowBox[{\\\"(\\\", GridBox[{{StyleBox[\\\"n\\\", \\\"TI\\\"]}, \
+{StyleBox[\\\"m\\\", \\\"TI\\\"]}}], \\\")\\\"}]\\).\"\>", "MSG"], 
+  "\[NonBreakingSpace]", 
+  ButtonBox[
+   StyleBox["\[RightSkeleton]", "SR"],
+   Active->True,
+   BaseStyle->"Link",
+   ButtonData->"paclet:ref/Binomial"]}]], "Print", "PrintUsage",
+ CellChangeTimes->{3.6803755003962593`*^9},
+ CellTags->"Info3680350300-9724442"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"Sum", "[", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"2", "^", "k"}], "*", 
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{"3", "^", 
+        RowBox[{"(", 
+         RowBox[{"5", "-", "k"}], ")"}]}], "+", "1"}], ")"}], "*", 
+     RowBox[{"Binomial", "[", 
+      RowBox[{"5", ",", "k"}], "]"}], "*", "k"}], ",", 
+    RowBox[{"{", 
+     RowBox[{"k", ",", "1", ",", "5"}], "}"}]}], "]"}], "+", "10"}]], "Input",\
+
+ CellChangeTimes->{{3.680375483196178*^9, 3.680375563080512*^9}}],
+
+Cell[BoxData["7070"], "Output",
+ CellChangeTimes->{{3.680375511444592*^9, 3.680375523422751*^9}, {
+  3.680375558014676*^9, 3.680375563952013*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"32", "*", "5"}], "+", 
+  RowBox[{"16", "*", "3", "*", "5", "*", "4"}], "+", 
+  RowBox[{"8", "*", "9", "*", "10", "*", "3"}], "+", 
+  RowBox[{"4", "*", "27", "*", "10", "*", "2"}], "+", 
+  RowBox[{"2", "*", "81", "*", "5", "*", "1"}]}]], "Input",
+ CellChangeTimes->{{3.6803755906400146`*^9, 3.68037562863099*^9}}],
+
+Cell[BoxData["6250"], "Output",
+ CellChangeTimes->{3.680375629648971*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"32", "*", "5"}], "+", 
+  RowBox[{"16", "*", "5", "*", "4"}], "+", 
+  RowBox[{"8", "*", "10", "*", "3"}], "+", 
+  RowBox[{"4", "*", "10", "*", "2"}], "+", 
+  RowBox[{"2", "*", "5", "*", "1"}]}]], "Input",
+ CellChangeTimes->{{3.680375634631386*^9, 3.680375649892378*^9}}],
+
+Cell[BoxData["810"], "Output",
+ CellChangeTimes->{3.680375651119503*^9}]
+}, Open  ]]
+},
+WindowSize->{808, 621},
+WindowMargins->{{278, Automatic}, {Automatic, 17}},
+FrontEndVersion->"10.0 for Linux x86 (64-bit) (June 27, 2014)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{
+ "Info3680350285-9724442"->{
+  Cell[694, 26, 4515, 69, 231, "Print",
+   CellTags->"Info3680350285-9724442"]},
+ "Info3680350300-9724442"->{
+  Cell[5368, 104, 629, 14, 59, "Print",
+   CellTags->"Info3680350300-9724442"]}
+ }
+*)
+(*CellTagsIndex
+CellTagsIndex->{
+ {"Info3680350285-9724442", 7883, 186},
+ {"Info3680350300-9724442", 7993, 189}
+ }
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 111, 2, 32, "Input"],
+Cell[694, 26, 4515, 69, 231, "Print",
+ CellTags->"Info3680350285-9724442"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[5246, 100, 119, 2, 32, "Input"],
+Cell[5368, 104, 629, 14, 59, "Print",
+ CellTags->"Info3680350300-9724442"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[6034, 123, 509, 16, 32, "Input"],
+Cell[6546, 141, 146, 2, 32, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[6729, 148, 347, 7, 32, "Input"],
+Cell[7079, 157, 73, 1, 32, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[7189, 163, 304, 7, 32, "Input"],
+Cell[7496, 172, 72, 1, 32, "Output"]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)
